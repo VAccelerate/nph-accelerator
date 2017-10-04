@@ -6,7 +6,6 @@ import { Link } from 'react-router'
 class SignUp extends Component{
   render(){
     const { passwordShowing, dispatch } = this.props
-    console.log(this.props);
 
     return (
       <div>
