@@ -7,14 +7,14 @@ import {
 import CheckIfPregnant from './CheckIfPregnant'
 import CheckIfChildren from './CheckIfChildren'
 import CheckIfMidwife from './CheckIfMidwife'
-import AddChildren from './AddChildren'
+import RelevantQuestions from './RelevantQuestions'
 
 class Register extends Component {
   render () {
     const { isPregnant, hasChildren, hasMidwife } = this.props
     return (
       <Container>
-        <AddChildren />
+        <RelevantQuestions />
         {
           isPregnant === null
           ? <CheckIfPregnant />
@@ -31,6 +31,13 @@ class Register extends Component {
           hasChildren !==null &&
           hasMidwife === null
           ? <CheckIfMidwife />
+          : null
+        }
+        {
+          isPregnant !== null &&
+          hasChildren !==null &&
+          hasMidwife !== null
+          ? <RelevantQuestions />
           : null
         }
       </Container>
