@@ -1,5 +1,15 @@
 import {combineReducers} from 'redux'
+import passwordShowing from './passwordShowing'
 
-const reducers = combineReducers({})
+import isPregnant from './isPregnant'
+import hasChildren from './hasChildren'
+import hasMidwife from './hasMidwife'
+
+const reducers = combineReducers({
+  isPregnant,
+  hasChildren,
+  hasMidwife,
+  passwordShowing
+})
 
 export default reducers
