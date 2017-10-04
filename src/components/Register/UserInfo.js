@@ -10,11 +10,14 @@ import {
 
 class UserInfo extends Component {
 
-    checkUserName (name, value) {
+    checkUserName (event) {
+        console.log("hello")
+        const name = this.userName.value
         this.props.dispatch({
             type: 'HAS_NAME',
-            payload: value
+            payload: name
         })
+
     }
 
     render () {
@@ -23,15 +26,18 @@ class UserInfo extends Component {
                 <Card>
                     <CardTitle>User Information</CardTitle>
                     <CardBody>
+                    <form>
                         <input
                           type='text'
-                          id='userName'
                           name='userName'
+                          ref={(input) => this.userName = input}
                           placeholder='Please Enter Your Name Here'
                           required
                         />
                         <br/>
-                        <Button color="primary" onClick={()=> this.checkUserName('hasName', "A NAME AT SOME POINT")}>Next</Button>
+                        <br/>
+                        <Button color='primary' onClick={this.checkUserName.bind(this)}>submit</Button>
+                    </form>
                     </CardBody>
                 </Card>
             </Container>
