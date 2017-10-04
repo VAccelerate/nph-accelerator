@@ -8,6 +8,8 @@ import {
   Button
 } from 'reactstrap'
 
+import SkipQuestion from './SkipQuestion'
+
 class CheckIfChildren extends Component {
   checkIfPregnant (name, value) {
     this.props.dispatch({
@@ -24,9 +26,10 @@ class CheckIfChildren extends Component {
             Do you have any children?
           </CardTitle>
           <CardBody>
-            <Button name='hasChildren' onClick={() => this.checkIfPregnant('hasChildren', true)} value={true} color='secondary'>Yes</Button>{' '}
-            <Button name='hasChildren' onClick={() => this.checkIfPregnant('hasChildren', false)} value={false} color='secondary'>No</Button>
+            <Button name='hasChildren' onClick={() => this.checkIfPregnant('hasChildren', 'true')} color='secondary'>Yes</Button>{' '}
+            <Button name='hasChildren' onClick={() => this.checkIfPregnant('hasChildren', 'false')} color='secondary'>No</Button>
           </CardBody>
+          <SkipQuestion onSkip={() => this.checkIfPregnant('skipped', 'skipped')} />
         </Card>
       </Container>
     )
