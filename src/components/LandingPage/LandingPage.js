@@ -3,7 +3,7 @@ import React from 'react'
 import './landingPage.css'
 import SignUp from '../signUp'
 
-const Home = () => {
+const LandingPage = () => {
   return (
     <div>
       <div className='container'>
@@ -13,4 +13,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default LandingPage
