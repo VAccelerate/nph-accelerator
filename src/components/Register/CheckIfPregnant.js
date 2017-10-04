@@ -7,6 +7,7 @@ import {
   CardBody,
   Button
 } from 'reactstrap'
+import SkipQuestion from './SkipQuestion'
 
 class CheckIfPregnant extends Component {
   checkIfPregnant (name, value) {
@@ -24,9 +25,10 @@ class CheckIfPregnant extends Component {
             Are you or your partner expecting a child?
           </CardTitle>
           <CardBody>
-            <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', true)} value={true} color='secondary'>Yes</Button>{' '}
-            <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', false)} value={false} color='secondary'>No</Button>
+            <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', 'true')} color='secondary'>Yes</Button>{' '}
+            <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', 'false')} color='secondary'>No</Button>
           </CardBody>
+          <SkipQuestion onSkip={() => this.checkIfPregnant('skipped', 'skipped')}/>
         </Card>
       </Container>
     )

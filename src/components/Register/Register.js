@@ -33,8 +33,6 @@ class Register extends Component {
           ? <CheckIfMidwife />
           : null
         }
-
-
       </Container>
     )
   }
