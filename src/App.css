@@ -39,3 +39,8 @@ img.nav-user-icon {
   width: 40vw;
   font-size: 5vw;
 }
+
+.hamburger {
+  background-color: purple;
+  float: right;
+}
