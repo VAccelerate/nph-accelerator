@@ -7,12 +7,14 @@ import {
 import CheckIfPregnant from './CheckIfPregnant'
 import CheckIfChildren from './CheckIfChildren'
 import CheckIfMidwife from './CheckIfMidwife'
+import AddChildren from './AddChildren'
 
 class Register extends Component {
   render () {
     const { isPregnant, hasChildren, hasMidwife } = this.props
     return (
       <Container>
+        <AddChildren />
         {
           isPregnant === null
           ? <CheckIfPregnant />
