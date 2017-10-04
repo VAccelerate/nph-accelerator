@@ -1,38 +1,42 @@
-import React from 'react'
+import React, {Component} from 'react'
+import { connect } from 'react-redux'
+import { Button } from 'reactstrap'
 
-const SignUp = () => {
-  const passwordType = 'password'
-  function togglePasswordDisplay() {
-    let passwordType = passwordType === 'password'
-      ? 'text'
-      : 'password'
-  }
-  return (
-    <div>
-      <div className='emailSignUp'>
-        <input
-          type='text'
-          name='email'
-          placeholder='email address'
-        />
-        <br/>
-        <input
-          type={passwordType}
-          name='password'
-          placeholder='password'
-        />
-        <span
-          onClick={() => togglePasswordDisplay()}
-        >
-          show
-        </span>
-        <br/>
-        <button>
-          Register
-        </button>
+class SignUp extends Component{
+  render(){
+    const { passwordShowing, dispatch } = this.props
+
+    return (
+      <div>
+        <div className='emailSignUp'>
+          <input
+            type='text'
+            name='email'
+            placeholder='email address'
+          />
+          <br/>
+          <input
+            type={passwordShowing}
+            name='password'
+            placeholder='password'
+          />
+          <span
+            onClick={() => dispatch({
+              type: 'TOGGLE_PASSWORD_DISPLAY',
+              payload: passwordShowing
+            })}
+            >
+            show
+          </span>
+          <br/>
+          <Button>
+            Register
+          </Button>
+        </div>
       </div>
-    </div>
-  )
+    )
+
+  }
 }
 
-export default SignUp
+export default connect(state => state)(SignUp)
