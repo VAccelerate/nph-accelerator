@@ -26,3 +26,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+img.nav-user-icon {
+  width: 7vw;
+}
+
+.nav-user {
+  list-style: none;
+}
+
+.nav-home {
+  width: 40vw;
+  font-size: 5vw;
+}
