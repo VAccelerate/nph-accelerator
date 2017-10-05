@@ -5,9 +5,11 @@ import hasName from './hasName'
 import isPregnant from './isPregnant'
 import hasChildren from './hasChildren'
 import hasMidwife from './hasMidwife'
+import homeDropdown from './homeDropdown'
 import knowDueDate from './knowDueDate'
 import dueDate from './dueDate'
 import children from './children'
+import pointsTotal from './pointsTotal'
 
 const reducers = combineReducers({
   hasName,
@@ -15,9 +17,11 @@ const reducers = combineReducers({
   hasChildren,
   hasMidwife,
   passwordShowing,
+  homeDropdown,
   knowDueDate,
   dueDate,
-  children
+  children,
+  pointsTotal
 })
 
 export default reducers

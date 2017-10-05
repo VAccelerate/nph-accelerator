@@ -4,9 +4,11 @@ const initialState = {
   hasChildren: null,
   hasMidwife: null,
   passwordShowing: 'password',
+  homeDropdown: null,
   knowDueDate: null,
   dueDate: null,
-  children: []
+  children: [],
+  pointsTotal: 0
 }
 
 export default initialState
