@@ -9,7 +9,9 @@ const data = {
         {name: 'Common Symptoms'},
         {name: 'Smoking, Drugs & Alcohol'},
         {name: 'Getting Ready for Baby'},
-        {name: 'Sex'}
+        {name: 'Danger Signs'},
+        {name: 'Labour & Birth'},
+        {name: 'Sex During Pregnancy'}
       ]
     },
     babyToddler: {
