@@ -10,6 +10,7 @@ import knowDueDate from './knowDueDate'
 import dueDate from './dueDate'
 import children from './children'
 import deleteChildren from './deleteChildren'
+import landingCarousel from './landingCarousel'
 
 const reducers = combineReducers({
   hasName,
@@ -21,7 +22,8 @@ const reducers = combineReducers({
   knowDueDate,
   dueDate,
   children,
-  deleteChildren
+  deleteChildren,
+  landingCarousel
 })
 
 export default reducers

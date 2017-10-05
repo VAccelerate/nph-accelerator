@@ -7,7 +7,8 @@ const initialState = {
   homeDropdown: null,
   knowDueDate: null,
   dueDate: null,
-  children: []
+  children: [],
+  landingCarousel: 0
 }
 
 export default initialState
