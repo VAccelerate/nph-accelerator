@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Advice from './Advice'
-import data from './data'
+import data from './homeData'
 
 const Home = () => {
   return (
