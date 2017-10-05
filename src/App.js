@@ -4,6 +4,7 @@ import { Route } from 'react-router'
 
 import LandingPage from './components/LandingPage/LandingPage.js'
 import Register from './components/Register/Register'
+import Home from './components/Home'
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App">
         <Route exact path='/' component={LandingPage} />
         <Route path='/register' component={Register} />
+        <Route path='/home' component={Home} />
       </div>
     );
   }

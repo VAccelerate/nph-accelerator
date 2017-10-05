@@ -132,7 +132,6 @@ class RelevantQuestions extends Component {
                           {child.child.name}
                         </h4>
                         <p>{child.child.gender}, DoB: {child.child.dob}</p>
-                        <Button >Edit</Button>
                         <Button onClick={() => this.deleteChild(key)}>Remove</Button>
                       </div>
                     )
