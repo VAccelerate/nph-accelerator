@@ -7,7 +7,6 @@ import {
 class SkipQuestion extends Component {
   skipQuestion () {
     const type = this.props.type
-    console.log(type, 'type')
     this.props.dispatch({
       type: {type},
       payload: 'skipped'
@@ -15,7 +14,6 @@ class SkipQuestion extends Component {
   }
 
   render () {
-    console.log(this.props)
     return (
       <div>
         <Button onClick={this.props.onSkip}>Skip</Button><br />
