@@ -10,14 +10,15 @@ class Advice extends Component{
 
    this.toggleNavbar = this.toggleNavbar.bind(this);
    this.state = {
-     collapsed: true
+     collapsed: !(this.props.homeDropdown === this.props.section.header)
    };
  }
 
  toggleNavbar() {
-   this.setState({
-     collapsed: !this.state.collapsed
-   });
+   const payload = this.props.homeDropdown === this.props.section.header
+    ? null
+    : this.props.section.header
+   this.props.dispatch({type: 'SET_HOME_DROPDOWN', payload: payload})
  }
 
   render(){
@@ -41,7 +42,7 @@ class Advice extends Component{
             <span>{section.header}</span>
             <span><img className='dropdown-arrow' src={dropdownArrow} alt=''/></span>
           </NavbarBrand>
-          <Collapse isOpen={!this.state.collapsed} navbar>
+          <Collapse isOpen={this.props.homeDropdown === this.props.section.header} navbar>
             <Nav navbar>
               <NavItem>
                 {section.subheaders.map(renderSubheader)}
