@@ -1,9 +1,13 @@
 import React from 'react'
 
+import NavBar from '../NavBar'
+import PointsOverview from './PointsOverview'
+
 const Home = () => {
   return (
     <div>
-      points and shit!
+      <NavBar />
+      <PointsOverview />
     </div>
   )
 }
