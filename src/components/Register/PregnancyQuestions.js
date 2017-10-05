@@ -14,6 +14,8 @@ import DatePicker from 'react-datepicker'
 import moment from 'moment'
 import 'react-datepicker/dist/react-datepicker.css'
 
+import SkipQuestion from './SkipQuestion'
+
 class PregnancyQuestions extends Component {
   constructor (props) {
     super(props)
@@ -50,10 +52,13 @@ class PregnancyQuestions extends Component {
       dueDate: date
     })
     const due = moment(date).format('DD/MM/YYYY')
-    this.props.dispatch({
-      type: 'DUE_DATE',
-      payload: due
-    })
+
+    if (moment().isBefore(date)) {
+      this.props.dispatch({
+        type: 'DUE_DATE',
+        payload: due
+      })
+    }
   }
 
   lmpDate (date) {
@@ -62,10 +67,13 @@ class PregnancyQuestions extends Component {
     })
     let dueDate = moment(date).add(40, 'w')
     dueDate = moment(dueDate).format('DD/MM/YYYY')
-    this.props.dispatch({
-      type: 'DUE_DATE',
-      payload: dueDate
-    })
+
+    if (moment().isBefore(dueDate)) {
+      this.props.dispatch({
+        type: 'DUE_DATE',
+        payload: dueDate
+      })
+    }
   }
 
   render () {
@@ -107,7 +115,7 @@ class PregnancyQuestions extends Component {
                         dateFormat="DD/MM/YYYY"
                     />
                     {
-                      !this.isDateValid()
+                      moment().isAfter(this.state.lmpDate)
                       ? null
                       : <p>Pick a date in the past</p>
                     }
@@ -115,6 +123,8 @@ class PregnancyQuestions extends Component {
                 : null
               }
             </CardBody>
+            <SkipQuestion onSkip={() => this.dueDate('skipped', 'skipped')} />
+            <span>This information is not relevant to me</span>
           </Card>
           : null
         }

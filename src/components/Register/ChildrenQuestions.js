@@ -68,7 +68,11 @@ class SkipQuestion extends Component {
   }
 
   isValid () {
-    if (this.state.name.length > 1 && this.state.gender !== '') {
+    const validDate = this.isDateValid()
+
+    if (this.state.name.length > 1 &&
+      this.state.gender !== '' &&
+      validDate) {
       return true
     } else {
       return false
@@ -76,13 +80,14 @@ class SkipQuestion extends Component {
   }
 
   isDateValid () {
-    return moment().isBefore(this.state.dueDate)
+    return !moment().isBefore(this.state.birthDate)
   }
 
   dob (date) {
     const dob = moment(date).format('DD/MM/YYYY')
     this.setState({
-      dob: dob
+      dob: dob,
+      birthDate: date
     })
   }
 
@@ -129,7 +134,7 @@ class SkipQuestion extends Component {
                         dateFormat="DD/MM/YYYY"
                     />
                     {
-                      !this.isDateValid()
+                      this.isDateValid()
                       ? null
                       : <p>Pick a date in the past</p>
                     }

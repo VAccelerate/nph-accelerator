@@ -14,52 +14,23 @@ import ChildrenQuestions from './ChildrenQuestions'
 class Register extends Component {
   render () {
     const { hasName, isPregnant, dueDate, hasChildren, hasMidwife } = this.props
+    let display = null
+    if (hasName === null) {
+      return display = <UserInfo />
+    } else if (isPregnant === null) {
+      return display = <CheckIfPregnant />
+    } else if (hasMidwife === null && isPregnant === 'true') {
+      return display = <CheckIfMidwife />
+    } else if (isPregnant === 'true' && dueDate === null) {
+      return display = <PregnancyQuestions />
+    } else if (hasChildren === null) {
+      return display = <CheckIfChildren />
+    } else if (hasChildren === 'true') {
+      return display = <ChildrenQuestions />
+    }
     return (
       <Container>
-        {
-          hasName === null
-          ? <UserInfo />
-          : null
-        }
-        {
-          hasName !== null &&
-          isPregnant === null
-          ? <CheckIfPregnant />
-          : null
-        }
-        {
-          hasName !== null &&
-          isPregnant === 'true' &&
-          hasMidwife === null
-          ? <CheckIfMidwife />
-          : null
-        }
-        {
-          hasName !== null &&
-          dueDate === null &&
-          hasMidwife !== null &&
-          isPregnant === 'true'
-          ? <PregnancyQuestions />
-          : null
-        }
-        {
-          hasName !== null &&
-          isPregnant !== null &&
-          hasChildren === null &&
-          hasMidwife !== null &&
-          dueDate !== null
-          ? <CheckIfChildren />
-          : null
-        }
-        {
-          hasName !== null &&
-          hasChildren === 'true' &&
-          isPregnant !== null &&
-          hasMidwife !== null &&
-          dueDate !== null
-          ? <ChildrenQuestions />
-          : null
-        }
+        {display}
       </Container>
     )
   }
