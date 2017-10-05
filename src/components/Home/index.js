@@ -3,17 +3,20 @@ import Advice from './Advice'
 import data from './homeData'
 import Contact from './Contact'
 import Points from './Points'
+import UserMessage from './UserMessage'
+import NavBar from '../NavBar'
 
 const Home = () => {
   return (
     <div>
       <div className='container'>
-        <Points />
-        <Advice section={data.homepageDropdowns.pregnancy} />
-        <Advice section={data.homepageDropdowns.babyToddler} />
-        <Advice section={data.homepageDropdowns.supportHelp} />
+        <NavBar />
+        <UserMessage /><hr/>
+        <Points /><hr/>
+        <Advice section={data.homepageDropdowns.pregnancy} /><hr/>
+        <Advice section={data.homepageDropdowns.babyToddler} /><hr/>
+        <Advice section={data.homepageDropdowns.supportHelp} /><hr/><br/>
       </div>
-      <br/>
       <Contact/>
     </div>
   )
