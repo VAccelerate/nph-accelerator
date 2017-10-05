@@ -8,12 +8,14 @@ import UserInfo from './UserInfo'
 import CheckIfPregnant from './CheckIfPregnant'
 import CheckIfChildren from './CheckIfChildren'
 import CheckIfMidwife from './CheckIfMidwife'
+import RelevantQuestions from './RelevantQuestions'
 
 class Register extends Component {
   render () {
     const { hasName, isPregnant, hasChildren, hasMidwife } = this.props
     return (
       <Container>
+        <RelevantQuestions />
         {
           hasName === null
           ? <UserInfo />
@@ -38,6 +40,13 @@ class Register extends Component {
           hasChildren !==null &&
           hasMidwife === null
           ? <CheckIfMidwife />
+          : null
+        }
+        {
+          isPregnant !== null &&
+          hasChildren !==null &&
+          hasMidwife !== null
+          ? <RelevantQuestions />
           : null
         }
       </Container>
