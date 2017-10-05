@@ -8,14 +8,14 @@ import UserInfo from './UserInfo'
 import CheckIfPregnant from './CheckIfPregnant'
 import CheckIfChildren from './CheckIfChildren'
 import CheckIfMidwife from './CheckIfMidwife'
-import RelevantQuestions from './RelevantQuestions'
+import PregnancyQuestions from './PregnancyQuestions'
+import ChildrenQuestions from './ChildrenQuestions'
 
 class Register extends Component {
   render () {
-    const { hasName, isPregnant, hasChildren, hasMidwife } = this.props
+    const { hasName, isPregnant, dueDate, hasChildren, hasMidwife } = this.props
     return (
       <Container>
-        <RelevantQuestions />
         {
           hasName === null
           ? <UserInfo />
@@ -29,24 +29,35 @@ class Register extends Component {
         }
         {
           hasName !== null &&
-          isPregnant !== null &&
-          hasChildren === null
-          ? <CheckIfChildren />
-          : null
-        }
-        {
-          hasName !== null &&
-          isPregnant !== null &&
-          hasChildren !==null &&
+          isPregnant === 'true' &&
           hasMidwife === null
           ? <CheckIfMidwife />
           : null
         }
         {
+          hasName !== null &&
+          dueDate === null &&
+          hasMidwife !== null &&
+          isPregnant === 'true'
+          ? <PregnancyQuestions />
+          : null
+        }
+        {
+          hasName !== null &&
           isPregnant !== null &&
-          hasChildren !==null &&
-          hasMidwife !== null
-          ? <RelevantQuestions />
+          hasChildren === null &&
+          hasMidwife !== null &&
+          dueDate !== null
+          ? <CheckIfChildren />
+          : null
+        }
+        {
+          hasName !== null &&
+          hasChildren === 'true' &&
+          isPregnant !== null &&
+          hasMidwife !== null &&
+          dueDate !== null
+          ? <ChildrenQuestions />
           : null
         }
       </Container>
