@@ -10,16 +10,28 @@ import {
   Label,
   Input
 } from 'reactstrap'
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+
+import 'react-datepicker/dist/react-datepicker.css';
 
 class RelevantQuestions extends Component {
   constructor (props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
     this.addChild = this.addChild.bind(this)
+    this.deleteChild = this.deleteChild.bind(this)
+    this.dueDate = this.dueDate.bind(this)
+    this.lmpDate = this.lmpDate.bind(this)
+    this.dob = this.dob.bind(this)
+
     this.state = {
       name: '',
       dob: '',
-      gender: ''
+      gender: '',
+      dueDate: moment(),
+      lmpDate: moment(),
+      birthDate: moment()
     }
   }
 
@@ -57,6 +69,17 @@ class RelevantQuestions extends Component {
     })
   }
 
+  deleteChild (key) {
+    let children = this.props.children
+    children = children.splice(key, 1)
+
+    this.props.dispatch({
+      type: 'DELETE_CHILDREN',
+      payload: children
+    })
+
+  }
+
   isValid () {
     if (this.state.name.length > 1 && this.state.gender !== '') {
       return true
@@ -65,13 +88,38 @@ class RelevantQuestions extends Component {
     }
   }
 
-  // dueDate (date) {
-  //   console.log(date, 'date')
-  //   this.props.dispatch({
-  //     type: 'DUE_DATE',
-  //     payload: 'date'
-  //   })
-  // }
+  isDateValid () {
+    return moment().isBefore(this.state.dueDate)
+  }
+
+  dueDate (date) {
+    this.setState({
+      dueDate: date
+    })
+    const due = moment(date).format('DD/MM/YYYY')
+    this.props.dispatch({
+      type: 'DUE_DATE',
+      payload: due
+    })
+  }
+
+  lmpDate (date) {
+    this.setState({
+      lmpDate: date
+    })
+    const lmp = moment(date).format('DD/MM/YYYY')
+    this.props.dispatch({
+      type: 'LMP_DATE',
+      payload: lmp
+    })
+  }
+
+  dob (date) {
+    const dob = moment(date).format('DD/MM/YYYY')
+    this.setState({
+      dob: dob
+    })
+  }
 
   render () {
     return (
@@ -89,16 +137,34 @@ class RelevantQuestions extends Component {
                 this.props.knowDueDate
                 ? <FormGroup>
                   <Label for='dueDate'>Due date</Label>
-                  <Input type='date' name='date' id='dueDate' value='' ref='date' placeholder='2017-01-10' />
+                  <DatePicker
+                      selected={this.state.dueDate}
+                      onChange={this.dueDate}
+                      dateFormat="DD/MM/YYYY"
+                  />
+                  {
+                    this.isDateValid()
+                    ? null
+                    : <p>Pick a date in the future</p>
+                  }
                 </FormGroup>
                 : null
               }
               {
                 this.props.knowDueDate === false
                 ? <FormGroup>
-                  <Label for='lmpDate'>Do you the first day of your last period?</Label>
-                  <Input type='date' name='date' id='lmpDate' value='' ref='date' placeholder='2017-01-10' />
-                </FormGroup>
+                    <Label for='lmpDate'>Do you the first day of your last period?</Label>
+                    <DatePicker
+                        selected={this.state.lmpDate}
+                        onChange={this.lmpDate}
+                        dateFormat="DD/MM/YYYY"
+                    />
+                    {
+                      !this.isDateValid()
+                      ? null
+                      : <p>Pick a date in the past</p>
+                    }
+                  </FormGroup>
                 : null
               }
             </CardBody>
@@ -117,10 +183,10 @@ class RelevantQuestions extends Component {
                     return (
                       <div key={key}>
                         <h4>
-                          {child.child.name}
+                          {child.name}
                         </h4>
-                        <p>{child.child.gender}, DoB: {child.child.dob}</p>
-                        <Button >Remove</Button>
+                        <p>{child.gender}, DoB: {child.dob}</p>
+                        <Button onClick={() => this.deleteChild(key)}>Remove</Button>
                       </div>
                     )
                   })
@@ -138,8 +204,17 @@ class RelevantQuestions extends Component {
                     </Input>
                   </FormGroup>
                   <FormGroup>
-                    <Label for='birthDate'>Date of birth</Label>
-                    <Input type='date' name='dob' id='birthDate' value='' ref='date' placeholder='2017-01-10' />
+                    <Label for='dob'>Date of birth</Label>
+                    <DatePicker
+                        selected={this.state.birthDate}
+                        onChange={this.dob}
+                        dateFormat="DD/MM/YYYY"
+                    />
+                    {
+                      !this.isDateValid()
+                      ? null
+                      : <p>Pick a date in the past</p>
+                    }
                   </FormGroup>
                   <Button disabled={!this.isValid()} onClick={this.addChild}>Add Child</Button>
                 </div>
