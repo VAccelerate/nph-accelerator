@@ -5,9 +5,7 @@ export default function register (state = initialState.children, action) {
     case 'CHILDREN':
       return [
         ...state,
-        {
-          child: action.payload
-        }
+        action.payload
       ]
     default:
       return state
