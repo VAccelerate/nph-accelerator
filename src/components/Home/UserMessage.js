@@ -13,20 +13,17 @@ const items = [
   {
     key: 'item1',
     src: '',
-    altText: "Hi Lisa, welcome to Ngati Porou Hauora's family help app.",
-    caption: "Caption this"
+    altText: "hello things are still here",
   },
   {
     key: 'item2',
     src: '',
     altText: 'Slide 2',
-    caption: 'Slide 2'
   },
   {
     key: 'item3',
     src: '',
     altText: 'Slide 3',
-    caption: 'Slide 3'
   }
 ]
 
@@ -69,23 +66,23 @@ class UserMessage extends Component{
 
   render(){
     const { activeIndex } = this.state
+    const { hasName } = this.props
 
     const slides = items.map((item) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
+          key={item.key}
           src={item.src}
           altText={item.altText}
-        >
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-        </CarouselItem>
+        />
       )
     })
 
     return (
       <div>
+      <h2>Kia Ora {hasName}</h2>
       <Carousel
         activeIndex={activeIndex}
         next={this.next}
