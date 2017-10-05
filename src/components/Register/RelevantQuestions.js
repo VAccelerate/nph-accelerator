@@ -70,9 +70,6 @@ class RelevantQuestions extends Component {
   }
 
   isValid () {
-    console.log(
-      this.props.children, 'children'
-    )
     if (this.state.name.length > 1 && this.state.gender !== '') {
       return true
     } else {
