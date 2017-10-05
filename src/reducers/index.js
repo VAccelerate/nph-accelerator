@@ -9,6 +9,7 @@ import homeDropdown from './homeDropdown'
 import knowDueDate from './knowDueDate'
 import dueDate from './dueDate'
 import children from './children'
+import pointsTotal from './pointsTotal'
 import deleteChildren from './deleteChildren'
 import landingCarousel from './landingCarousel'
 
@@ -23,7 +24,9 @@ const reducers = combineReducers({
   dueDate,
   children,
   deleteChildren,
-  landingCarousel
+  landingCarousel,
+  pointsTotal,
+  deleteChildren
 })
 
 export default reducers
