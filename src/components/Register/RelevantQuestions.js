@@ -16,6 +16,7 @@ class RelevantQuestions extends Component {
     super(props)
     this.handleChange = this.handleChange.bind(this)
     this.addChild = this.addChild.bind(this)
+    this.deleteChild = this.deleteChild.bind(this)
     this.state = {
       name: '',
       dob: '',
@@ -55,6 +56,17 @@ class RelevantQuestions extends Component {
       dob: '',
       gender: ''
     })
+  }
+
+  deleteChild (key) {
+    let children = this.props.children
+    children = children.splice(key, 1)
+
+    this.props.dispatch({
+      type: 'DELETE_CHILDREN',
+      payload: children
+    })
+
   }
 
   isValid () {
@@ -120,7 +132,7 @@ class RelevantQuestions extends Component {
                           {child.child.name}
                         </h4>
                         <p>{child.child.gender}, DoB: {child.child.dob}</p>
-                        <Button >Remove</Button>
+                        <Button onClick={() => this.deleteChild(key)}>Remove</Button>
                       </div>
                     )
                   })

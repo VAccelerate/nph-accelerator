@@ -9,6 +9,7 @@ import homeDropdown from './homeDropdown'
 import knowDueDate from './knowDueDate'
 import dueDate from './dueDate'
 import children from './children'
+import deleteChildren from './deleteChildren'
 
 const reducers = combineReducers({
   hasName,
@@ -19,7 +20,8 @@ const reducers = combineReducers({
   homeDropdown,
   knowDueDate,
   dueDate,
-  children
+  children,
+  deleteChildren
 })
 
 export default reducers
