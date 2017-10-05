@@ -16,6 +16,7 @@ class RelevantQuestions extends Component {
     super(props)
     this.handleChange = this.handleChange.bind(this)
     this.addChild = this.addChild.bind(this)
+    this.deleteChild = this.deleteChild.bind(this)
     this.state = {
       name: '',
       dob: '',
@@ -57,7 +58,21 @@ class RelevantQuestions extends Component {
     })
   }
 
+  deleteChild (key) {
+    let children = this.props.children
+    children = children.splice(key, 1)
+
+    this.props.dispatch({
+      type: 'DELETE_CHILDREN',
+      payload: children
+    })
+
+  }
+
   isValid () {
+    console.log(
+      this.props.children, 'children'
+    )
     if (this.state.name.length > 1 && this.state.gender !== '') {
       return true
     } else {
@@ -121,7 +136,7 @@ class RelevantQuestions extends Component {
                         </h4>
                         <p>{child.child.gender}, DoB: {child.child.dob}</p>
                         <Button >Edit</Button>
-                        <Button >Remove</Button>
+                        <Button onClick={() => this.deleteChild(key)}>Remove</Button>
                       </div>
                     )
                   })

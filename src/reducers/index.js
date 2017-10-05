@@ -7,6 +7,7 @@ import hasMidwife from './hasMidwife'
 import knowDueDate from './knowDueDate'
 import dueDate from './dueDate'
 import children from './children'
+import deleteChildren from './deleteChildren'
 
 const reducers = combineReducers({
   isPregnant,
@@ -15,7 +16,8 @@ const reducers = combineReducers({
   passwordShowing,
   knowDueDate,
   dueDate,
-  children
+  children,
+  deleteChildren
 })
 
 export default reducers
