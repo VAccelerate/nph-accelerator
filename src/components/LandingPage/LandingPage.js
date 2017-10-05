@@ -4,7 +4,7 @@ import './landingPage.css'
 import SignUp from '../signUp'
 import NavBar from '../NavBar'
 
-const Home = () => {
+const LandingPage = () => {
   return (
     <div>
       <div className='container'>
@@ -15,4 +15,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default LandingPage

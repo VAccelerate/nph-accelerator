@@ -44,3 +44,8 @@ img.nav-user-icon {
   background-color: purple;
   float: right;
 }
+
+img.dropdown-arrow {
+  width: 7vw;
+  margin-left: 25vw;
+}
