@@ -17,7 +17,6 @@ class SkipQuestion extends Component {
     return (
       <div>
         <Button onClick={this.props.onSkip}>Skip</Button><br />
-        <span>This information is not relevant to me</span>
       </div>
     )
   }
