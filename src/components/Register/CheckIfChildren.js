@@ -11,7 +11,7 @@ import {
 import SkipQuestion from './SkipQuestion'
 
 class CheckIfChildren extends Component {
-  checkIfPregnant (name, value) {
+  checkIfChildren (name, value) {
     this.props.dispatch({
       type: 'HAS_CHILDREN',
       payload: value
@@ -26,10 +26,10 @@ class CheckIfChildren extends Component {
             Do you have any children?
           </CardTitle>
           <CardBody>
-            <Button name='hasChildren' onClick={() => this.checkIfPregnant('hasChildren', 'true')} color='secondary'>Yes</Button>{' '}
-            <Button name='hasChildren' onClick={() => this.checkIfPregnant('hasChildren', 'false')} color='secondary'>No</Button>
+            <Button name='hasChildren' onClick={() => this.checkIfChildren('hasChildren', 'true')} color='secondary'>Yes</Button>{' '}
+            <Button name='hasChildren' onClick={() => this.checkIfChildren('hasChildren', 'false')} color='secondary'>No</Button>
           </CardBody>
-          <SkipQuestion onSkip={() => this.checkIfPregnant('skipped', 'skipped')} />
+          <SkipQuestion onSkip={() => this.checkIfChildren('skipped', 'skipped')} />
         </Card>
       </Container>
     )
