@@ -8,7 +8,6 @@ import Home from './components/Home'
 
 import Rewards from './components/Rewards'
 import RewardsView from './components/RewardsView'
-import Offers from './components/Offers'
 
 
 class App extends Component {
@@ -20,7 +19,6 @@ class App extends Component {
         <Route path='/home' component={Home} />
         <Route path='/rewards' component={Rewards} />
         <Route path='/rewards/view' component={RewardsView} />
-        <Route path='/offers' component={Offers} />
       </div>
     );
   }

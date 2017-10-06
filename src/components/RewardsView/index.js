@@ -16,6 +16,7 @@ import {
 import classnames from 'classnames'
 
 import NavBar from '../NavBar'
+import RewardCards from '../RewardCards'
 import MyRewards from './MyRewards'
 
 class RewardsView extends React.Component {
@@ -80,7 +81,7 @@ class RewardsView extends React.Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId='catalogue'>
-            catalogue goes here
+            <RewardCards />
           </TabPane>
           <TabPane tabId='myRewards'>
             {myRewardsDisplay}
