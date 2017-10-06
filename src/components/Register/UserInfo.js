@@ -6,37 +6,56 @@ import {
   CardTitle,
   CardBody,
   Button,
-  Form
+  Form,
+  Input
 } from 'reactstrap'
 
 class UserInfo extends Component {
+  constructor(props) {
+    super(props)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+    this.isValid = this.isValid.bind(this)
+    this.state = {
+      name: ''
+    }
+  }
 
-  checkUserName (event) {
-    event.preventDefault()
-    const name = this.userName.value
+  handleSubmit () {
     this.props.dispatch({
-      type: 'HAS_NAME',
-      payload: name
+      type: 'NAME',
+      payload: this.state.name
     })
+  }
+
+  handleChange (event) {
+    const { name, value } = event.target
+    this.setState({
+      [name]: value
+    })
+  }
+
+  isValid () {
+    return (this.state.name.length > 0)
   }
 
   render () {
     return (
       <Container>
         <Card>
-          <CardTitle>User Information</CardTitle>
+          <CardTitle>Enter your name</CardTitle>
           <CardBody>
           <Form>
-            <input
+            <Input
               type='text'
-              name='userName'
-              ref={(input) => this.userName = input}
-              placeholder='Please Enter Your Name Here'
+              name='name'
+              placeholder='Name'
+              onChange={this.handleChange}
               required
             />
             <br/>
             <br/>
-            <Button color='primary' onClick={this.checkUserName.bind(this)}>submit</Button>
+            <Button disabled={!this.isValid()} color='secondary' onClick={this.handleSubmit}>Continue</Button>
           </Form>
           </CardBody>
         </Card>

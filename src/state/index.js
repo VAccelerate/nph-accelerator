@@ -1,5 +1,5 @@
 const initialState = {
-  hasName: null,
+  userName: null,
   isPregnant: null,
   hasChildren: null,
   hasMidwife: null,
