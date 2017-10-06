@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'reactstrap'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 class SignUp extends Component{
   render(){
@@ -31,9 +31,9 @@ class SignUp extends Component{
             show
           </span>
           <br/>
-          <Button>
+          <Link to='/register'><Button>
             Register
-          </Button>
+          </Button></Link>
         </div>
         <div className='socialSignUp'>
           <Button>Sign in with Facebook</Button><br/>
