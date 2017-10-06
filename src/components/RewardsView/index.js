@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import {
   TabContent,
   TabPane,
@@ -17,7 +18,7 @@ import classnames from 'classnames'
 import NavBar from '../NavBar'
 import MyRewards from './MyRewards'
 
-export default class RewardsView extends React.Component {
+class RewardsView extends React.Component {
 
   constructor(props) {
     super(props);
@@ -38,6 +39,23 @@ export default class RewardsView extends React.Component {
 
   render(){
 
+    const { userRewardIds } = this.props
+
+    const myRewardsDisplay = userRewardIds.length === 0
+      ? (
+        <div>
+          <p>
+            You don't currently have any rewards, check out <u>your catalogue</u> to see what's available.
+          </p>
+          <Button onClick={() => { this.toggle('catalogue') }}>
+            View My Catalogue
+          </Button>
+        </div>
+      )
+      : (
+        <div>nope</div>
+      )
+
     return (
       <div>
         <div className='container'>
@@ -46,7 +64,7 @@ export default class RewardsView extends React.Component {
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === 'catalogue' })}
-              onClick={() => { this.toggle('catalogue'); }}
+              onClick={() => { this.toggle('catalogue') }}
             >
               Catalogue
             </NavLink>
@@ -54,7 +72,7 @@ export default class RewardsView extends React.Component {
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === 'myRewards' })}
-              onClick={() => { this.toggle('myRewards'); }}
+              onClick={() => { this.toggle('myRewards') }}
             >
               My Rewards
             </NavLink>
@@ -65,7 +83,7 @@ export default class RewardsView extends React.Component {
             catalogue goes here
           </TabPane>
           <TabPane tabId='myRewards'>
-            <MyRewards />
+            {myRewardsDisplay}
           </TabPane>
         </TabContent>
         </div>
@@ -73,3 +91,5 @@ export default class RewardsView extends React.Component {
     )
   }
 }
+
+export default connect(state => state)(RewardsView)

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'reactstrap'
 
 import OfferPreview from '../Offers/OfferPreview'
 import offers from '../Offers/data'
@@ -19,8 +20,18 @@ class MyRewards extends Component{
 
     const userRewards = userRewardIds.map(getRewardById)
 
-    return (
+    const display = userRewards.length === 0
+    ? (
       <div>
+        <p>
+          You don't currently have any rewards, check out <u>your catalogue</u> to see what's available.
+        </p>
+        <Button>
+          View My Catalogue
+        </Button>
+      </div>
+    )
+    : (
         <div className='container'>
           <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
           {userRewards.map((offer, key) => {
@@ -29,7 +40,17 @@ class MyRewards extends Component{
             )
           })}
         </div>
-      </div>
+    )
+
+    return (
+        <div className='container'>
+          <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
+          {userRewards.map((offer, key) => {
+            return (
+              <OfferPreview offerImg={offerImg} offer={offer} key={key} />
+            )
+          })}
+        </div>
     )
 
   }
