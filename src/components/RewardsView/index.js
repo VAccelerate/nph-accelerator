@@ -15,6 +15,7 @@ import {
 import classnames from 'classnames'
 
 import NavBar from '../NavBar'
+import MyRewards from './MyRewards'
 
 export default class RewardsView extends React.Component {
 
@@ -64,7 +65,7 @@ export default class RewardsView extends React.Component {
             catalogue goes here
           </TabPane>
           <TabPane tabId='myRewards'>
-            rewards go here
+            <MyRewards />
           </TabPane>
         </TabContent>
         </div>
