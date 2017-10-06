@@ -2,24 +2,21 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'reactstrap'
 
-import OfferPreview from '../Offers/OfferPreview'
-import offers from '../Offers/data'
-import offerImg from '../../img/offerImgPlaceholder.png'
+import RewardPreview from '../RewardCards/RewardPreview'
+import rewards from '../RewardCards/data'
+import rewardImg from '../../img/rewardImgPlaceholder.png'
 
 class MyRewards extends Component{
 
-  render(){
-
+  render () {
     const { userRewardIds } = this.props
-
     function getRewardById(id) {
-      return offers.find(offer => {
-        return offer.id === id
+      return rewards.find(reward => {
+        return reward.id === id
       })
     }
 
     const userRewards = userRewardIds.map(getRewardById)
-
     const display = userRewards.length === 0
     ? (
       <div>
@@ -34,9 +31,9 @@ class MyRewards extends Component{
     : (
         <div className='container'>
           <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
-          {userRewards.map((offer, key) => {
+          {userRewards.map((reward, key) => {
             return (
-              <OfferPreview offerImg={offerImg} offer={offer} key={key} />
+              <RewardPreview rewardImg={rewardImg} reward={reward} key={key} />
             )
           })}
         </div>
@@ -45,9 +42,9 @@ class MyRewards extends Component{
     return (
         <div className='container'>
           <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
-          {userRewards.map((offer, key) => {
+          {userRewards.map((reward, key) => {
             return (
-              <OfferPreview offerImg={offerImg} offer={offer} key={key} />
+              <RewardPreview rewardImg={rewardImg} reward={reward} key={key} />
             )
           })}
         </div>

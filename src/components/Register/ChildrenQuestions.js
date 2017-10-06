@@ -131,7 +131,7 @@ class SkipQuestion extends Component {
                     <DatePicker
                         selected={this.state.birthDate}
                         onChange={this.dob}
-                        dateFormat="DD/MM/YYYY"
+                        dateFormat='DD/MM/YYYY'
                     />
                     {
                       this.isDateValid()

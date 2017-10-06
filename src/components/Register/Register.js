@@ -13,9 +13,9 @@ import ChildrenQuestions from './ChildrenQuestions'
 
 class Register extends Component {
   render () {
-    const { hasName, isPregnant, dueDate, hasChildren, hasMidwife } = this.props
+    const { userName, isPregnant, dueDate, hasChildren, hasMidwife } = this.props
     let display = null
-    if (hasName === null) {
+    if (userName === null) {
       return display = <UserInfo />
     } else if (isPregnant === null) {
       return display = <CheckIfPregnant />
