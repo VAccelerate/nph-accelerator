@@ -9,7 +9,8 @@ const initialState = {
   dueDate: null,
   children: [],
   landingCarousel: 0,
-  pointsTotal: 0
+  pointsTotal: 0,
+  userRewardIds: []
 }
 
 export default initialState

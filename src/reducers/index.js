@@ -12,6 +12,7 @@ import children from './children'
 import pointsTotal from './pointsTotal'
 import deleteChildren from './deleteChildren'
 import landingCarousel from './landingCarousel'
+import userRewardIds from './userRewardIds'
 
 const reducers = combineReducers({
   hasName,
@@ -26,7 +27,8 @@ const reducers = combineReducers({
   deleteChildren,
   landingCarousel,
   pointsTotal,
-  deleteChildren
+  deleteChildren,
+  userRewardIds
 })
 
 export default reducers
