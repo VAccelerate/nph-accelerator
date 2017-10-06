@@ -1,0 +1,18 @@
+.points {
+  float: right;
+  color: blue;
+  font-size: 1.5em;
+}
+
+.reward {
+  text-align: left;
+}
+
+.rewardCard {
+  color: black;
+  margin-top: 10px;
+}
+
+.divider {
+  border-right: 1px solid #CCC;
+}

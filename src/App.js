@@ -8,8 +8,8 @@ import Home from './components/Home'
 
 import Rewards from './components/Rewards'
 import RewardsView from './components/RewardsView'
-import Offers from './components/Offers'
 import RewardClaimed from './components/RewardClaimed'
+
 
 
 class App extends Component {
@@ -18,12 +18,11 @@ class App extends Component {
       <div className="App">
         <div className='content'>
           <Route exact path='/' component={LandingPage} />
-          <Route path='/register' component={Register} />
-          <Route path='/home' component={Home} />
-          <Route path='/rewards' component={Rewards} />
-          <Route path='/rewards/view' component={RewardsView} />
-          <Route path='/rewards/view/:id/:serial' component={RewardClaimed} />
-          <Route path='/offers' component={Offers} />
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/home' component={Home} />
+          <Route exact path='/rewards' component={Rewards} />
+          <Route exact path='/rewards/view' component={RewardsView} />
+          <Route exact path='/rewards/view/:id/:serial' component={RewardClaimed} />
         </div>
       </div>
     )

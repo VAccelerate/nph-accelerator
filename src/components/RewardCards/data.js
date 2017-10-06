@@ -1,4 +1,4 @@
-const offers = [
+const rewards = [
   {
     id: 0,
     brand: 'Vodafone',
@@ -10,7 +10,7 @@ const offers = [
   },
   {
     id: 1,
-    brand: 'Vodafone',
+    brand: 'Spark',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -100,4 +100,4 @@ const offers = [
   }
 ]
 
-export default offers
+export default rewards

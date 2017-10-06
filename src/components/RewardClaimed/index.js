@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap'
 
 import NavBar from '../NavBar'
 
@@ -9,7 +10,10 @@ class RewardClaimed extends React.Component {
 
     return (
       <div>
-        for real though right?
+        <NavBar />
+        <Breadcrumb>
+          <BreadcrumbItem active>Back to Rewards</BreadcrumbItem>
+        </Breadcrumb>
       </div>
     )
   }
