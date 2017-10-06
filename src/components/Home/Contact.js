@@ -16,4 +16,4 @@ class Contact extends Component {
         )
     }
 }
-export default connect(state => state)(Contact)
+export default Contact
