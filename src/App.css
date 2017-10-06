@@ -59,6 +59,17 @@ img#trophy-img {
   max-height: 6vh;
 }
 
+.points-overview {
+  display: inline-block;
+  width: 100vw;
+  max-height: 200px;
+}
+
+.points-earned {
+  float: left;
+  width: 60vw;
+}
+
 .home-points-text {
   float: left;
   width: 60vw;
@@ -69,4 +80,22 @@ img#trophy-img {
   margin-left: 5vw;
   float: right;
   width: 12vw;
+}
+
+.points-stats {
+  float: left;
+  width: 35vw
+}
+
+.points-overview-rank {
+  display: inline-block;
+}
+
+.points-overview-header {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.points-overview-total {
+  font-size: 40px;
 }
