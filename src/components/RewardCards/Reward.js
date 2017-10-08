@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {  } from 'react-router-dom'
 import {
   Card,
   CardBody,
@@ -17,9 +18,37 @@ import './rewardPreview.css'
 import data from './data'
 
 class Reward extends Component {
+
+  handlePurchase() {
+    const id = this.props.match.params.id
+    this.props.dispatch({type: 'CLAIM_REWARD', payload: {
+      id: Number(id),
+      serial: '00001',
+      //serial to be set to unique once data structure added
+      points: data[id].points
+    }})
+    this.props.history.push(`/rewards/${id}/00001`)
+  }
+
   render () {
     const rewardId = this.props.match.params.id
     const { brand, description, id, title, disclaimer, points } = data[rewardId]
+    const { pointsTotal } = this.props
+    const buttonDisplay = pointsTotal < points
+      ? (
+        <Button disabled>
+        Claim for {points} points
+        </Button>
+      )
+      : (
+        <Button
+          onClick={this.handlePurchase.bind(this)}
+        >
+          Claim for {points} points
+        </Button>
+      )
+
+    const serial = '00001'
     return (
       <div>
         <Container>
@@ -40,7 +69,7 @@ class Reward extends Component {
               <Row>
                 <Col>
                   <CardText>{description}</CardText>
-                  <Button>Claim for {points} points</Button>
+                  {buttonDisplay}
                 </Col>
               </Row>
             </CardBody>
