@@ -29,8 +29,6 @@ class RewardClaimed extends React.Component {
       return coupon.serial === serial
     })
 
-    console.log(coupon);
-
 
     return (
       <div>
