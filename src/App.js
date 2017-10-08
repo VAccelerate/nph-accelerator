@@ -7,6 +7,7 @@ import Register from './components/Register/Register'
 import Home from './components/Home'
 
 import Rewards from './components/Rewards'
+import Reward from './components/RewardCards/Reward'
 import RewardsView from './components/RewardsView'
 
 
@@ -19,6 +20,7 @@ class App extends Component {
         <Route exact path='/home' component={Home} />
         <Route exact path='/rewards' component={Rewards} />
         <Route exact path='/rewards/view' component={RewardsView} />
+        <Route exact path='/rewards/view/:id' component={Reward} />
       </div>
     );
   }
