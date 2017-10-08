@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Breadcrumb, BreadcrumbItem, Button, Card } from 'reactstrap'
+import { Breadcrumb, BreadcrumbItem, Button } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import rewards from '../RewardCards/data'
 import coupons from './rewardClaimedData'
@@ -17,16 +17,12 @@ class RewardClaimed extends React.Component {
 
     const brace = '<'
     const url = this.props.match.url
-    const identifiers = url.split('/rewards/view/')[1].split('/')
-    const id = Number(identifiers[0])
-    const serial = identifiers[1]
+    const identifiers = url.split('/rewards/')[1].split('/')
+    const id = Number(identifiers[0]) || null
+    const serial = identifiers[1] || null
 
     const reward = rewards.find(reward => {
       return reward.id === id
-    })
-
-    const coupon = coupons[id].find(coupon => {
-      return coupon.serial === serial
     })
 
 
@@ -35,7 +31,7 @@ class RewardClaimed extends React.Component {
         <NavBar />
         <Breadcrumb>
           <BreadcrumbItem>
-            <Link to={'/rewards/view'}>{brace} Back to Rewards</Link>
+            <Link to={'/rewards'}>{brace} Back to Rewards</Link>
           </BreadcrumbItem>
         </Breadcrumb>
         <RewardPreview rewardImg={rewardImg} reward={reward} key={id} />
