@@ -14,10 +14,12 @@ import {
 } from 'reactstrap'
 
 import './rewardPreview.css'
+import data from './data'
 
 class Reward extends Component {
   render () {
-    const { brand, description, id, title, disclaimer, points } = this.props.reward
+    const rewardId = this.props.match.params.id
+    const { brand, description, id, title, disclaimer, points } = data[rewardId]
     return (
       <div>
         <Container>
