@@ -22,7 +22,7 @@ class RewardPreview extends Component {
     return (
       <div>
         <Container>
-          <Link to={`/rewards/view/${id}`}>
+          <Link to={`/rewards/${id}`}>
             <Card className='rewardCard'>
               <CardBody>
                 <Row>

@@ -18,9 +18,9 @@ class App extends Component {
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/home' component={Home} />
-        <Route exact path='/rewards' component={Rewards} />
-        <Route exact path='/rewards/view' component={RewardsView} />
-        <Route exact path='/rewards/view/:id' component={Reward} />
+        <Route exact path='/points' component={Rewards} />
+        <Route exact path='/rewards' component={RewardsView} />
+        <Route exact path='/rewards/:id' component={Reward} />
       </div>
     );
   }
