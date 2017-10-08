@@ -2,6 +2,7 @@ const rewards = [
   {
     id: 0,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -11,6 +12,7 @@ const rewards = [
   {
     id: 1,
     brand: 'Spark',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -20,6 +22,7 @@ const rewards = [
   {
     id: 2,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -29,6 +32,7 @@ const rewards = [
   {
     id: 3,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -38,6 +42,7 @@ const rewards = [
   {
     id: 4,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -47,6 +52,7 @@ const rewards = [
   {
     id: 5,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -56,6 +62,7 @@ const rewards = [
   {
     id: 6,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -65,6 +72,7 @@ const rewards = [
   {
     id: 7,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -74,6 +82,7 @@ const rewards = [
   {
     id: 8,
     brand: 'Vodafone',
+    category: 'Mobile',
     icon: 'smiley',
     title: '$20 FREE CREDIT',
     points: 100,
@@ -82,21 +91,23 @@ const rewards = [
   },
   {
     id: 9,
-    brand: 'Vodafone',
+    brand: 'Paknsave',
+    category: 'Food',
     icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
+    title: '50% grocery discount',
+    points: 200,
+    description: 'Epic!',
+    disclaimer: 'If you have enough points, you can have it!'
   },
   {
     id: 10,
-    brand: 'Vodafone',
+    brand: 'BP',
+    category: 'Fuel',
     icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
+    title: '$10 Free Fuel',
+    points: 50,
     description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
+    disclaimer: 'Available to anyone!'
   }
 ]
 
