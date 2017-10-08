@@ -54,7 +54,7 @@ class RewardsView extends React.Component {
         </div>
       )
       : (
-        <div>nope</div>
+        <MyRewards />
       )
 
     return (

@@ -17,27 +17,6 @@ class MyRewards extends Component{
     }
 
     const userRewards = userRewardIds.map(getRewardById)
-    const display = userRewards.length === 0
-    ? (
-      <div>
-        <p>
-          You don't currently have any rewards, check out <u>your catalogue</u> to see what's available.
-        </p>
-        <Button>
-          View My Catalogue
-        </Button>
-      </div>
-    )
-    : (
-        <div className='container'>
-          <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
-          {userRewards.map((reward, key) => {
-            return (
-              <RewardPreview rewardImg={rewardImg} reward={reward} key={key} />
-            )
-          })}
-        </div>
-    )
 
     return (
         <div className='container'>
