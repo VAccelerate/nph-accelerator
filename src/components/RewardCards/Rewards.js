@@ -43,7 +43,7 @@ class Rewards extends Component {
     return (
       <div>
         <div className='container'>
-          <Input className='searchInput' onChange={this.handleChange} type="text" name="searchString" id="searchString" placeholder="Type to search" />
+          <Input className='searchInput' onChange={this.handleChange} type='text' name='searchString' id='searchString' placeholder='Type to search' />
           Showing {rewardsToDisplay.length} of {rewards.length} rewards
           {rewardsToDisplay.map((reward, key) => {
             return (

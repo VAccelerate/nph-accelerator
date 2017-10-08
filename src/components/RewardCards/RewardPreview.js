@@ -26,11 +26,11 @@ class RewardPreview extends Component {
             <Card className='rewardCard'>
               <CardBody>
                 <Row>
-                  <Col xs="4" className='divider'>
+                  <Col xs='4' className='divider'>
                     <h5>{brand}</h5>
                     <CardImg alt='logo' src={this.props.rewardImg} />
                   </Col>
-                  <Col xs="8">
+                  <Col xs='8'>
                     <CardTitle className='reward'>{title}</CardTitle>
                     <CardSubtitle className='reward'>{disclaimer}</CardSubtitle>
                     <CardText className='points'>{points}pts</CardText>
