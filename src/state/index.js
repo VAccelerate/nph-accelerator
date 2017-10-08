@@ -10,7 +10,7 @@ const initialState = {
   children: [],
   landingCarousel: 0,
   pointsTotal: 0,
-  userRewardIds: []
+  userRewardIds: [1,2,4,5]
 }
 
 export default initialState
