@@ -15,6 +15,7 @@ import {
 
 import './rewardPreview.css'
 import data from './data'
+import NavBar from '../NavBar'
 
 class Reward extends Component {
   render () {
@@ -22,6 +23,7 @@ class Reward extends Component {
     const { brand, description, id, title, disclaimer, points } = data[rewardId]
     return (
       <div>
+        <NavBar />
         <Container>
           <Card>
             <CardBody>
