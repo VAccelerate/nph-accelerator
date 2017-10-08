@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import { Route } from 'react-router'
+import { Route, BrowserRouter } from 'react-router'
 
 import LandingPage from './components/LandingPage/LandingPage.js'
 import Register from './components/Register/Register'
@@ -9,6 +9,8 @@ import Home from './components/Home'
 import Rewards from './components/Rewards'
 import Reward from './components/RewardCards/Reward'
 import RewardsView from './components/RewardsView'
+import RewardClaimed from './components/RewardClaimed'
+
 
 
 class App extends Component {
@@ -21,8 +23,9 @@ class App extends Component {
         <Route exact path='/points' component={Rewards} />
         <Route exact path='/rewards' component={RewardsView} />
         <Route exact path='/rewards/:id' component={Reward} />
+        <Route exact path='/rewards/:id/:serial' component={RewardClaimed} />
       </div>
-    );
+    )
   }
 }
 

@@ -99,3 +99,17 @@ img#trophy-img {
 .points-overview-total {
   font-size: 40px;
 }
+
+img.coupon-img {
+  width: 60vw;
+}
+
+.reward-claimed-button {
+  width: 80vw;
+  margin-bottom: 10px;
+}
+
+.terms-link {
+  margin-top: 0px;
+  font-size: 12px;
+}
