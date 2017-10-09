@@ -4,7 +4,8 @@ import {
   Input,
   Row,
   Col,
-  Badge
+  Badge,
+  Container
 } from 'reactstrap'
 
 import rewards from './data.js'
@@ -33,7 +34,6 @@ class Rewards extends Component {
   }
 
   render () {
-    const rewardsString = JSON.stringify(rewards)
     let rewardsToDisplay = rewards.filter(reward => {
       const rewardString = (reward.description +
         ' ' + reward.brand +
@@ -55,7 +55,7 @@ class Rewards extends Component {
 
     return (
       <div>
-        <div className='container'>
+        <Container>
           <Row className='pointsHeader'>
             <Col className='pointsHeaderText'>
               Points available
@@ -64,41 +64,44 @@ class Rewards extends Component {
               <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
             </Col>
           </Row>
-          <Input
-            className='searchInput'
-            onChange={this.handleChange}
-            type='select'
-            name='brandFilter'
-            id='brandFilter'>
-            <option value=''>Select a brand</option>
-            <option value='vodafone'>Vodafone</option>
-            <option value='spark'>Spark</option>
-            <option value='bp'>BP</option>
-            <option value='paknsave'>Pak n Save</option>
-          </Input>
-          <Input
-            className='searchInput'
-            onChange={this.handleChange}
-            type='select'
-            name='categoryFilter'
-            id='categoryFilter'>
-            <option value=''>Select a category</option>
-            <option value='mobile'>Mobile</option>
-            <option value='food'>Food</option>
-            <option value='fuel'>Fuel</option>
-          </Input>
-          <Input className='searchInput'
-            onChange={this.handleChange}
-            type='text' name='searchString'
-            id='searchString'
-            placeholder='Type to search' />
+        </Container>
+        <Input className='searchInput'
+               onChange={this.handleChange}
+               type='text' name='searchString'
+               id='searchString'
+               placeholder='Type to search'
+        />
+        <Input
+          className='searchDropdownInput'
+          onChange={this.handleChange}
+          type='select'
+          name='categoryFilter'
+          id='categoryFilter'>
+          <option value=''>Categories</option>
+          <option value='mobile'>Mobile</option>
+          <option value='food'>Food</option>
+          <option value='fuel'>Fuel</option>
+        </Input>
+        <Input
+          className='searchDropdownInput'
+          onChange={this.handleChange}
+          type='select'
+          name='brandFilter'
+          id='brandFilter'>
+          <option value=''>Brands</option>
+          <option value='vodafone'>Vodafone</option>
+          <option value='spark'>Spark</option>
+          <option value='bp'>BP</option>
+          <option value='paknsave'>Pak n Save</option>
+        </Input>
+        <div className='rewardCount'>
           Showing {rewardsToDisplay.length} of {rewards.length} rewards
-          {rewardsToDisplay.map((reward, key) => {
-            return (
-              <RewardPreview rewardImg={rewardImg} reward={reward} key={key} />
-            )
-          })}
         </div>
+        {rewardsToDisplay.map((reward, key) => {
+          return (
+            <RewardPreview rewardImg={rewardImg} reward={reward} key={key} />
+          )
+        })}
       </div>
     )
   }
