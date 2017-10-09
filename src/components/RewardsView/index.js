@@ -6,18 +6,15 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Card,
   Button,
-  CardTitle,
-  CardText,
-  Row,
-  Col
+  Badge
 } from 'reactstrap'
 import classnames from 'classnames'
 
 import NavBar from '../NavBar'
 import MyRewards from './MyRewards'
-import Rewards from '../RewardCards/Rewards'
+import Rewards from '../RewardCards'
+import Footer from '../Footer'
 
 class RewardsView extends React.Component {
 
@@ -88,6 +85,7 @@ class RewardsView extends React.Component {
           </TabPane>
         </TabContent>
         </div>
+        <Footer />
       </div>
     )
   }

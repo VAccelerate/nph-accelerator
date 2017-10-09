@@ -4,13 +4,7 @@ import {
   TabPane,
   Nav,
   NavItem,
-  NavLink,
-  Card,
-  Button,
-  CardTitle,
-  CardText,
-  Row,
-  Col
+  NavLink
 } from 'reactstrap'
 import classnames from 'classnames'
 
