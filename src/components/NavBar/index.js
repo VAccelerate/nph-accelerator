@@ -2,42 +2,57 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import { Link } from 'react-router'
+import { slide as Menu } from 'react-burger-menu'
+import FontAwesomeIcon from '../FontAwesomeIcon'
+import nav from './navBar.js'
 
 class NavBar extends Component{
   constructor(props) {
-    super(props);
-
-    this.toggleNavbar = this.toggleNavbar.bind(this);
+    super(props)
+    this.toggleNavbar = this.toggleNavbar.bind(this)
     this.state = {
-      collapsed: true
-    };
+      toggle: false
+    }
   }
 
   toggleNavbar() {
+    console.log('triggered')
+    const toggle = !this.state.toggle
     this.setState({
-      collapsed: !this.state.collapsed
-    });
+      toggle: toggle
+    })
+    this.props.dispatch({
+      type: 'NAV_TOGGLE',
+      payload: toggle
+    })
   }
+
   render() {
     return (
       <div>
+        <Menu
+          left
+          isOpen={this.props.navToggle}
+          styles={ nav }
+          disableOverlayClick={true}
+          customCrossIcon={false}>
+          <a style={{position: 'absolute', top: 5, right: 30}} onClick={this.toggleNavbar}><FontAwesomeIcon name='close' /></a>
+          <a id='home' className='menu-item' href='/' onClick={this.toggleNavbar}>Home</a>
+          <a id='babyAndToddle' className='menu-item' href='/about' onClick={this.toggleNavbar}>Baby & Toddler</a>
+          <a id='pregnancy' className='menu-item' href='/pregnancy' onClick={this.toggleNavbar}>Pregnancy</a>
+          <a id='rewards' className='menu-item' href='/rewards' onClick={this.toggleNavbar}>Rewards</a>
+          <a id='calendar' className='menu-item' href='/calendar' onClick={this.toggleNavbar}>Calendar</a>
+          <a id='supportAndHelp' className='menu-item' href='/supportAndHelp' onClick={this.toggleNavbar}>Support & Help</a>
+          <a id='contact' className='menu-item' href='/contact' onClick={this.toggleNavbar}>Contact</a>
+          <a onClick={ this.showSettings } className='menu-item--small' href='' onClick={this.toggleNavbar}>Settings</a>
+        </Menu>
         <Navbar color='faded' light>
-          <NavItem className='nav-user'><img src='https://openclipart.org/download/247320/abstract-user-flat-4.svg' className='nav-user-icon'/></NavItem>
+          <NavbarToggler onClick={this.toggleNavbar} style={{border: 'none'}} />
           <NavbarBrand href='/' className='nav-home'>Ngati Porou Hauora</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className='nav-hamburger' />
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
-              <NavItem>
-                <NavLink href='#'>Example Link 1</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#'>Example Link 2</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
+          <NavItem className='nav-user'><img src='https://openclipart.org/download/247320/abstract-user-flat-4.svg' className='nav-user-icon'/></NavItem>
         </Navbar>
       </div>
-    );
+    )
   }
 }
 
