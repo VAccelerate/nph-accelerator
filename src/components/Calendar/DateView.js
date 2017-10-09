@@ -12,16 +12,44 @@ class DateView extends Component{
 
   render() {
 
+    const dateDue = this.props.dueDate.split('/')
+
+    let dueDate = {
+      year: Number(dateDue[2]),
+      month: (Number(dateDue[1]) - 1),
+      day: Number(dateDue[0])
+    }
+    dueDate.formatted = new Date(dueDate.year, dueDate.month, dueDate.day)
+
     let edgeDays = []
     let eventDays = []
 
-    console.log(moment(21/10/2017).add(3, 'd').add(12, 'hours')._d)
-    console.log(new Date(2017, 10, 19))
+    calendarEvents.forEach(extractRelevantDates)
+
+    function extractRelevantDates(calendarEvent) {
+      edgeDays.push(findDateFromBirth(calendarEvent.startDay))
+      edgeDays.push(findDateFromBirth(calendarEvent.endDay))
+      for (var i = calendarEvent.startDay; i < calendarEvent.endDay; i++) {
+        eventDays.push(findDateFromBirth(i))
+      }
+    }
+
+    function findDateFromBirth (daysPastBirth) {
+        return formatDate(moment(dueDate.formatted).add(daysPastBirth, 'days').format('YYYY-MM-D'))
+    }
+
+    function formatDate(date){
+      const splitDate = date.split('-')
+      const res = new Date(Number(splitDate[0]), (Number(splitDate[1]) - 1), Number(splitDate[2]))
+      return res
+    }
+
 
     const modifiers = {
-      edgeDays: [new Date(2017, 10, 19), new Date(2017, 10, 24), moment(24/10/2017).add(3, 'd')._d],
-      eventDays: [new Date(2017, 10, 20), new Date(2017, 10, 21)]
+      edgeDays: edgeDays,
+      eventDays: eventDays
     }
+    
     return (
       <div>
         <DayPicker month={new Date(2017, 10)} modifiers={modifiers} />
