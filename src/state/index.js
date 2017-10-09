@@ -6,7 +6,7 @@ const initialState = {
   passwordShowing: 'password',
   homeDropdown: null,
   knowDueDate: null,
-  dueDate: null,
+  dueDate: '22/06/2018',
   children: [],
   landingCarousel: 0,
   pointsTotal: 200,
