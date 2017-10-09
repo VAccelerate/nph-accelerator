@@ -4,7 +4,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } f
 import { Link } from 'react-router'
 import { slide as Menu } from 'react-burger-menu'
 import FontAwesomeIcon from '../FontAwesomeIcon'
-import nav from './navBar.js'
+import nav from './styling.js'
 
 class NavBar extends Component{
   constructor(props) {
@@ -41,7 +41,7 @@ class NavBar extends Component{
           <a id='babyAndToddler' className='menu-item' href='#' onClick={this.toggleNavbar}>Baby & Toddler</a>
           <a id='pregnancy' className='menu-item' href='#' onClick={this.toggleNavbar}>Pregnancy</a>
           <a id='rewards' className='menu-item' href='/rewards' onClick={this.toggleNavbar}>Rewards</a>
-          <a id='calendar' className='menu-item' href='#' onClick={this.toggleNavbar}>Calendar</a>
+          <a id='calendar' className='menu-item' href='/calendar' onClick={this.toggleNavbar}>Calendar</a>
           <a id='supportAndHelp' className='menu-item' href='#' onClick={this.toggleNavbar}>Support & Help</a>
           <a id='myPoints' className='menu-item' href='/points' onClick={this.toggleNavbar}>My Rewards</a>
           <a id='contact' className='menu-item' href='#' onClick={this.toggleNavbar}>Contact</a>
