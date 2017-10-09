@@ -1,10 +1,10 @@
 import initialState from '../state'
 
-export default function pointsTotal (state = initialState.pointsTotal, action) {
+export default function userRewardIds (state = initialState.userRewardIds, action) {
   switch (action.type) {
 
     case 'CLAIM_REWARD':
-      state -= action.payload.points
+      state.unshift(action.payload.id)
       return state
 
     default:

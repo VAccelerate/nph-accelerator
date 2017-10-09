@@ -1,5 +1,5 @@
 const initialState = {
-  hasName: null,
+  userName: null,
   isPregnant: null,
   hasChildren: null,
   hasMidwife: null,
@@ -9,7 +9,8 @@ const initialState = {
   dueDate: null,
   children: [],
   landingCarousel: 0,
-  pointsTotal: 0
+  pointsTotal: 200,
+  userRewardIds: []
 }
 
 export default initialState

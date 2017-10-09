@@ -1,8 +1,8 @@
 import initialState from '../state'
 
-export default function register (state = initialState.hasName, action) {
+export default function register (state = initialState.userName, action) {
   switch (action.type) {
-    case 'HAS_NAME':
+    case 'NAME':
       return action.payload
     default:
       return state

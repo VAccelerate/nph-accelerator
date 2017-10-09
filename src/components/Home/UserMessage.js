@@ -13,7 +13,7 @@ const items = [
   {
     key: 'item1',
     src: '',
-    altText: "hello things are still here",
+    altText: 'hello things are still here',
   },
   {
     key: 'item2',
@@ -90,8 +90,8 @@ class UserMessage extends Component{
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        <CarouselControl direction='prev' directionText='Previous' onClickHandler={this.previous} />
+        <CarouselControl direction='next' directionText='Next' onClickHandler={this.next} />
     </Carousel>
       </div>
     )

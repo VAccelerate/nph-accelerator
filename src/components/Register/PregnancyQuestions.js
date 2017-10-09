@@ -95,7 +95,7 @@ class PregnancyQuestions extends Component {
                   <DatePicker
                       selected={this.state.dueDate}
                       onChange={this.dueDate}
-                      dateFormat="DD/MM/YYYY"
+                      dateFormat='DD/MM/YYYY'
                   />
                   {
                     this.isDateValid()
@@ -112,7 +112,7 @@ class PregnancyQuestions extends Component {
                     <DatePicker
                         selected={this.state.lmpDate}
                         onChange={this.lmpDate}
-                        dateFormat="DD/MM/YYYY"
+                        dateFormat='DD/MM/YYYY'
                     />
                     {
                       moment().isAfter(this.state.lmpDate)

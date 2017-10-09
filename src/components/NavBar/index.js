@@ -21,17 +21,17 @@ class NavBar extends Component{
   render() {
     return (
       <div>
-        <Navbar color="faded" light>
-          <NavItem className='nav-user'><img src="https://openclipart.org/download/247320/abstract-user-flat-4.svg" className='nav-user-icon'/></NavItem>
-          <NavbarBrand href="/" className="nav-home">Ngati Porou Hauora</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="nav-hamburger" />
+        <Navbar color='faded' light>
+          <NavItem className='nav-user'><img src='https://openclipart.org/download/247320/abstract-user-flat-4.svg' className='nav-user-icon'/></NavItem>
+          <NavbarBrand href='/' className='nav-home'>Ngati Porou Hauora</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className='nav-hamburger' />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href="#">Example Link 1</NavLink>
+                <NavLink href='#'>Example Link 1</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Example Link 2</NavLink>
+                <NavLink href='#'>Example Link 2</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

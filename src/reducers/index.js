@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
 import passwordShowing from './passwordShowing'
-import hasName from './hasName'
+import userName from './userName'
 import isPregnant from './isPregnant'
 import hasChildren from './hasChildren'
 import hasMidwife from './hasMidwife'
@@ -12,9 +12,10 @@ import children from './children'
 import pointsTotal from './pointsTotal'
 import deleteChildren from './deleteChildren'
 import landingCarousel from './landingCarousel'
+import userRewardIds from './userRewardIds'
 
 const reducers = combineReducers({
-  hasName,
+  userName,
   isPregnant,
   hasChildren,
   hasMidwife,
@@ -26,7 +27,7 @@ const reducers = combineReducers({
   deleteChildren,
   landingCarousel,
   pointsTotal,
-  deleteChildren
+  userRewardIds
 })
 
 export default reducers

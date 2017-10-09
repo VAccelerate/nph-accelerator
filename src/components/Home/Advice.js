@@ -37,8 +37,8 @@ class Advice extends Component{
 
     return (
       <div>
-        <Navbar color="faded" light>
-          <NavbarBrand onClick={this.toggleNavbar} className="advice-header">
+        <Navbar color='faded' light>
+          <NavbarBrand onClick={this.toggleNavbar} className='advice-header'>
             <span>{section.header}</span>
             <span><img className='dropdown-arrow' src={dropdownArrow} alt=''/></span>
           </NavbarBrand>

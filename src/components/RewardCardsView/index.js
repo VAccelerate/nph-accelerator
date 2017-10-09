@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import {
   TabContent,
   TabPane,
@@ -16,10 +15,9 @@ import {
 import classnames from 'classnames'
 
 import NavBar from '../NavBar'
-import MyRewards from './MyRewards'
-import Rewards from '../RewardCards/Rewards'
+import Rewards from '../Rewards'
 
-class RewardsView extends React.Component {
+export default class RewardsView extends React.Component {
 
   constructor(props) {
     super(props);
@@ -27,7 +25,7 @@ class RewardsView extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: 'catalogue'
-    }
+    };
   }
 
   toggle(tab) {
@@ -40,23 +38,6 @@ class RewardsView extends React.Component {
 
   render(){
 
-    const { userRewardIds } = this.props
-
-    const myRewardsDisplay = userRewardIds.length === 0
-      ? (
-        <div>
-          <p>
-            You don't currently have any rewards, check out <u>your catalogue</u> to see what's available.
-          </p>
-          <Button onClick={() => { this.toggle('catalogue') }}>
-            View My Catalogue
-          </Button>
-        </div>
-      )
-      : (
-        <MyRewards />
-      )
-
     return (
       <div>
         <div className='container'>
@@ -65,7 +46,7 @@ class RewardsView extends React.Component {
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === 'catalogue' })}
-              onClick={() => { this.toggle('catalogue') }}
+              onClick={() => { this.toggle('catalogue'); }}
             >
               Catalogue
             </NavLink>
@@ -73,7 +54,7 @@ class RewardsView extends React.Component {
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === 'myRewards' })}
-              onClick={() => { this.toggle('myRewards') }}
+              onClick={() => { this.toggle('myRewards'); }}
             >
               My Rewards
             </NavLink>
@@ -84,7 +65,7 @@ class RewardsView extends React.Component {
             <Rewards />
           </TabPane>
           <TabPane tabId='myRewards'>
-            {myRewardsDisplay}
+            rewards go here
           </TabPane>
         </TabContent>
         </div>
@@ -92,5 +73,3 @@ class RewardsView extends React.Component {
     )
   }
 }
-
-export default connect(state => state)(RewardsView)
