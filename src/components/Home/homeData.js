@@ -5,7 +5,7 @@ const data = {
       header: 'Pregnancy',
       subheaders: [
         {name: 'Food & Nutrition'},
-        {name: 'Excercise & Fitness'},
+        {name: 'Exercise & Fitness'},
         {name: 'Common Symptoms'},
         {name: 'Smoking, Drugs & Alcohol'},
         {name: 'Getting Ready for Baby'},
