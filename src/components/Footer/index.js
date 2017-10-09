@@ -6,7 +6,7 @@ import {
   Row,
   Col
 } from 'reactstrap'
-import FontAwesomeIcon from '../FontAwesomeIcon'
+import FontAwesomeIcon from '../FontAwesomeIcon/index'
 import logo from '../../img/logo.png'
 import './footer.css'
 
