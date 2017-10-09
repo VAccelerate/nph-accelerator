@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Input } from 'reactstrap'
+import {
+  Input,
+  Row,
+  Col,
+  Badge
+} from 'reactstrap'
 
 import rewards from './data.js'
 import rewardImg from '../../img/rewardImgPlaceholder.png'
@@ -51,6 +56,14 @@ class Rewards extends Component {
     return (
       <div>
         <div className='container'>
+          <Row className='pointsHeader'>
+            <Col className='pointsHeaderText'>
+              Points available
+            </Col>
+            <Col>
+              <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
+            </Col>
+          </Row>
           <Input
             className='searchInput'
             onChange={this.handleChange}
