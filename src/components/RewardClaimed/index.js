@@ -18,8 +18,8 @@ class RewardClaimed extends React.Component {
     const brace = '<'
     const url = this.props.match.url
     const identifiers = url.split('/rewards/')[1].split('/')
-    const id = Number(identifiers[0]) || null
-    const serial = identifiers[1] || null
+    const id = Number(identifiers[0])
+    const serial = identifiers[1]
 
     const reward = rewards.find(reward => {
       return reward.id === id
