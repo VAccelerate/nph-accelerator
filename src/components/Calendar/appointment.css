@@ -1,8 +1,37 @@
-.hr {
-  padding: 0;
-  margin: 0;
+.appointmentCard {
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #60cdff;
+  color: #ffffff;
+  border: none;
 }
 
-.appointment {
+.cardTitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+}
+
+.cardBody {
+  font-size: 14px;
+}
+
+.dateHeader {
+  padding-top: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 10px;
+  background-color: #f9f8f8;
   text-align: left;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+.datePill {
+  color: #8c96ab;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  float: right;
 }
