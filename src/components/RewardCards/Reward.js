@@ -15,6 +15,7 @@ import {
 
 import './rewardPreview.css'
 import data from './data'
+import NavBar from '../NavBar'
 
 class Reward extends Component {
 
@@ -50,6 +51,7 @@ class Reward extends Component {
     const serial = '00001'
     return (
       <div>
+        <NavBar />
         <Container>
           <Card>
             <CardBody>
