@@ -1,7 +1,7 @@
 .tipCard {
     text-align: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 7px;
+    margin-bottom: 20px;
     background-color: #fd7171;
     color: #ffffff;
     border: none;
@@ -18,6 +18,7 @@
 }
 
 .tipDateHeader {
+    margin-top: 14px;
     padding-top: 10px;
     padding-left: 9px;
     padding-right: 9px;

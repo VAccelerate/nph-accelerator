@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
-  Badge,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
+  Media,
   Container,
   Row,
   Col
 } from 'reactstrap'
 import FontAwesomeIcon from '../FontAwesomeIcon'
+import logo from '../../img/logo.png'
 import './footer.css'
 
 class Footer extends Component {
@@ -21,9 +18,11 @@ class Footer extends Component {
         <div className='madeBy'>
           <Container>
             <Row>
-              <Col xs="3"><FontAwesomeIcon name='calendar-o fa-4x' /></Col>
-              <Col xs="9">
-                by Ngati Porou Hauora
+              <Col xs='3'>
+                <img src={logo} className='footerLogo' alt='Generic placeholder image' />
+              </Col>
+              <Col xs='9'>
+                <div className='footerText'>by Ngati Porou Hauora</div>
               </Col>
             </Row>
           </Container>
@@ -36,7 +35,7 @@ class Footer extends Component {
                 <FontAwesomeIcon name='facebook-square fa-3x' />
               </Col>
               <Col>
-                <FontAwesomeIcon name='twitter-square fa-3x' />
+                <FontAwesomeIcon name='twitter fa-3x' />
               </Col>
               <Col>
                 <FontAwesomeIcon name='instagram fa-3x' />
