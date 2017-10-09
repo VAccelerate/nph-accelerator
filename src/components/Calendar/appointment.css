@@ -29,9 +29,10 @@
 }
 
 .datePill {
+  font-weight: normal;
   color: #8c96ab;
+  background-color: #ffffff;
   font-size: 14px;
-  font-weight: 500;
   letter-spacing: 0.5px;
   float: right;
 }

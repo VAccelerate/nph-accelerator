@@ -20,7 +20,7 @@ class Appointment extends Component {
       <div>
         <div className='tipDateHeader'>
           <Container>
-            Monday 5th December 2017 <Badge color='dark' className='datePill' pill>Week 12-13</Badge>
+            Monday 5th December 2017 <Badge className='datePill' pill>Week 12-13</Badge>
           </Container>
         </div>
         <Container>
