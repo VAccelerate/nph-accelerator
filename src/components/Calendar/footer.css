@@ -1,0 +1,32 @@
+.madeBy {
+    background-color: #f9f8f8;
+    text-align: left;
+    color: #9b9b9b;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    height: 83px;
+}
+
+.socialIcons {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    color: #9b9b9b;
+}
+
+.footerText {
+    margin-top: 23px;
+    height: 23px;
+    color: #777777;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.06;
+}
+
+img.footerLogo {
+    width: auto;
+    height: 72px;
+}

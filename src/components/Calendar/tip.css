@@ -1,0 +1,30 @@
+.tipCard {
+    text-align: left;
+    margin-top: 7px;
+    margin-bottom: 20px;
+    background-color: #fd7171;
+    color: #ffffff;
+    border: none;
+}
+
+.cardTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.06;
+}
+
+.cardBody {
+    font-size: 14px;
+}
+
+.tipDateHeader {
+    margin-top: 14px;
+    padding-top: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 10px;
+    background-color: #f9f8f8;
+    text-align: left;
+    font-size: 14px;
+    color: #9b9b9b;
+}

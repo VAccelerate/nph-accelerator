@@ -6,6 +6,7 @@ import moment from 'moment'
 
 import calendarEvents from './calendarEvents'
 import './calendar.css'
+import CalendarDates from './CalendarDates'
 
 class DateView extends Component{
 
@@ -48,7 +49,13 @@ class DateView extends Component{
       edgeDays: edgeDays,
       eventDays: eventDays
     }
-    return <DayPicker modifiers={modifiers} />
+    
+    return (
+      <div>
+        <DayPicker month={new Date(2017, 10)} modifiers={modifiers} />
+        <CalendarDates />
+      </div>
+    )
   }
 }
 

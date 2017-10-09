@@ -1,0 +1,38 @@
+.appointmentCard {
+  text-align: left;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  background-color: #60cdff;
+  color: #ffffff;
+  border: none;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+}
+
+.cardBody {
+  font-size: 14px;
+}
+
+.dateHeader {
+  padding-top: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom: 10px;
+  background-color: #f9f8f8;
+  text-align: left;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+.datePill {
+  font-weight: normal;
+  color: #8c96ab;
+  background-color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  float: right;
+}
