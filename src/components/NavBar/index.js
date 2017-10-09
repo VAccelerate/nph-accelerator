@@ -16,7 +16,6 @@ class NavBar extends Component{
   }
 
   toggleNavbar() {
-    console.log('triggered')
     const toggle = !this.state.toggle
     this.setState({
       toggle: toggle
@@ -35,7 +34,8 @@ class NavBar extends Component{
           isOpen={this.props.navToggle}
           styles={ nav }
           disableOverlayClick={true}
-          customCrossIcon={false}>
+          customCrossIcon={false}
+          customBurgerIcon={false}>
           <a style={{position: 'absolute', top: 5, right: 30}} onClick={this.toggleNavbar}><FontAwesomeIcon name='close' /></a>
           <a id='home' className='menu-item' href='/home' onClick={this.toggleNavbar}>Home</a>
           <a id='babyAndToddler' className='menu-item' href='#' onClick={this.toggleNavbar}>Baby & Toddler</a>
@@ -48,7 +48,7 @@ class NavBar extends Component{
         </Menu>
         <Navbar color='faded' light>
           <NavbarToggler onClick={this.toggleNavbar} style={{border: 'none'}} />
-          <NavbarBrand href='/' className='nav-home'>Ngati Porou Hauora</NavbarBrand>
+          <NavbarBrand href='/home' className='nav-home'>Ngati Porou Hauora</NavbarBrand>
           <NavItem className='nav-user'><img src='https://openclipart.org/download/247320/abstract-user-flat-4.svg' className='nav-user-icon'/></NavItem>
         </Navbar>
       </div>
