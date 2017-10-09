@@ -12,8 +12,8 @@ const nav = {
     background: '#373a47',
     padding: '2.5em 1.5em 0',
     fontSize: '1em',
-    'margin-right': '20px',
-    'margin-left': '-30px'
+    marginRight: '20px',
+    marginLeft: '-30px'
   },
   bmMorphShape: {
     fill: '#373a47'
