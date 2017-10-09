@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import NavBar from '../NavBar'
 import DateView from './DateView'
+import Footer from './Footer'
 
 class Calendar extends Component {
   render () {
@@ -10,6 +11,7 @@ class Calendar extends Component {
       <div>
         <NavBar />
         <DateView />
+        <Footer />
       </div>
     )
   }
