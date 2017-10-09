@@ -1,0 +1,9 @@
+.DayPicker-Day--eventDays {
+  color: #7c86a2;
+  background-color: #e8f4ff;
+}
+
+.DayPicker-Day--edgeDays {
+  color: #ffffff;
+  background-color: #2cbffc;
+}
