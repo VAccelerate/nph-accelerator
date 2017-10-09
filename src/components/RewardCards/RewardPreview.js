@@ -20,10 +20,9 @@ class RewardPreview extends Component {
     return (
       <div>
         <Link to={`/rewards/${id}`}>
-          <Card className='rewardCard'>
-            <CardBody>
+            <CardBody className='rewardCard'>
               <Row>
-                <Col xs='3'>
+                <Col xs='3' className='rewardLogo'>
                   <CardImg alt='logo' src={this.props.rewardImg} />
                   <p>{points}pts</p>
                 </Col>
@@ -31,12 +30,11 @@ class RewardPreview extends Component {
                   <CardTitle className='rewardTitle'>{title}</CardTitle>
                   <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
                 </Col>
-                <Col xs="2">
-                  <FontAwesomeIcon name='angle-right fa-5x' />
+                <Col xs='2'>
+                  <FontAwesomeIcon name='angle-right fa-4x' />
                 </Col>
               </Row>
             </CardBody>
-          </Card>
         </Link>
       </div>
     )

@@ -8,6 +8,8 @@
   background-color: #35a5b5;
   border: solid 1px rgba(81, 86, 99, 0.24);
   color: #ffffff;
+  padding: 0.5rem;
+  padding-bottom: 0;
 }
 
 .rewardTitle {
@@ -20,12 +22,15 @@
 
 .rewardSubtitle {
   font-weight: normal;
+  line-height: normal;
   font-size: 12px;
   text-align: left;
   color: #ffffff;
 }
 
 .rewardLogo {
-  background-color: #ffffff;
-  border: solid 1px #35a5b5;
+  font-size: 13px;
+  text-align: center;
+  //color: #35a5b5;
+  //background-color: #ffffff;
 }
