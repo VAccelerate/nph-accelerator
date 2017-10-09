@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
+    "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
     "moment": "^2.18.1",
     "react": "^16.0.0",
