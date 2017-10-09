@@ -3,7 +3,7 @@ import {
   Card,
   Container,
   CardTitle,
-  CardBody,
+  CardBody
 } from 'reactstrap'
 
 class HowToGetRewards extends Component {

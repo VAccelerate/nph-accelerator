@@ -11,7 +11,6 @@ import {
 class UserInfo extends Component {
 
     checkUserName (event) {
-        console.log("hello")
         const name = this.userName.value
         this.props.dispatch({
             type: 'HAS_NAME',

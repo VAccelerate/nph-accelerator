@@ -4,37 +4,35 @@ const data = {
     earnPointsLinks: {
         pregnancy: {
           challenges: [
-            {title: 'Food & Nutrition', descText: 'Read up on Nutrition and Pregnancy >', url: ''},
-            {name: 'Exercise & Fitness', descText: 'Read up on Exercising while Pregnant >', url: ''},
-            {name: 'Common Symptoms', descText: 'Read up on Common symptoms of Pregnancy >', url: ''},
-            {name: 'Smoking, Drugs & Alcohol', descText: 'Read up on Smoking, drugs, alcohol and Pregnancy >', url: ''},
-            {name: 'Getting Ready for Baby', descText: 'Read up on getting ready for baby >', url: ''},
-            {name: 'Danger Signs', descText: 'Read up on Pregnancy danger signs >', url: ''},
-            {name: 'Labour & Birth', descText: 'Read up on Labour and Birth >', url: ''},
-            {name: 'Sex During Pregnancy', descText: 'Read up on Sex during Pregnancy >', url: ''}
+            {name: 'Food & Nutrition', descText: 'Take the test on Nutrition and Pregnancy >', url: 'http://google.com', isCompleted: true},
+            {name: 'Exercise & Fitness', descText: 'Take the test on Exercising while Pregnant >', url: '', isCompleted: true},
+            {name: 'Common Symptoms', descText: 'Take the test on Common symptoms of Pregnancy >', url: '', isCompleted: true},
+            {name: 'Smoking, Drugs & Alcohol', descText: 'Take the test on Smoking, drugs, alcohol and Pregnancy >', url: '', isCompleted: true},
+            {name: 'Getting Ready for Baby', descText: 'Take the test on getting ready for baby >', url: '', isCompleted: true},
+            {name: 'Danger Signs', descText: 'Take the test on Pregnancy danger signs >', url: '', isCompleted: true},
+            {name: 'Labour & Birth', descText: 'Take the test on Labour and Birth >', url: '', isCompleted: true},
+            {name: 'Sex During Pregnancy', descText: 'Take the test on Sex during Pregnancy >', url: '', isCompleted: true}
           ]
         },
         babyToddler: {
-          subheaders: [
-            {name: '0 - 3 months'},
-            {name: '3 - 6 months'},
-            {name: '6 - 12 months'},
-            {name: '1-3 years'},
-            {name: '3 - 5 years'},
+          challenges: [
+            {name: '0 - 3 months', descText: 'Take the test on Infant Healthcare (0-3 Months) >', url: '', isCompleted: false},
+            {name: '3 - 6 months', descText: 'Take the test on Infant Healthcare (3-6 Months) >', url: '', isCompleted: false},
+            {name: '6 - 12 months', descText: 'Take the test on Infant Healthcare (6-12 Months) >', url: '', isCompleted: false},
+            {name: '1-3 years', descText: 'Take the test on Toddler Healthcare (1-3 Years) >', url: '', isCompleted: false},
+            {name: '3 - 5 years', descText: 'Take the test on Child Healthcare (3-5 Years) >', url: '', isCompleted: false},
           ]
         },
         supportHelp: {
-          subheaders: [
-            {name: 'Feeling stressed?'},
-            {name: 'Not sleeping?'},
-            {name: 'Feeling unhappy?'},
-            {name: 'Feeling unsafe?'},
-            {name: 'Feeling unwell?'},
-            {name: 'Feeling alone?'},
+          challenges: [
+            {name: 'Feeling stressed?', descText: 'Take the test on Exercising while Pregnant >', url: '', isCompleted: false},
+            {name: 'Not sleeping?', descText: 'Take the test on Exercising while Pregnant >', url: '', isCompleted: false},
+            {name: 'Feeling unhappy?', descText: 'Take the test on Exercising while Pregnant >', url: '', isCompleted: false},
+            {name: 'Feeling unsafe?', descText: 'Take the test on Exercising while Pregnant >', url: '', isCompleted: false},
+            {name: 'Feeling unwell?', descText: 'Take the test on Exercising while Pregnant >', url: '', isCompleted: false},
+            {name: 'Feeling alone?', descText: 'Take the test on Exercising while Pregnant >', url: '', isCompleted: false},
           ]
         }
       }
-
-    }
 }
 export default data

@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import {
   Card,
   Container,
   CardTitle,
-  CardBody,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
+  CardBody
 } from 'reactstrap'
 import { Link } from 'react-router'
+
 
 
 class EarnMorePoints extends Component {
@@ -25,20 +22,41 @@ class EarnMorePoints extends Component {
 
         function renderSubheader(subheader){
             return (
-                <NavLink key={subheader.name}>{subheader.name}</NavLink>
+                <div key={subheader.name}>
+                <a key={subheader.name} href={subheader.url}>{subheader.descText}</a><br/>
+                </div>
             )
         }
+        function shuffleArray(object){
+
+          let newObject = object.challenges.filter(function(category){
+            return category.isCompleted === false;
+          });
+          let i = newObject.length - 1;
+          for(; i > -1; i--) {
+            const j = Math.floor(Math.random()*(i+1));
+            const temp = newObject[i];
+            newObject[i] = newObject[j];
+            newObject[j] = temp;
+          }
+
+          if(newObject.length > 4){
+            newObject = newObject.slice(0,4)
+          }else if(newObject.length == 0){
+            return [{name:"nothing", descText:"You've completed everything for now!", url:null, isCompleted:false}];
+          }
+          return newObject;
+        }
+
 
         return(
             <Container>
                 <Card>
                     <CardTitle>Earn more points</CardTitle>
                     <CardBody>
-                        <li>Peas</li>
-                        <li>Carrots</li>
-                        <li>Eggplants</li>
-                        <li>Tomacco</li>
+                        {shuffleArray(section).map(renderSubheader)}
                     </CardBody>
+
                 </Card>
             </Container>
         )
