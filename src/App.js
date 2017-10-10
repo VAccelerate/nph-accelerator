@@ -13,6 +13,8 @@ import RewardsView from './components/RewardsView'
 import RewardClaimed from './components/RewardClaimed'
 import Calendar from './components/Calendar'
 import Challenges from './components/Challenges'
+import YourPregnancy from './components/SectionPage/YourPregnancy'
+// import ArticlePage from './components/ArticlePage'
 
 class App extends Component {
   render () {
@@ -27,6 +29,8 @@ class App extends Component {
         <Route exact path='/rewards/:id/:serial' component={RewardClaimed} />
         <Route exact path='/calendar' component={Calendar} />
         <Route exact path='/challenges/:id' component={Challenges} />
+        <Route exact path='/your-pregnancy' component={YourPregnancy} />
+        {/* <Route exact path='/your-pregnancy/:articleId' component={ArticlePage} /> */}
       </div>
     )
   }
