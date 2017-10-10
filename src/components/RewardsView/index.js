@@ -6,7 +6,10 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button
+  Button,
+  Row,
+  Col,
+  Container
 } from 'reactstrap'
 import classnames from 'classnames'
 
@@ -57,35 +60,37 @@ class RewardsView extends React.Component {
 
     return (
       <div>
-        <div className='container'>
+        <Container>
           <NavBar />
-          <Nav tabs>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: this.state.activeTab === 'catalogue' })}
-              onClick={() => { this.toggle('catalogue') }}
-            >
-              Shop
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: this.state.activeTab === 'myRewards' })}
-              onClick={() => { this.toggle('myRewards') }}
-            >
-              My Rewards
-            </NavLink>
-          </NavItem>
-        </Nav>
-        <TabContent activeTab={this.state.activeTab}>
-          <TabPane tabId='catalogue'>
-            <Rewards />
-          </TabPane>
-          <TabPane tabId='myRewards'>
-            {myRewardsDisplay}
-          </TabPane>
-        </TabContent>
-        </div>
+          <Nav tabs justified>
+            <NavItem>
+              <NavLink
+                className={classnames({ active: this.state.activeTab === 'catalogue' })}
+                onClick={() => { this.toggle('catalogue') }}
+              >
+                Shop
+              </NavLink>
+            </NavItem>
+            <div className='verticalDivider' />
+            <NavItem>
+              <NavLink
+                className={classnames({ active: this.state.activeTab === 'myRewards' })}
+                onClick={() => { this.toggle('myRewards') }}
+              >
+                My Rewards
+              </NavLink>
+            </NavItem>
+          </Nav>
+          <div className='tabHR' />
+          <TabContent activeTab={this.state.activeTab}>
+            <TabPane tabId='catalogue'>
+              <Rewards />
+            </TabPane>
+            <TabPane tabId='myRewards'>
+              {myRewardsDisplay}
+            </TabPane>
+          </TabContent>
+        </Container>
         <Footer />
       </div>
     )
