@@ -8,12 +8,14 @@ import {
   CardSubtitle,
   CardText,
   Button,
+  Badge,
   Container,
   Row,
   Col
 } from 'reactstrap'
+import { Link } from 'react-router-dom'
 
-import './rewardPreview.css'
+import './reward.css'
 import data from './data'
 import NavBar from '../NavBar'
 
@@ -32,16 +34,24 @@ class Reward extends Component {
 
   render () {
     const rewardId = this.props.match.params.id
-    const { brand, description, title, disclaimer, points } = data[rewardId]
+    const { id, title, disclaimer, points, icon, description } = data[rewardId]
     const { pointsTotal } = this.props
     const buttonDisplay = pointsTotal < points
       ? (
-        <Button disabled>
+        <Button
+          block
+          outline
+          disabled
+          className='rewardClaimButton'
+        >
         Claim for {points} points
         </Button>
       )
       : (
         <Button
+          block
+          outline
+          className='rewardClaimButton'
           onClick={this.handlePurchase.bind(this)}
         >
           Claim for {points} points
@@ -52,29 +62,35 @@ class Reward extends Component {
       <div>
         <NavBar />
         <Container>
-          <Card>
-            <CardBody>
-              <Row>
-                <Col xs='4' className='divider'>
-                  <h5>{brand}</h5>
-                  <CardImg alt='logo' src={this.props.rewardImg} />
-                </Col>
-                <Col xs='8'>
-                  <CardTitle className='reward'>{title}</CardTitle>
-                  <CardSubtitle className='reward'>{disclaimer}</CardSubtitle>
-                  <CardText className='points'>{points}pts</CardText>
-                </Col>
-              </Row>
-              <hr />
-              <Row>
-                <Col>
-                  <CardText>{description}</CardText>
-                  {buttonDisplay}
-                </Col>
-              </Row>
-            </CardBody>
-          </Card>
-          <p>Terms & conditions</p>
+          <Row className='pointsHeader'>
+            <Col className='pointsHeaderText'>
+              Points available
+            </Col>
+            <Col>
+              <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <CardBody  className='rewardCard'>
+            <Row>
+              <Col xs='3' className='rewardUnclaimedLogo'>
+                <CardImg className='rewardLogoImg' alt='logo' src={icon} />
+                <p>{points}pts</p>
+              </Col>
+              <Col xs='9'>
+                <CardTitle className='rewardTitle'>{title}</CardTitle>
+                <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
+              </Col>
+            </Row>
+            <Row>
+              <Col className='rewardUnclaimedDesc'>
+                <CardText>{description}</CardText>
+                {buttonDisplay}
+              </Col>
+            </Row>
+          </CardBody>
+          <Link to={`/rewards/`} className='link'>Terms & conditions</Link>
         </Container>
       </div>
     )

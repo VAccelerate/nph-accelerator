@@ -1,0 +1,74 @@
+.pointsHeader {
+    margin-top: 10px;
+    background-color: #fd7171;
+    height: 53px;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.pointsHeaderText {
+    margin-top: 1.6vh;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.06;
+    color: #ffffff;
+}
+
+.pointsPill {
+    background-color: #ffffff;
+    color: #fd7171;
+    float: right;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    border-radius: 1rem;
+    /* Vertically centre pill */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.link {
+    font-size: 10px;
+    text-align: left;
+    color: #fd7171;
+    border-bottom: solid 1px #fd7171;
+}
+
+/* Have to overwrite styles from RewardPreview class */
+.rewardUnclaimedLogo {
+    font-size: 13px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0;
+    color: #35a5b5;
+    margin-top: -8px;
+    margin-left: 7px;
+    margin-right: -7px;
+    padding-top: 10px;
+    background-color: #ffffff;
+}
+
+/* Contains the description and claim button */
+.rewardUnclaimedDesc {
+    background-color: #ffffff;
+    color: #373a3c;
+    font-size: 15px;
+    line-height: 1.2;
+    text-align: left;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    margin-top: 1px;
+    margin-left: 7px;
+    margin-right: 7px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.rewardClaimButton {
+    font-size: 16px;
+    line-height: 1.31;
+    text-align: center;
+    color: #ef005c;
+    border: solid 1px #ef005c;
+}
