@@ -45,10 +45,10 @@ class NavBar extends Component {
           <a id='home' className='menu-item' href='/home' onClick={this.toggleNavbar}>Home</a>
           <a id='rewards' className='menu-item' href='/rewards' onClick={this.toggleNavbar}>Rewards</a>
           <a id='calendar' className='menu-item' href='/calendar' onClick={this.toggleNavbar}>Calendar</a>
-          <a id='pregnancy' className='menu-item' href='#' onClick={this.toggleNavbar}>Pregnancy</a>
-          <a id='babyAndToddler' className='menu-item' href='#' onClick={this.toggleNavbar}>Baby & Toddler</a>
-          <a id='supportAndHelp' className='menu-item' href='#' onClick={this.toggleNavbar}>Support & Help</a>
-          <a id='contact' className='menu-item' href='#' onClick={this.toggleNavbar}>Contact</a>
+          <a id='pregnancy' className='menu-item' href='/' onClick={this.toggleNavbar}>Pregnancy</a>
+          <a id='babyAndToddler' className='menu-item' href='/' onClick={this.toggleNavbar}>Baby & Toddler</a>
+          <a id='supportAndHelp' className='menu-item' href='/' onClick={this.toggleNavbar}>Support & Help</a>
+          <a id='contact' className='menu-item' href='/' onClick={this.toggleNavbar}>Contact</a>
         </Menu>
         <Navbar color='faded' light>
           <NavItem onClick={this.toggleNavbar}>
@@ -56,7 +56,7 @@ class NavBar extends Component {
           </NavItem>
           <NavItem>
             <Link to='/home' className='nav-link-to'>
-              <img src={navName} className='nav-name' />
+              <img src={navName} alt='' className='nav-name' />
             </Link>
           </NavItem>
           <NavItem className='nav-icons'>
@@ -66,7 +66,7 @@ class NavBar extends Component {
             <Link to='/calendar' className='nav-link-to'>
               <FontAwesomeIcon className='nav-icon' name='calendar' />
             </Link>
-            <Link to='/#' className='nav-link-to'>
+            <Link to='/' className='nav-link-to'>
               <FontAwesomeIcon className='nav-icon' name='user-o' />
             </Link>
           </NavItem>

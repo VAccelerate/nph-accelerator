@@ -1,0 +1,91 @@
+.challenges {
+  height: 100vh;
+  background-color: #f9f8f8;
+}
+
+.gamepad-img {
+  margin-top: 4vh;
+  width: 44vw;
+  margin-left: 28vw;
+  margin-right: 28vw;
+}
+
+.X-img {
+  float: right;
+  margin-right: 15px;
+  margin-top: 17px;
+}
+
+.challenge-messages {
+  margin-top: 4vh;
+}
+
+.challenge-title {
+  width: 56vw;
+  margin-left: 22vw;
+  margin-right: 22vw;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #35a5b5;
+}
+
+.challenge-description {
+  margin-top: 2vh;
+  height: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.11;
+  text-align: center;
+  color: #000000;
+}
+
+.question-messages {
+  text-align: left;
+  margin-left: 7vw;
+}
+
+.question-title {
+  height: 22px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.12;
+  color: #4a4a4a;
+  margin-bottom: 0px;
+  margin-top: 31px;
+}
+
+.question-description {
+  height: 16px;
+  font-size: 14px;
+  color: #35a5b5;
+  margin-top: 1vh;
+}
+
+.answers {
+  margin-left: 8vw;
+  margin-top: 3.5vh;
+}
+
+.answer-option {
+  font-size: 14px;
+  text-align: left;
+  color: #000000;
+  margin-left: 0;
+  margin-bottom: 2.5vh;
+}
+
+.answer-text {
+  margin-left: 4vw;
+  position: absolute;
+  margin-right: 8vw;
+}
+
+.answer-submit-button {
+  width: 283px;
+  height: 40px;
+  margin-top: 10vh;
+  margin-left: -15vw;
+  margin-bottom: 10vh;
+}
