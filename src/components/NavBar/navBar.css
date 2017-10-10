@@ -36,10 +36,27 @@
 }
 
 img.nav-name {
-  margin-left: -20vw;
+  margin-left: -15vw;
 }
 
 .nav-link-to {
   text-decoration: none;
   color: #ffffff;
+}
+
+img.nav-img {
+  height: auto;
+  width: 25px;
+}
+
+.menu-item {
+  width: 134px;
+  height: 40px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+  text-align: center;
+  color: #35a5b5;
+  margin-left: 15vw;
 }

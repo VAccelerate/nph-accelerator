@@ -60,10 +60,13 @@ class NavBar extends Component{
           </Link>
           </NavItem>
           <NavItem className='nav-icons'>
+            <Link to='/points' className='nav-link-to'>
+              <FontAwesomeIcon className='nav-icon' name='trophy' />
+            </Link>
             <Link to='/calendar' className='nav-link-to'>
               <FontAwesomeIcon className='nav-icon' name='calendar' />
             </Link>
-            <Link to='/points' className='nav-link-to'>
+            <Link to='/#' className='nav-link-to'>
               <FontAwesomeIcon className='nav-icon' name='user-o' />
             </Link>
           </NavItem>

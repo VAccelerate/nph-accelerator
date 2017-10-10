@@ -9,7 +9,7 @@ const nav = {
     position: 'relative'
   },
   bmMenu: {
-    background: '#373a47',
+    background: '#f9f8f8',
     padding: '2.5em 1.5em 0',
     fontSize: '1em',
     marginRight: '20px',
