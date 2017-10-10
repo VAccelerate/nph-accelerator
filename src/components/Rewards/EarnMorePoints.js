@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
-  Card,
   Container,
-  CardTitle,
-  CardBody
+  Nav,
+  NavItem,
+  NavLink
 } from 'reactstrap'
+import './earnMorePoints.css'
 
 class EarnMorePoints extends Component {
   render () {
@@ -13,9 +14,9 @@ class EarnMorePoints extends Component {
 
     function renderSubheader (subheader) {
       return (
-        <div key={subheader.name}>
-          <a key={subheader.name} href={subheader.url}>{subheader.descText}</a><br />
-        </div>
+        <NavItem key={subheader.name}>
+          <NavLink key={subheader.name} href={subheader.url} className={subheader.name}>{subheader.descText}</NavLink>
+        </NavItem>
       )
     }
     function shuffleArray (object) {
@@ -40,13 +41,12 @@ class EarnMorePoints extends Component {
 
     return (
       <Container>
-        <Card>
-          <CardTitle>Earn more points</CardTitle>
-          <CardBody>
+        <h3 className='EMP-title'>Unlock Challenges</h3>
+        <div className='EMP-list'>
+          <Nav>
             {shuffleArray(section).map(renderSubheader)}
-          </CardBody>
-
-        </Card>
+          </Nav>
+        </div>
       </Container>
     )
   }
