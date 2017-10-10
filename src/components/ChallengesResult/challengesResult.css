@@ -1,0 +1,95 @@
+.challenges-result {
+  background-color: #f9f8f8;
+  height: 110vh;
+}
+
+.results-top-section {
+  height: 14vh;
+  background-color: #f9f8f8;
+}
+
+.X-img {
+  float: right;
+  margin-right: 15px;
+  margin-top: 17px;
+}
+
+.result-banner {
+  height: 21vh;
+  width: 100vw;
+  display: inline-flex;
+  padding-top: 5.5vh;
+  padding-left: 14vw;
+}
+
+.results-banner-left {
+  width: 65vw;
+}
+
+.banner-header {
+  height: 24.6px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 0.95;
+  color: #ffffff;
+  margin-bottom: 0.5vh;
+  text-align: left;
+}
+
+.banner-subheader {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.11;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 0.5vh;
+}
+
+.banner-score {
+  height: 21px;
+  font-size: 18px;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.results-banner-right {
+  width: 35vw;
+}
+
+img#banner-img-fail {
+  margin-left: -10vw;
+  margin-top: 1vh;
+}
+
+img#banner-img-pass {
+  margin-left: -10vw;
+  margin-top: 1vh;
+  height: 9.5vh;
+}
+
+#results-pass {
+  background-color: #fd7171;
+}
+
+#results-fail {
+  background-color: #35a5b5;
+}
+
+.results-bottom-section {
+  height: 65vh;
+  background-color: #f9f8f8;
+  padding-top: 5vh;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.result-description {
+  text-align: left;
+  margin-bottom: 3vh;
+}
+
+.results-button {
+  width: 85vw;
+  margin-bottom: 2vh;
+}
