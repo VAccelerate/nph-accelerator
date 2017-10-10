@@ -11,8 +11,8 @@ import { Link } from 'react-router-dom'
 
 import NavBar from '../NavBar'
 import './sectionPage.css'
-import yourPregnancyArticles from './yourPregnancyArticles'
-import yourPregnancyImg from '../../img/SectionPages/yourPregnancy.png'
+import babyAndToddlerArticles from './babyAndToddlerArticles'
+import babyAndToddlerImg from '../../img/SectionPages/babyAndToddler.png'
 import angleCalendar from '../../img/angle/angle.png'
 import angleLink from '../../img/darkAngle/angle@2x.png'
 import Footer from '../Footer'
@@ -22,7 +22,7 @@ class YourPregnancy extends Component {
     return (
       <div>
         <NavBar />
-        <img className='bannerImg' src={yourPregnancyImg} alt='' />
+        <img className='bannerImg' src={babyAndToddlerImg} alt='' />
         <Container>
           <h4 className='sectionPageTitle'>Your pregnancy</h4>
           <p className='sectionPageContent'>This is where you can learn all about your pregnancy. Have a browse
@@ -40,7 +40,7 @@ class YourPregnancy extends Component {
             </Row>
           </Card></Link>
           {
-            yourPregnancyArticles.map((article, key) => {
+            babyAndToddlerArticles.map((article, key) => {
               const { title, description } = article
               return (
                 <Link to={`/your-pregnancy/${article.id}`}><Card key={key} className='linkCard'>
@@ -65,12 +65,6 @@ class YourPregnancy extends Component {
             </li>
             <li className='li'>
               Sex during pregnancy
-            </li>
-            <li className='li'>
-              Danger signs
-            </li>
-            <li className='li'>
-              Labour & birth
             </li>
           </ul>
         </Container>

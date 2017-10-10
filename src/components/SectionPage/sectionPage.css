@@ -1,8 +1,4 @@
 
-body {
-  background-color: #ffffff;
-}
-
 .bannerImg {
   width: 100%;
 }
@@ -52,6 +48,7 @@ body {
   border-radius: 4px;
   background-color: #35a5b5;
   border: none;
+  margin-top: 20px;
 }
 
 .myCalendarText {
@@ -118,11 +115,12 @@ body {
   color: #35a5b5;
 }
 
-hr {
-  margin-top: 20px;
+.hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-li {
+.li {
   list-style: none;
   font-family: HelveticaNeue;
   font-size: 16px;
