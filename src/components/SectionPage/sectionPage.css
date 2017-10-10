@@ -7,7 +7,7 @@ body {
   width: 100%;
 }
 
-.yourPregnancyTitle {
+.sectionPageTitle {
   text-align: left;
   color: #35a5b5;
   width: 134px;
@@ -19,7 +19,7 @@ body {
   padding-top: 13px;
 }
 
-.yourPregnancyContent {
+.sectionPageContent {
   width: 300px;
   height: 84px;
   font-family: HelveticaNeue;
@@ -28,6 +28,10 @@ body {
   text-align: left;
   color: #373a3c;
   padding-top: 6px;
+}
+
+.sectionPageContent.supportAndHelp {
+  margin-bottom: 20px;
 }
 
 .myCalendarTitle {

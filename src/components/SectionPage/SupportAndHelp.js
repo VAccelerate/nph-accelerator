@@ -24,15 +24,15 @@ class SupportAndHelp extends Component {
         <NavBar />
         <img className='bannerImg' src={supportAndHelpImg} alt='' />
         <Container>
-          <h4 className='yourPregnancyTitle'>Support & Help</h4>
-          <p className='yourPregnancyContent'>It can be hard raising a family,
+          <h4 className='sectionPageTitle'>Support & Help</h4>
+          <p className='sectionPageContent supportAndHelp'>It can be hard raising a family,
             we are here to let you know. You are not alone. Below you can find
             valuable information to help you if your having trouble.</p>
           {
             supportAndHelpArticles.map((article, key) => {
               const { title, description } = article
               return (
-                <Link to={`/your-pregnancy/${article.id}`}><Card key={key} className='linkCard'>
+                <Link to={`/support-and-help/${article.id}`}><Card key={key} className='linkCard'>
                   <Row>
                     <Col xs='10'>
                       <CardTitle className='linkTitle'>{title}</CardTitle>
