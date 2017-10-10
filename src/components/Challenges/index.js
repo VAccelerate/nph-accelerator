@@ -18,9 +18,9 @@ class Challenges extends Component {
           <img className='gamepad-img' src={gamepad} />
         </div>
         <div className='challenge-messages'>
-          <h3 className='challenge-title' >
+          <p className='challenge-title' >
             Ready for your Alcohol pregnancy points challenge?
-          </h3>
+          </p>
           <p className='challenge-description' >
             Unlock points to win rewards.
           </p>
