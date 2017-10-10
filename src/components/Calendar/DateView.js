@@ -8,6 +8,7 @@ import calendarEvents from './calendarEvents'
 import CalendarDates from './CalendarDates'
 import CalendarNav from './CalendarNav'
 import CalendarWeekday from './CalendarWeekday'
+import './calendar.css'
 
 class DateView extends Component {
   constructor (props) {
@@ -84,9 +85,9 @@ class DateView extends Component {
     return (
       <div>
         <DayPicker
+          modifiers={modifiers}
           month={this.state.currentMonth}
           onMonthChange={this.handleChange}
-          modifiers={modifiers}
           navbarElement={<CalendarNav />}
           weekdayElement={<CalendarWeekday />}
           enableOutsideDays />
