@@ -9,6 +9,8 @@
 
 .EMP-list{
   list-style: none;
+  text-align: left;
+  display: block;
 }
 
 .nav-link{
