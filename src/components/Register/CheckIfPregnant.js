@@ -28,7 +28,7 @@ class CheckIfPregnant extends Component {
             <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', 'true')} color='secondary'>Yes</Button>{' '}
             <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', 'false')} color='secondary'>No</Button>
           </CardBody>
-          <SkipQuestion onSkip={() => this.checkIfPregnant('skipped', 'skipped')}/>
+          <SkipQuestion onSkip={() => this.checkIfPregnant('skipped', 'skipped')} />
         </Card>
       </Container>
     )

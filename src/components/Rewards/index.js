@@ -7,15 +7,16 @@ import EarnMorePoints from './EarnMorePoints'
 import data from './rewardsData'
 
 class Rewards extends Component {
-    render () {
-  return (
-    <div>
-      <NavBar />
-      <PointsOverview />
-      <EarnMorePoints section={data.earnPointsLinks.pregnancy}/>
-      <HowToGetRewards/>
-    </div>
-  )
-}}
+  render () {
+    return (
+      <div>
+        <NavBar />
+        <PointsOverview />
+        <EarnMorePoints section={data.earnPointsLinks.pregnancy} />
+        <HowToGetRewards />
+      </div>
+    )
+  }
+}
 
 export default connect(state => state)(Rewards)

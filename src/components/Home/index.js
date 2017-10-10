@@ -14,21 +14,21 @@ class Home extends Component {
       <div>
         <div className='container'>
           <NavBar />
-          <UserMessage /><hr/>
-          <Points /><hr/>
+          <UserMessage /><hr />
+          <Points /><hr />
           {
             this.props.isPregnant === 'false'
             ? null
-            : <div><Advice section={data.homepageDropdowns.pregnancy} /><hr/></div>
+            : <div><Advice section={data.homepageDropdowns.pregnancy} /><hr /></div>
           }
           {
             this.props.hasChildren === 'false'
             ? null
-            : <div><Advice section={data.homepageDropdowns.babyToddler} /><hr/></div>
+            : <div><Advice section={data.homepageDropdowns.babyToddler} /><hr /></div>
           }
-          <Advice section={data.homepageDropdowns.supportHelp} /><hr/><br/>
+          <Advice section={data.homepageDropdowns.supportHelp} /><hr /><br />
         </div>
-        <Contact/>
+        <Contact />
       </div>
     )
   }

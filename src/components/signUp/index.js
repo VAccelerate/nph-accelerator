@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import { Button } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-class SignUp extends Component{
-  render(){
+class SignUp extends Component {
+  render () {
     const { passwordShowing, dispatch } = this.props
 
     return (
@@ -16,7 +16,7 @@ class SignUp extends Component{
             name='email'
             placeholder='email address'
           />
-          <br/>
+          <br />
           <input
             type={passwordShowing}
             name='password'
@@ -30,13 +30,13 @@ class SignUp extends Component{
             >
             show
           </span>
-          <br/>
+          <br />
           <Link to='/register'><Button>
             Register
           </Button></Link>
         </div>
         <div className='socialSignUp'>
-          <Button>Sign in with Facebook</Button><br/>
+          <Button>Sign in with Facebook</Button><br />
           <Button>Sign in with Google</Button>
         </div>
         <div className='login'>
@@ -44,7 +44,6 @@ class SignUp extends Component{
         </div>
       </div>
     )
-
   }
 }
 

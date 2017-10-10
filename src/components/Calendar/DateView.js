@@ -12,10 +12,8 @@ import CalendarCaption from './CalendarCaption'
 
 import './calendar.css'
 
-class DateView extends Component{
-
-  render() {
-
+class DateView extends Component {
+  render () {
     const dateDue = this.props.dueDate.split('/')
 
     let dueDate = {
@@ -30,7 +28,7 @@ class DateView extends Component{
 
     calendarEvents.forEach(extractRelevantDates)
 
-    function extractRelevantDates(calendarEvent) {
+    function extractRelevantDates (calendarEvent) {
       edgeDays.push(findDateFromBirth(calendarEvent.startDay))
       edgeDays.push(findDateFromBirth(calendarEvent.endDay))
       for (var i = calendarEvent.startDay; i < calendarEvent.endDay; i++) {
@@ -39,10 +37,10 @@ class DateView extends Component{
     }
 
     function findDateFromBirth (daysPastBirth) {
-        return formatDate(moment(dueDate.formatted).add(daysPastBirth, 'days').format('YYYY-MM-D'))
+      return formatDate(moment(dueDate.formatted).add(daysPastBirth, 'days').format('YYYY-MM-D'))
     }
 
-    function formatDate(date){
+    function formatDate (date) {
       const splitDate = date.split('-')
       const res = new Date(Number(splitDate[0]), (Number(splitDate[1]) - 1), Number(splitDate[2]))
       return res
