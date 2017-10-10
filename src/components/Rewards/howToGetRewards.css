@@ -1,4 +1,4 @@
-.EMP-title{
+.htgr-title{
   font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
@@ -7,7 +7,13 @@
   color: #4a4a4a;
 }
 
-.Food{
+.htgr-list{
+  text-align: left;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.htgr-midwife{
   font-size: 16px;
   text-align: left;
   color: #fd7171;
@@ -15,7 +21,7 @@
   line-height: 1.19;
 }
 
-.Exercise{
+.htgr-doctor{
   font-size: 16px;
   text-align: left;
   color: #fd7171;
@@ -23,7 +29,7 @@
   line-height: 1.19;
 }
 
-.Symptoms{
+.htgr-scans{
   font-size: 16px;
   text-align: left;
   color: #fd7171;
@@ -31,7 +37,7 @@
   line-height: 1.19;
 }
 
-.SmokingAlc{
+.htgr-wellchild{
   font-size: 16px;
   text-align: left;
   color: #fd7171;
@@ -39,31 +45,7 @@
   line-height: 1.19;
 }
 
-.GetReady{
-  font-size: 16px;
-  text-align: left;
-  color: #fd7171;
-  text-decoration: underline;
-  line-height: 1.19;
-}
-
-.Danger{
-  font-size: 16px;
-  text-align: left;
-  color: #fd7171;
-  text-decoration: underline;
-  line-height: 1.19;
-}
-
-.Sex{
-  font-size: 16px;
-  text-align: left;
-  color: #fd7171;
-  text-decoration: underline;
-  line-height: 1.19;
-}
-
-.Labour{
+.htgr-challenges{
   font-size: 16px;
   text-align: left;
   color: #fd7171;

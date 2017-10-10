@@ -4,7 +4,10 @@ import {
   Card,
   Container,
   CardTitle,
-  CardBody
+  CardBody,
+  Nav,
+  NavItem,
+  NavLink
 } from 'reactstrap'
 import { Link } from 'react-router'
 import './earnMorePoints.css'
@@ -23,9 +26,9 @@ class EarnMorePoints extends Component {
 
         function renderSubheader(subheader){
             return (
-                <div key={subheader.name}>
-                <a key={subheader.name} href={subheader.url}>{subheader.descText}</a><br/>
-                </div>
+                <NavItem key={subheader.name}>
+                <NavLink key={subheader.name} href={subheader.url} className={subheader.name}>{subheader.descText}</NavLink>
+                </NavItem>
             )
         }
         function shuffleArray(object){
@@ -52,11 +55,11 @@ class EarnMorePoints extends Component {
 
         return(
             <Container>
-              <h3 className='EMP-title'>Earn more points</h3>
+              <h3 className='EMP-title'>Unlock Challenges</h3>
                 <div className="EMP-list">
-                  <p>
+                  <Nav>
                     {shuffleArray(section).map(renderSubheader)}
-                  </p>
+                  </Nav>
                 </div>
             </Container>
         )
