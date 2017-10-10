@@ -11,8 +11,9 @@ class Reward extends Component {
     const currentMonth = this.props.currentMonth
 
     let relevantDates = eventData.filter((event) => {
-      const compare = moment(currentMonth).add(1, 'M')._d
-      const startMinusOneDay = moment(currentMonth).subtract(1, 'd')._d
+      const startOfMonth = moment(currentMonth).date(1)._d
+      const compare = moment(startOfMonth).add(1, 'M')._d
+      const startMinusOneDay = moment(startOfMonth).subtract(1, 'd')._d
       const startTrue = moment(event.startDay).isBefore(moment(compare)) && moment(event.startDay).isAfter(startMinusOneDay)
       const endTrue = moment(event.endDay).isBefore(moment(compare)) && moment(event.endDay).isAfter(startMinusOneDay)
       return (startTrue || endTrue)
