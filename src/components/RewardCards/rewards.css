@@ -65,3 +65,8 @@
   width: auto;
   margin-bottom: 2vh;
 }
+
+/* Turn off image rounding */
+.card-img {
+  border-radius: 0;
+}

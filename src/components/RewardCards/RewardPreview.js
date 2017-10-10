@@ -18,7 +18,7 @@ class RewardPreview extends Component {
   render () {
 
     const { brand, description, icon, id, title, disclaimer, points } = this.props.reward
-    const cardStyle = this.props.pointsTotal > points ? 'rewardCard' : 'unavailableRewardCard'
+    const cardStyle = this.props.pointsTotal >= points ? 'rewardCard' : 'unavailableRewardCard'
     const availableReward = this.props.pointsTotal > points
 
     return (

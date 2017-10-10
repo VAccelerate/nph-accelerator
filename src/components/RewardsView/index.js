@@ -6,8 +6,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button,
-  Badge
+  Button
 } from 'reactstrap'
 import classnames from 'classnames'
 
@@ -15,6 +14,8 @@ import NavBar from '../NavBar'
 import MyRewards from './MyRewards'
 import Rewards from '../RewardCards'
 import Footer from '../Footer'
+
+import './index.css'
 
 class RewardsView extends React.Component {
 
@@ -64,7 +65,7 @@ class RewardsView extends React.Component {
               className={classnames({ active: this.state.activeTab === 'catalogue' })}
               onClick={() => { this.toggle('catalogue') }}
             >
-              Catalogue
+              Shop
             </NavLink>
           </NavItem>
           <NavItem>
