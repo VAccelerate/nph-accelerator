@@ -4,12 +4,15 @@ import {
   Container
 } from 'reactstrap'
 
+import AppBar from './AppBar'
 import UserInfo from './UserInfo'
 import CheckIfPregnant from './CheckIfPregnant'
 import CheckIfChildren from './CheckIfChildren'
 import CheckIfMidwife from './CheckIfMidwife'
 import PregnancyQuestions from './PregnancyQuestions'
 import ChildrenQuestions from './ChildrenQuestions'
+
+import './register.css'
 
 class Register extends Component {
   render () {
@@ -29,7 +32,8 @@ class Register extends Component {
       display = <ChildrenQuestions />
     }
     return (
-      <Container>
+      <Container className='register'>
+        <AppBar />
         {display}
       </Container>
     )

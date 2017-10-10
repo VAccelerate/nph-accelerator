@@ -1,0 +1,41 @@
+.register {
+  height: 100vh;
+  background-color: #f9f8f8;
+}
+
+.app-bar {
+  width: 110vw;
+  height: 44px;
+  background-color: #35a5b5;
+  list-style: none;
+  margin-left: -5vw;
+  margin-right: -10vw;
+}
+
+img.app-name {
+  margin-left: 47vw;
+}
+
+.question-card {
+  margin-top: 6vh;
+  margin-left: -4vw;
+  width: 90vw;
+  border-width: 0;
+}
+
+.question-phrase {
+  height: 24px;
+  font-size: 20px;
+  color: #35a5b5;
+  margin-top: 3.5vh;
+  margin-bottom: 0;
+}
+
+.continue-button {
+  border: solid 1.8px;
+  border-color: #ef005c;
+  color: #ef005c;
+  width: 78vw;
+  background-color: #ffffff;
+  margin-top: -6vh;
+}
