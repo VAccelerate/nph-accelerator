@@ -16,7 +16,7 @@ import './tip.css'
 class Tip extends Component {
   render () {
     const tipInfo = this.props.tipInfo
-    let startDay = tipInfo.startDayInfo
+    let startDay = tipInfo.startDay
     startDay = moment(startDay).format('dddd Do MMMM YYYY')
     const { title } = tipInfo
     return (
