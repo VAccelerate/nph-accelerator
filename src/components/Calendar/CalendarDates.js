@@ -18,22 +18,18 @@ class Reward extends Component {
       return (startTrue || endTrue)
     })
 
-    console.log('relevnat', relevantDates)
     const tipData = relevantDates.filter((date) => {
-      console.log(date, 'date')
       return (date.type === 'tip')
     })
 
     const appointmentData = relevantDates.filter((date) => {
       return (date.type === 'appointment')
     })
-    console.log('appointmentData', appointmentData)
     return (
       <div>
         {
           appointmentData.map((appointment, key) => {
-            console.log('appt', appointment)
-            return <Appointment key={key} appointmentInfo={appointment}/>
+            return <Appointment key={key} appointmentInfo={appointment} />
           })
         }
         {

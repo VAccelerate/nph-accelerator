@@ -24,7 +24,7 @@ class Advice extends Component{
     function renderCarouselDiv (carouselDiv) {
       return (
         <div>
-          <img alt='carouselImg' src={carouselDiv.imgSrc} />
+          <img src={carouselDiv.imgSrc} alt='Fascinating yet inspiring' />
         </div>
       )
     }
@@ -40,7 +40,6 @@ class Advice extends Component{
         </div>
       </div>
     )
-
   }
 }
 

@@ -13,12 +13,10 @@ import RewardsView from './components/RewardsView'
 import RewardClaimed from './components/RewardClaimed'
 import Calendar from './components/Calendar'
 
-
-
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
+      <div className='App'>
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/home' component={Home} />

@@ -16,8 +16,6 @@ import FontAwesomeIcon from '../FontAwesomeIcon'
 import './appointment.css'
 
 class Appointment extends Component {
-
-
   render () {
     const appointmentInfo = this.props.appointmentInfo
     let startDay = appointmentInfo.startDay

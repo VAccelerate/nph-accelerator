@@ -18,15 +18,15 @@ import data from './data'
 import NavBar from '../NavBar'
 
 class Reward extends Component {
-
-  handlePurchase() {
+  handlePurchase () {
     const id = this.props.match.params.id
-    this.props.dispatch({type: 'CLAIM_REWARD', payload: {
-      id: Number(id),
-      serial: '00001',
-      //serial to be set to unique once data structure added
-      points: data[id].points
-    }})
+    this.props.dispatch({type: 'CLAIM_REWARD',
+      payload: {
+        id: Number(id),
+        serial: '00001',
+      // serial to be set to unique once data structure added
+        points: data[id].points
+      }})
     this.props.history.push(`/rewards/${id}/00001`)
   }
 

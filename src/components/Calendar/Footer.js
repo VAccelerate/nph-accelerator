@@ -10,7 +10,6 @@ import logo from '../../img/logo.png'
 import './footer.css'
 
 class Footer extends Component {
-
   render () {
     return (
       <div>
@@ -18,7 +17,7 @@ class Footer extends Component {
           <Container>
             <Row>
               <Col xs='3'>
-                <img src={logo} className='footerLogo' alt='logo' />
+                <img src={logo} className='footerLogo' alt='Generic placeholder ' />
               </Col>
               <Col xs='9'>
                 <div className='footerText'>by Ngati Porou Hauora</div>

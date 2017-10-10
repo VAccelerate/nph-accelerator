@@ -16,17 +16,17 @@ class Register extends Component {
     const { userName, isPregnant, dueDate, hasChildren, hasMidwife } = this.props
     let display = null
     if (userName === null) {
-      return display = <UserInfo />
+      display = <UserInfo />
     } else if (isPregnant === null) {
-      return display = <CheckIfPregnant />
+      display = <CheckIfPregnant />
     } else if (hasMidwife === null && isPregnant === 'true') {
-      return display = <CheckIfMidwife />
+      display = <CheckIfMidwife />
     } else if (isPregnant === 'true' && dueDate === null) {
-      return display = <PregnancyQuestions />
+      display = <PregnancyQuestions />
     } else if (hasChildren === null) {
-      return display = <CheckIfChildren />
+      display = <CheckIfChildren />
     } else if (hasChildren === 'true') {
-      return display = <ChildrenQuestions />
+      display = <ChildrenQuestions />
     }
     return (
       <Container>

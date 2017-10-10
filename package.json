@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
+    "dotenv": "^4.0.0",
     "font-awesome": "^4.7.0",
     "moment": "^2.18.1",
     "react": "^16.0.0",
@@ -25,7 +26,21 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "yarn standard",
+    "prepush": "yarn standard"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "ignore": [
+      "**/src/registerServiceWorker.js",
+      "**/src/helpers.js"
+    ],
+    "globals": [
+      "it"
+    ]
+  }
 }

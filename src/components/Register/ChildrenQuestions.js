@@ -96,11 +96,11 @@ class SkipQuestion extends Component {
         {
           this.props.hasChildren === 'true'
           ? <Card>
-              <CardTitle>
+            <CardTitle>
                 Enter your childs details
               </CardTitle>
-              <CardBody>
-                {
+            <CardBody>
+              {
                   this.props.children.map((child, key) => {
                     return (
                       <div key={key}>
@@ -113,36 +113,36 @@ class SkipQuestion extends Component {
                     )
                   })
                 }
-                <div>
-                  <FormGroup>
-                    <Input type='text' name='name' id='name' value={this.state.name} placeholder='Name' onChange={this.handleChange} />
-                  </FormGroup>
-                  <FormGroup>
-                    <Input type='select' name='gender' value={this.state.gender} id='genderSelect' onChange={this.handleChange} >
-                      <option value=''>Gender</option>
-                      <option value='male'>Male</option>
-                      <option value='female'>Female</option>
-                      <option value='neither'>Prefer not to answer</option>
-                    </Input>
-                  </FormGroup>
-                  <FormGroup>
-                    <Label for='dob'>Date of birth</Label>
-                    <DatePicker
-                        selected={this.state.birthDate}
-                        onChange={this.dob}
-                        dateFormat='DD/MM/YYYY'
+              <div>
+                <FormGroup>
+                  <Input type='text' name='name' id='name' value={this.state.name} placeholder='Name' onChange={this.handleChange} />
+                </FormGroup>
+                <FormGroup>
+                  <Input type='select' name='gender' value={this.state.gender} id='genderSelect' onChange={this.handleChange} >
+                    <option value=''>Gender</option>
+                    <option value='male'>Male</option>
+                    <option value='female'>Female</option>
+                    <option value='neither'>Prefer not to answer</option>
+                  </Input>
+                </FormGroup>
+                <FormGroup>
+                  <Label for='dob'>Date of birth</Label>
+                  <DatePicker
+                    selected={this.state.birthDate}
+                    onChange={this.dob}
+                    dateFormat='DD/MM/YYYY'
                     />
-                    {
+                  {
                       this.isDateValid()
                       ? null
                       : <p>Pick a date in the past</p>
                     }
-                  </FormGroup>
-                  <Button disabled={!this.isValid()} onClick={this.addChild}>Add Child</Button>
-                </div>
-              </CardBody>
-              <Link to={'/home'}><Button>Continue</Button></Link>
-            </Card>
+                </FormGroup>
+                <Button disabled={!this.isValid()} onClick={this.addChild}>Add Child</Button>
+              </div>
+            </CardBody>
+            <Link to={'/home'}><Button>Continue</Button></Link>
+          </Card>
           : null
         }
       </div>

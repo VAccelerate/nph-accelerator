@@ -1,0 +1,45 @@
+.nav-bar{
+  width: 110vw;
+  height: 44px;
+  background-color: #35a5b5;
+  margin-left: -10vw;
+  padding-left: 10vw;
+  list-style: none;
+}
+
+.nav-title {
+  width: 89px;
+  height: 29px;
+  font-size: 24px;
+  line-height: 0.79;
+  text-align: left;
+  color: #ffffff;
+}
+
+.nav-icons {
+  color: #ffffff;
+  list-style: none;
+  margin-right: -5px;
+  margin-top: 3px;
+}
+
+.nav-icon {
+  width: 40px;
+  font-size: 22px;
+}
+
+.hamburger-icon {
+  margin-left: 5vw;
+  color: #ffffff;
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+img.nav-name {
+  margin-left: -20vw;
+}
+
+.nav-link-to {
+  text-decoration: none;
+  color: #ffffff;
+}
