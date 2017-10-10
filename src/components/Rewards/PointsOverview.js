@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Card } from 'reactstrap'
-import { Link } from 'react-router'
+import { Card, Container, Col, Row } from 'reactstrap'
+import './pointsOverview.css'
 
-class Advice extends Component{
-
-  render(){
-    const { pointsTotal } =this.props
-    //Once data is available create dynamic generator for these fields
+class PointsOverview extends Component {
+  render () {
+    const { pointsTotal } = this.props
+    // Once data is available create dynamic generator for these fields
     const moneySaved = 300
     const pointsToReward = 200
     const challengesCompleted = 25
@@ -18,32 +17,42 @@ class Advice extends Component{
 
     return (
       <div>
-        <Card className='points-overview'>
-          <div className='points-earned'>
-            <h4 className='points-overview-header'>Points Earned</h4>
-            <p className='points-overview-total'>{pointsTotal}</p>
-            <div className='points-overview-rank'>
-              <img
-                src={rank.icon}
-                alt=''
-                className='points-overview-rank-img'
-              />
-              <p className='points-overview-rank-title'>{rank.title}</p>
-            </div>
-          </div>
-          <div className='points-stats'>
-            <h4 className='points-overview-header'>Money Saved</h4>
-            <p className='points-overview-subheader'>${moneySaved}</p>
-            <h4 className='points-overview-header'>Til Next Reward</h4>
-            <p className='points-overview-subheader'>{pointsToReward}pts</p>
-            <h4 className='points-overview-header'>Challenges Completed</h4>
-            <p className='points-overview-subheader'>{challengesCompleted}/40</p>
-          </div>
-        </Card>
+        <Container>
+          <Card className='points-overview'>
+            <Row className='points-overview-row'>
+              <Col className='points-earned-col' xs='6'>
+                <div className='points-earned'>
+                  <p className='points-overview-total'>{pointsTotal}</p>
+                  <h4 className='points-overview-header'>Points Earned</h4>
+                  <div className='points-overview-rank'>
+                    <img
+                      src={rank.icon}
+                      alt=''
+                      className='points-overview-rank-img'
+                      />
+                    <p className='points-overview-rank-title'>{rank.title}</p>
+                  </div>
+                </div>
+              </Col>
+              <Col className='points-stats-col' xs='6'>
+                <div className='points-saved'>
+                  <h4 className='points-saved-header'>Money Saved</h4>
+                  <p className='points-saved-subheader'>${moneySaved}</p>
+                </div>
+                <div className='points-tilnext'>
+                  <h4 className='points-tilnext-header'>Til Next Reward</h4>
+                  <p className='points-tilnext-subheader'>{pointsToReward}pts</p>
+                </div>
+              </Col>
+            </Row>
+            <Row className='points-challenges'>
+              <h4 className='points-challenges-header'>{challengesCompleted}/40 Challenges Complete</h4>
+            </Row>
+          </Card>
+        </Container>
       </div>
     )
-
   }
 }
 
-export default connect(state => state)(Advice)
+export default connect(state => state)(PointsOverview)

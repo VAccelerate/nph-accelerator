@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import moment from 'moment'
 import {
   Card,
   CardBody,
@@ -13,23 +14,26 @@ import FontAwesomeIcon from '../FontAwesomeIcon'
 import './tip.css'
 
 class Tip extends Component {
-
   render () {
+    const tipInfo = this.props.tipInfo
+    let startDay = tipInfo.startDayInfo
+    startDay = moment(startDay).format('dddd Do MMMM YYYY')
+    const { title } = tipInfo
     return (
       <div>
         <div className='tipDateHeader'>
           <Container>
-            Wednesday 28th December 2017
+            {startDay}
           </Container>
         </div>
         <Container>
           <Card className='tipCard'>
             <CardBody>
               <Row>
-                <Col xs="3"><FontAwesomeIcon name='lightbulb-o fa-5x' /></Col>
-                <Col xs="9">
+                <Col xs='3'><FontAwesomeIcon name='lightbulb-o fa-5x' /></Col>
+                <Col xs='9'>
                   <CardTitle className='cardTitle'>Tip</CardTitle>
-                  <CardText className='cardBody'>Make sure you go to the dentist every 3 months.</CardText>
+                  <CardText className='cardBody'>{title}</CardText>
                 </Col>
               </Row>
             </CardBody>

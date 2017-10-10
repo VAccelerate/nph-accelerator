@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import 'font-awesome/css/font-awesome.css'
-import { Route, BrowserRouter } from 'react-router'
+import { Route } from 'react-router'
 
 import LandingPage from './components/LandingPage/LandingPage.js'
 import Register from './components/Register/Register'
@@ -13,12 +13,10 @@ import RewardsView from './components/RewardsView'
 import RewardClaimed from './components/RewardClaimed'
 import Calendar from './components/Calendar'
 
-
-
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
+      <div className='App'>
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/home' component={Home} />

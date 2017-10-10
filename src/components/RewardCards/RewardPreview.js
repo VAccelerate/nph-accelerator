@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
-  Card,
   CardBody,
   CardTitle,
   CardImg,
@@ -17,7 +16,7 @@ import './rewardPreview.css'
 class RewardPreview extends Component {
   render () {
 
-    const { brand, description, icon, id, title, disclaimer, points } = this.props.reward
+    const { brand, id, title, disclaimer, points } = this.props.reward
     const cardStyle = this.props.pointsTotal >= points ? 'rewardCard' : 'unavailableRewardCard'
     const availableReward = this.props.pointsTotal > points
 

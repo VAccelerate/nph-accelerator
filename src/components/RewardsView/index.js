@@ -21,26 +21,24 @@ import Footer from '../Footer'
 import './index.css'
 
 class RewardsView extends React.Component {
+  constructor (props) {
+    super(props)
 
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this)
     this.state = {
       activeTab: 'catalogue'
     }
   }
 
-  toggle(tab) {
+  toggle (tab) {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab
-      });
+      })
     }
   }
 
-  render(){
-
+  render () {
     const { userRewardIds } = this.props
 
     const myRewardsDisplay = userRewardIds.length === 0
