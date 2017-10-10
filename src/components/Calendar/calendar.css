@@ -7,3 +7,8 @@
   color: #ffffff;
   background-color: #2cbffc;
 }
+
+.DayPicker-Day--tipDays {
+  color: #ffffff;
+  background-color: #fd7171;
+}

@@ -2,8 +2,10 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Carousel } from 'react-responsive-carousel'
 import data from './landingPageData'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
-class Advice extends Component {
+class Advice extends Component{
+
   handleChange () {
     this.props.dispatch({type: 'CHANGE_LANDING_DISPLAY', payload: this.refs.carousel.state.selectedItem})
   }

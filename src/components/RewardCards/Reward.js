@@ -47,6 +47,7 @@ class Reward extends Component {
           Claim for {points} points
         </Button>
       )
+
     return (
       <div>
         <NavBar />

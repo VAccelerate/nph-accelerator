@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Breadcrumb, BreadcrumbItem, Button } from 'reactstrap'
 import { Link } from 'react-router-dom'
+
 import rewards from '../RewardCards/data'
 import NavBar from '../NavBar'
 import RewardPreview from '../RewardCards/RewardPreview'
