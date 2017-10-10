@@ -7,11 +7,13 @@ import {
   Badge,
   Container
 } from 'reactstrap'
+import RewardPreview from './RewardPreview'
 
 import rewards from './data.js'
 import rewardImg from '../../img/rewardImgPlaceholder.png'
-import RewardPreview from './RewardPreview'
-
+import vodafoneLogo from '../../img/grayscale/vodafone/bitmap@3x.png'
+import foursquareLogo from '../../img/grayscale/foursquare/bitmap@3x.png'
+import gasLogo from '../../img/grayscale/gasolinealley/bitmap@3x.png'
 import './rewards.css'
 
 class Rewards extends Component {
@@ -102,6 +104,26 @@ class Rewards extends Component {
             <RewardPreview rewardImg={'../../img/' + reward.icon + '/bitmap.png'} reward={reward} key={key} />
           )
         })}
+        <Row>
+          <Col>
+            <div className='partnerText'>
+              Some of our partners
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <img src={foursquareLogo} className='partnerLogo' alt='4Square logo' />
+          </Col>
+          <Col>
+            <img src={vodafoneLogo} className='partnerLogo' alt='VF logo' />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <img src={gasLogo} className='partnerLogo' alt='g.a.s. logo' />
+          </Col>
+        </Row>
       </div>
     )
   }
