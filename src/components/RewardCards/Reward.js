@@ -18,6 +18,7 @@ import './reward.css'
 import data from './data'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
+import angle from '../../img/angle/angle-left.svg'
 
 class Reward extends Component {
   handlePurchase () {
@@ -61,6 +62,14 @@ class Reward extends Component {
     return (
       <div>
         <NavBar />
+        <Row className='backHeader'>
+          <Col xs='2' className='backHeaderCol'>
+            <img className='angleLeft' src={angle} alt='Angle link' />
+          </Col>
+          <Col xs='10' className='backHeaderCol'>
+            Back to Shop
+          </Col>
+        </Row>
         <Container>
           <Container>
             <Row className='pointsHeader'>
