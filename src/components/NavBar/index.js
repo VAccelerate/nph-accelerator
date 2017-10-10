@@ -7,6 +7,7 @@ import FontAwesomeIcon from '../FontAwesomeIcon'
 import nav from './styling.js'
 import './navBar.css'
 import navName from '../../img/navName.png'
+import hamburgerX from '../../img/hamburgerX.svg'
 
 class NavBar extends Component {
   constructor (props) {
@@ -38,14 +39,15 @@ class NavBar extends Component {
           disableOverlayClick
           customCrossIcon={false}
           customBurgerIcon={false}>
-          <a style={{position: 'absolute', top: 5, right: 30}} onClick={this.toggleNavbar}><FontAwesomeIcon name='close' /></a>
+          <a style={{position: 'absolute', top: 15, right: 35}} onClick={this.toggleNavbar}>
+            <img src={hamburgerX} />
+          </a>
           <a id='home' className='menu-item' href='/home' onClick={this.toggleNavbar}>Home</a>
-          <a id='babyAndToddler' className='menu-item' href='#' onClick={this.toggleNavbar}>Baby & Toddler</a>
-          <a id='pregnancy' className='menu-item' href='#' onClick={this.toggleNavbar}>Pregnancy</a>
           <a id='rewards' className='menu-item' href='/rewards' onClick={this.toggleNavbar}>Rewards</a>
           <a id='calendar' className='menu-item' href='/calendar' onClick={this.toggleNavbar}>Calendar</a>
+          <a id='pregnancy' className='menu-item' href='#' onClick={this.toggleNavbar}>Pregnancy</a>
+          <a id='babyAndToddler' className='menu-item' href='#' onClick={this.toggleNavbar}>Baby & Toddler</a>
           <a id='supportAndHelp' className='menu-item' href='#' onClick={this.toggleNavbar}>Support & Help</a>
-          <a id='myPoints' className='menu-item' href='/points' onClick={this.toggleNavbar}>My Rewards</a>
           <a id='contact' className='menu-item' href='#' onClick={this.toggleNavbar}>Contact</a>
         </Menu>
         <Navbar color='faded' light>
