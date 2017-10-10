@@ -32,7 +32,7 @@ class Reward extends Component {
 
   render () {
     const rewardId = this.props.match.params.id
-    const { brand, description, id, title, disclaimer, points } = data[rewardId]
+    const { brand, description, title, disclaimer, points } = data[rewardId]
     const { pointsTotal } = this.props
     const buttonDisplay = pointsTotal < points
       ? (
@@ -48,7 +48,6 @@ class Reward extends Component {
         </Button>
       )
 
-    const serial = '00001'
     return (
       <div>
         <NavBar />

@@ -28,7 +28,6 @@ class Rewards extends Component {
   }
 
   render () {
-    const rewardsString = JSON.stringify(rewards)
     let rewardsToDisplay = rewards.filter(reward => {
       const rewardString = (reward.description +
         ' ' + reward.brand +

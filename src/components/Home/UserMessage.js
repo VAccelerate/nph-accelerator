@@ -4,10 +4,8 @@ import {
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
+  CarouselIndicators
 } from 'reactstrap'
-import { Link } from 'react-router'
 
 const items = [
   {

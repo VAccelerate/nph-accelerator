@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Button } from 'reactstrap'
 
 import RewardPreview from '../RewardCards/RewardPreview'
 import rewards from '../RewardCards/data'

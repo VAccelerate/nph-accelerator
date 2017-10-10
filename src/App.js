@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import 'font-awesome/css/font-awesome.css'
-import { Route, BrowserRouter } from 'react-router'
+import { Route } from 'react-router'
 
 import LandingPage from './components/LandingPage/LandingPage.js'
 import Register from './components/Register/Register'

@@ -1,18 +1,15 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router'
 import { Carousel } from 'react-responsive-carousel'
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 import data from './landingPageData'
 
 class Advice extends Component{
 
-  handleChange(){
+  handleChange () {
     this.props.dispatch({type: 'CHANGE_LANDING_DISPLAY', payload: this.refs.carousel.state.selectedItem})
   }
 
-  render(){
-
+  render () {
     const attributes = {
       showThumbs: false,
       showArrows: false,
@@ -27,7 +24,7 @@ class Advice extends Component{
     function renderCarouselDiv (carouselDiv) {
       return (
         <div>
-          <img src={carouselDiv.imgSrc} />
+          <img alt='carouselImg' src={carouselDiv.imgSrc} />
         </div>
       )
     }

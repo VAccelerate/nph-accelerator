@@ -2,13 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
   Card,
-  Container,
   CardTitle,
   CardBody,
   Button,
   FormGroup,
-  Label,
-  Input
+  Label
 } from 'reactstrap'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'

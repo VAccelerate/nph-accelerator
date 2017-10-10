@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
-  Media,
   Container,
   Row,
   Col
@@ -19,7 +18,7 @@ class Footer extends Component {
           <Container>
             <Row>
               <Col xs='3'>
-                <img src={logo} className='footerLogo' alt='Generic placeholder image' />
+                <img src={logo} className='footerLogo' alt='logo' />
               </Col>
               <Col xs='9'>
                 <div className='footerText'>by Ngati Porou Hauora</div>

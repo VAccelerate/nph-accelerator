@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
-import { Link } from 'react-router'
 
 class Advice extends Component{
 

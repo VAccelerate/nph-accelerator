@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Breadcrumb, BreadcrumbItem, Button } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import rewards from '../RewardCards/data'
-import coupons from './rewardClaimedData'
 
 import NavBar from '../NavBar'
 import RewardPreview from '../RewardCards/RewardPreview'
@@ -19,7 +18,6 @@ class RewardClaimed extends React.Component {
     const url = this.props.match.url
     const identifiers = url.split('/rewards/')[1].split('/')
     const id = Number(identifiers[0])
-    const serial = identifiers[1]
 
     const reward = rewards.find(reward => {
       return reward.id === id

@@ -11,8 +11,7 @@ const initialState = {
   landingCarousel: 0,
   userRewardIds: [1,2,4,5],
   navToggle: false,
-  pointsTotal: 200,
-  userRewardIds: []
+  pointsTotal: 200
 }
 
 export default initialState

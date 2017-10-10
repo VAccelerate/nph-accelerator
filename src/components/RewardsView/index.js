@@ -6,12 +6,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Card,
-  Button,
-  CardTitle,
-  CardText,
-  Row,
-  Col
+  Button
 } from 'reactstrap'
 import classnames from 'classnames'
 
