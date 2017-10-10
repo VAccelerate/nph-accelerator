@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+
 import RewardPreview from '../RewardCards/RewardPreview'
 import rewards from '../RewardCards/data'
 import rewardImg from '../../img/rewardImgPlaceholder.png'

@@ -8,19 +8,31 @@ import calendarEvents from './calendarEvents'
 import CalendarDates from './CalendarDates'
 import CalendarNav from './CalendarNav'
 import CalendarWeekday from './CalendarWeekday'
-import CalendarCaption from './CalendarCaption'
-
 import './calendar.css'
 
 class DateView extends Component {
+  constructor (props) {
+    super(props)
+    this.handleChange = this.handleChange.bind(this)
+    this.state = {
+      currentMonth: new Date()
+    }
+  }
+
+  handleChange (event) {
+    this.setState({
+      currentMonth: event
+    })
+  }
+
   render () {
     const dateDue = this.props.dueDate.split('/')
-
     let dueDate = {
       year: Number(dateDue[2]),
       month: (Number(dateDue[1]) - 1),
       day: Number(dateDue[0])
     }
+
     dueDate.formatted = new Date(dueDate.year, dueDate.month, dueDate.day)
 
     let edgeDays = []
@@ -51,18 +63,35 @@ class DateView extends Component {
       eventDays: eventDays
     }
 
-    console.log(modifiers, 'look at this one');
+    let eventData = []
+
+    calendarEvents.forEach(monthlyEventInfo)
+
+    function monthlyEventInfo (calendarEvent) {
+      const startDay = findDateFromBirth(calendarEvent.startDay)
+      const endDay = findDateFromBirth(calendarEvent.endDay)
+      const eventInfo = {
+        title: calendarEvent.title,
+        description: calendarEvent.description,
+        pageLink: calendarEvent.pageLink,
+        type: calendarEvent.type,
+        startDay: startDay,
+        endDay: endDay,
+        weeksOfPreg: calendarEvent.weeksOfPreg
+      }
+      return eventData.push(eventInfo)
+    }
 
     return (
       <div>
         <DayPicker
-          month={new Date(2017, 10)}
           modifiers={modifiers}
+          month={this.state.currentMonth}
+          onMonthChange={this.handleChange}
           navbarElement={<CalendarNav />}
           weekdayElement={<CalendarWeekday />}
-          enableOutsideDays
-        />
-        <CalendarDates />
+          enableOutsideDays />
+        <CalendarDates eventData={eventData} currentMonth={this.state.currentMonth} />
       </div>
     )
   }
