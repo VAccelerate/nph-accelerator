@@ -1,13 +1,11 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Card } from 'reactstrap'
-import { Link } from 'react-router'
 
-class Advice extends Component{
-
-  render(){
-    const { pointsTotal } =this.props
-    //Once data is available create dynamic generator for these fields
+class Advice extends Component {
+  render () {
+    const { pointsTotal } = this.props
+    // Once data is available create dynamic generator for these fields
     const moneySaved = 300
     const pointsToReward = 200
     const challengesCompleted = 25
@@ -42,7 +40,6 @@ class Advice extends Component{
         </Card>
       </div>
     )
-
   }
 }
 

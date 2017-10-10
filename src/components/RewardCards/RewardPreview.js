@@ -7,7 +7,6 @@ import {
   CardImg,
   CardSubtitle,
   CardText,
-  Button,
   Container,
   Row,
   Col
@@ -18,7 +17,7 @@ import './rewardPreview.css'
 
 class RewardPreview extends Component {
   render () {
-    const { brand, description, id, title, disclaimer, points } = this.props.reward
+    const { brand, id, title, disclaimer, points } = this.props.reward
     return (
       <div>
         <Container>

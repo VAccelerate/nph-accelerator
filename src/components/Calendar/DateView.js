@@ -1,17 +1,19 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import DayPicker from 'react-day-picker'
-import 'react-day-picker/lib/style.css'
 import moment from 'moment'
+import 'react-day-picker/lib/style.css'
 
 import calendarEvents from './calendarEvents'
-import './calendar.css'
 import CalendarDates from './CalendarDates'
+import CalendarNav from './CalendarNav'
+import CalendarWeekday from './CalendarWeekday'
+import CalendarCaption from './CalendarCaption'
 
-class DateView extends Component{
+import './calendar.css'
 
-  render() {
-
+class DateView extends Component {
+  render () {
     const dateDue = this.props.dueDate.split('/')
 
     let dueDate = {
@@ -26,7 +28,7 @@ class DateView extends Component{
 
     calendarEvents.forEach(extractRelevantDates)
 
-    function extractRelevantDates(calendarEvent) {
+    function extractRelevantDates (calendarEvent) {
       edgeDays.push(findDateFromBirth(calendarEvent.startDay))
       edgeDays.push(findDateFromBirth(calendarEvent.endDay))
       for (var i = calendarEvent.startDay; i < calendarEvent.endDay; i++) {
@@ -35,24 +37,29 @@ class DateView extends Component{
     }
 
     function findDateFromBirth (daysPastBirth) {
-        return formatDate(moment(dueDate.formatted).add(daysPastBirth, 'days').format('YYYY-MM-D'))
+      return formatDate(moment(dueDate.formatted).add(daysPastBirth, 'days').format('YYYY-MM-D'))
     }
 
-    function formatDate(date){
+    function formatDate (date) {
       const splitDate = date.split('-')
       const res = new Date(Number(splitDate[0]), (Number(splitDate[1]) - 1), Number(splitDate[2]))
       return res
     }
 
-
     const modifiers = {
       edgeDays: edgeDays,
       eventDays: eventDays
     }
-    
+
     return (
       <div>
-        <DayPicker month={new Date(2017, 10)} modifiers={modifiers} />
+        <DayPicker
+          month={new Date(2017, 10)}
+          modifiers={modifiers}
+          navbarElement={<CalendarNav />}
+          weekdayElement={<CalendarWeekday />}
+          enableOutsideDays
+        />
         <CalendarDates />
       </div>
     )
