@@ -10,7 +10,6 @@ import {
   Col
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import FontAwesomeIcon from '../FontAwesomeIcon'
 import angle from '../../img/angle/angle.png'
 
 import './rewardPreview.css'
@@ -56,7 +55,7 @@ class RewardPreview extends Component {
                 <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
               </Col>
               <Col xs='2'>
-                <FontAwesomeIcon name='angle-right fa-4x' />
+                <img className='angleRight' src={angle} alt='Angle link' />
               </Col>
             </Row>
           </CardBody>
