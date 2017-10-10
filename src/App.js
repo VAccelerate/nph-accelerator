@@ -12,6 +12,7 @@ import Reward from './components/RewardCards/Reward'
 import RewardsView from './components/RewardsView'
 import RewardClaimed from './components/RewardClaimed'
 import Calendar from './components/Calendar'
+import Challenges from './components/Challenges'
 
 class App extends Component {
   render () {
@@ -25,6 +26,7 @@ class App extends Component {
         <Route exact path='/rewards/:id' component={Reward} />
         <Route exact path='/rewards/:id/:serial' component={RewardClaimed} />
         <Route exact path='/calendar' component={Calendar} />
+        <Route exact path='/challenges/:id' component={Challenges} />
       </div>
     )
   }
