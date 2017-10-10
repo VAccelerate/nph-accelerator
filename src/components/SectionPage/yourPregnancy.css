@@ -1,0 +1,130 @@
+
+body {
+  background-color: #ffffff;
+}
+
+.yourPregnancyImg {
+  width: 100%;
+}
+
+.yourPregnancyTitle {
+  text-align: left;
+  color: #35a5b5;
+  width: 134px;
+  height: 23px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+  padding-top: 13px;
+}
+
+.yourPregnancyContent {
+  width: 300px;
+  height: 84px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  line-height: 1.31;
+  text-align: left;
+  color: #373a3c;
+  padding-top: 6px;
+}
+
+.myCalendarTitle {
+  height: 23px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 14px;
+  padding-top: 17px;
+}
+
+.myCalendarCard {
+  width: 100%;
+  height: 90px;
+  border-radius: 4px;
+  background-color: #35a5b5;
+  border: none;
+}
+
+.myCalendarText {
+  height: 24px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #373a3c;
+  padding-left: 14px;
+  padding-top: 6px;
+}
+
+.angleCalendar {
+  padding-top: 15px;
+  padding-right: 12px;
+}
+
+.linkText {
+  height: 24px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #373a3c;
+  padding-left: 14px;
+  padding-top: 6px;
+}
+
+.linkTitle {
+  height: 23px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+  text-align: left;
+  color: #35a5b5;
+  padding-left: 14px;
+  padding-top: 17px;
+}
+
+.linkCard {
+  width: 100%;
+  height: 79px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #e5e5e5;
+  margin-top: 9px;
+}
+
+.angleLink {
+  margin-top: 25px;
+  margin-right: 15px;
+  height: 30px;
+}
+
+.readMore {
+  height: 23px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+  text-align: left;
+  color: #35a5b5;
+}
+
+hr {
+  margin-top: 20px;
+}
+
+li {
+  list-style: none;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  line-height: 2;
+  text-align: left;
+  color: #fd7171;
+  text-decoration: underline;
+  margin-left: -40px;
+}
