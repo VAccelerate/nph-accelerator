@@ -37,14 +37,20 @@ class DateView extends Component {
 
     let edgeDays = []
     let eventDays = []
+    let tipDays = []
 
     calendarEvents.forEach(extractRelevantDates)
 
     function extractRelevantDates (calendarEvent) {
-      edgeDays.push(findDateFromBirth(calendarEvent.startDay))
-      edgeDays.push(findDateFromBirth(calendarEvent.endDay))
-      for (var i = calendarEvent.startDay; i < calendarEvent.endDay; i++) {
-        eventDays.push(findDateFromBirth(i))
+      if (calendarEvent.type === 'appointment') {
+        edgeDays.push(findDateFromBirth(calendarEvent.startDay))
+        edgeDays.push(findDateFromBirth(calendarEvent.endDay))
+        for (var i = calendarEvent.startDay; i < calendarEvent.endDay; i++) {
+          eventDays.push(findDateFromBirth(i))
+        }
+      }
+      if (calendarEvent.type === 'tip') {
+        tipDays.push(findDateFromBirth(calendarEvent.startDay))
       }
     }
 
@@ -60,7 +66,8 @@ class DateView extends Component {
 
     const modifiers = {
       edgeDays: edgeDays,
-      eventDays: eventDays
+      eventDays: eventDays,
+      tipDays: tipDays
     }
 
     let eventData = []
