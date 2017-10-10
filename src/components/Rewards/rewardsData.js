@@ -3,14 +3,14 @@ const data = {
   earnPointsLinks: {
     pregnancy: {
       challenges: [
-          {name: 'Food', descText: 'Nutrition and Pregnancy >', url: 'http://google.com', isCompleted: false},
-          {name: 'Exercise', descText: 'Exercising while Pregnant >', url: '', isCompleted: false},
-          {name: 'Symptoms', descText: 'Common symptoms of Pregnancy >', url: '', isCompleted: false},
-          {name: 'SmokingAlc', descText: 'Smoking, drugs, alcohol and Pregnancy >', url: '', isCompleted: false},
-          {name: 'GetReady', descText: 'Getting Ready for baby >', url: '', isCompleted: false},
-          {name: 'Danger', descText: 'Pregnancy Danger Signs >', url: '', isCompleted: false},
-          {name: 'Labour', descText: 'Labour and Birth >', url: '', isCompleted: false},
-          {name: 'Sex', descText: 'Sex during Pregnancy >', url: '', isCompleted: false}
+          {name: 'Food', descText: 'Nutrition and Pregnancy', url: 'http://google.com', isCompleted: false},
+          {name: 'Exercise', descText: 'Exercising while Pregnant', url: '', isCompleted: false},
+          {name: 'Symptoms', descText: 'Common symptoms of Pregnancy', url: '', isCompleted: false},
+          {name: 'SmokingAlc', descText: 'Smoking, drugs, alcohol and Pregnancy', url: '', isCompleted: false},
+          {name: 'GetReady', descText: 'Getting Ready for baby', url: '', isCompleted: false},
+          {name: 'Danger', descText: 'Pregnancy Danger Signs', url: '', isCompleted: false},
+          {name: 'Labour', descText: 'Labour and Birth', url: '', isCompleted: false},
+          {name: 'Sex', descText: 'Sex during Pregnancy', url: '', isCompleted: false}
       ]
     },
     babyToddler: {

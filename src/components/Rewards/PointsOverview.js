@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Card, Container, Col, Row } from 'reactstrap'
+import { Card, Container, Col, Row, CardFooter } from 'reactstrap'
 import './pointsOverview.css'
 
 class PointsOverview extends Component {
@@ -45,9 +45,10 @@ class PointsOverview extends Component {
                 </div>
               </Col>
             </Row>
-            <Row className='points-challenges'>
-              <h4 className='points-challenges-header'>{challengesCompleted}/40 Challenges Complete</h4>
-            </Row>
+
+          </Card>
+          <Card className='points-challenges'>
+            <h4 className='points-challenges-header'>{challengesCompleted}/40 Challenges Complete</h4>
           </Card>
         </Container>
       </div>

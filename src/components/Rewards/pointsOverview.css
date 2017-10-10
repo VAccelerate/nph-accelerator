@@ -1,7 +1,8 @@
 .points-overview{
   max-height: none;
   width: auto;
-  border-radius: 10%;
+  border-radius: 10px 10px 0px 0px;
+  margin-top: 10px;
 }
 
 .lines{
@@ -87,6 +88,7 @@ width: auto
   align-self: center;
   height: 46px;
   background-color: #fd7171;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .points-challenges-header{

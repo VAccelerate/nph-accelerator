@@ -43,9 +43,7 @@ class EarnMorePoints extends Component {
       <Container>
         <h3 className='EMP-title'>Unlock Challenges</h3>
         <div className='EMP-list'>
-          <Nav>
-            {shuffleArray(section).map(renderSubheader)}
-          </Nav>
+          {shuffleArray(section).map(renderSubheader)}
         </div>
       </Container>
     )

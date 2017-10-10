@@ -10,45 +10,14 @@
 .htgr-list{
   text-align: left;
   display: block;
-  padding: 0.5rem 1rem;
 }
 
-.htgr-midwife{
+.nav-link{
   font-size: 16px;
   text-align: left;
   color: #fd7171;
   text-decoration: underline;
   line-height: 1.19;
-}
-
-.htgr-doctor{
-  font-size: 16px;
-  text-align: left;
-  color: #fd7171;
-  text-decoration: underline;
-  line-height: 1.19;
-}
-
-.htgr-scans{
-  font-size: 16px;
-  text-align: left;
-  color: #fd7171;
-  text-decoration: underline;
-  line-height: 1.19;
-}
-
-.htgr-wellchild{
-  font-size: 16px;
-  text-align: left;
-  color: #fd7171;
-  text-decoration: underline;
-  line-height: 1.19;
-}
-
-.htgr-challenges{
-  font-size: 16px;
-  text-align: left;
-  color: #fd7171;
-  text-decoration: underline;
-  line-height: 1.19;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
