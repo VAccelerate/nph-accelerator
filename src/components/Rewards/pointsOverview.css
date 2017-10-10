@@ -1,0 +1,99 @@
+.points-overview{
+  max-height: none;
+  width: auto;
+  border-radius: 10%;
+}
+
+.lines{
+  width: 90%;
+}
+
+
+.points-overview-row{
+  width: 100%;
+  align-self: center;
+}
+
+.points-earned{
+width: auto
+
+}
+
+.points-earned-col{
+}
+
+.points-overview-total{
+  color:#FD7171;
+  font-size: 64px;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+
+.points-overview-header{
+  text-align: center;
+  color: #a2abbf;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+.points-overview-rank-img{
+
+}
+
+.points-overview-rank-title{
+  text-align: center;
+  margin-left: 10px;
+}
+
+
+.points-stats-col{
+  text-align: center;
+  font-family: HelveticaNeue;
+  color: #6b7897;
+  height: auto;
+}
+
+.points-saved{
+  height: 50%;
+}
+
+.points-saved-header{
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.points-saved-subheader{
+  font-size: 28.5px;
+  color: #3ede59;
+}
+
+.points-tilnext{
+    height: 50%;
+}
+
+
+.points-tilnext-header{
+  font-size: 15px;
+}
+
+.points-tilnext-subheader{
+  font-size: 28.5px;
+}
+
+.points-challenges{
+  width: 100%;
+  align-self: center;
+  height: 46px;
+  background-color: #fd7171;
+}
+
+.points-challenges-header{
+  text-align: center;
+  margin: auto;
+  font-family: Lato;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
