@@ -1,12 +1,16 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import DayPicker from 'react-day-picker'
-import 'react-day-picker/lib/style.css'
 import moment from 'moment'
+import 'react-day-picker/lib/style.css'
 
 import calendarEvents from './calendarEvents'
-import './calendar.css'
 import CalendarDates from './CalendarDates'
+import CalendarNav from './CalendarNav'
+import CalendarWeekday from './CalendarWeekday'
+import CalendarCaption from './CalendarCaption'
+
+import './calendar.css'
 
 class DateView extends Component{
 
@@ -44,15 +48,20 @@ class DateView extends Component{
       return res
     }
 
-
     const modifiers = {
       edgeDays: edgeDays,
       eventDays: eventDays
     }
-    
+
     return (
       <div>
-        <DayPicker month={new Date(2017, 10)} modifiers={modifiers} />
+        <DayPicker
+          month={new Date(2017, 10)}
+          modifiers={modifiers}
+          navbarElement={<CalendarNav />}
+          weekdayElement={<CalendarWeekday />}
+          enableOutsideDays
+        />
         <CalendarDates />
       </div>
     )
