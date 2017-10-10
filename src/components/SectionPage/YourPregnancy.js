@@ -22,7 +22,7 @@ class YourPregnancy extends Component {
     return (
       <div>
         <NavBar />
-        <img className='yourPregnancyImg' src={yourPregnancyImg} alt='' />
+        <img className='bannerImg' src={yourPregnancyImg} alt='' />
         <Container>
           <h4 className='yourPregnancyTitle'>Your pregnancy</h4>
           <p className='yourPregnancyContent'>This is where you can learn all about your pregnancy. Have a browse

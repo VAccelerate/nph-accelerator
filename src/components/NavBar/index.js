@@ -45,7 +45,7 @@ class NavBar extends Component {
           <a id='home' className='menu-item' href='/home' onClick={this.toggleNavbar}>Home</a>
           <a id='rewards' className='menu-item' href='/rewards' onClick={this.toggleNavbar}>Rewards</a>
           <a id='calendar' className='menu-item' href='/calendar' onClick={this.toggleNavbar}>Calendar</a>
-          <a id='pregnancy' className='menu-item' href='/' onClick={this.toggleNavbar}>Pregnancy</a>
+          <a id='pregnancy' className='menu-item' href='/your-pregnancy' onClick={this.toggleNavbar}>Pregnancy</a>
           <a id='babyAndToddler' className='menu-item' href='/' onClick={this.toggleNavbar}>Baby & Toddler</a>
           <a id='supportAndHelp' className='menu-item' href='/' onClick={this.toggleNavbar}>Support & Help</a>
           <a id='contact' className='menu-item' href='/' onClick={this.toggleNavbar}>Contact</a>
