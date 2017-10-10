@@ -5,7 +5,8 @@ import SignUp from '../SignUp'
 import Carousel from './Carousel'
 import {
   Container,
-  Row
+  Row,
+  Col
 } from 'reactstrap'
 
 const LandingPage = () => {
@@ -13,10 +14,14 @@ const LandingPage = () => {
     <div className='bgColor'>
       <Container>
         <Row>
-          <Carousel />
+          <Col>
+            <Carousel />
+          </Col>
         </Row>
         <Row>
-          <SignUp />
+          <Col>
+            <SignUp />
+          </Col>
         </Row>
       </Container>
     </div>

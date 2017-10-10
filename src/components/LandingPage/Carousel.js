@@ -18,15 +18,15 @@ class Advice extends Component{
       showStatus: false,
       infiniteLoop: true,
       autoPlay: true,
-      dynamicHeight: true,
+      dynamicHeight: false,
       onChange: this.handleChange.bind(this),
       selectedItem: this.props.landingCarousel
     }
 
     function renderCarouselDiv (carouselDiv) {
       return (
-        <div>
-          <img src={carouselDiv.imgSrc} alt='Fascinating yet inspiring' />
+        <div className='landingCarousel'>
+          <img src={carouselDiv.imgSrc} alt='App feature screen-shot' />
         </div>
       )
     }

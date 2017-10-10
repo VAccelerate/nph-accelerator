@@ -1,0 +1,42 @@
+.signUpHeading {
+    font-size: 20px;
+    text-align: center;
+    color: #35a5b5;
+}
+
+.signUpForm {
+    margin-top: 2vh;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.facebookSignUp {
+    margin-top: 1vh;
+    border: 0;
+    background-color: #39579a;
+}
+
+.googleSignUp {
+    margin-top: 1vh;
+    border: 0;
+    background-color: #df4a32;
+}
+
+.showPasswordBtn {
+    font-size: 9px;
+    text-align: left;
+    color: #fd7171;
+}
+
+.alreadyHaveAccount {
+    margin-top: 1vh;
+    font-size: 12px;
+    text-align: center;
+    color: #666666;
+}
+
+.alreadyHaveAccountLink {
+    color: #fd7171;
+    border-bottom: 1px solid #fd7171;
+}

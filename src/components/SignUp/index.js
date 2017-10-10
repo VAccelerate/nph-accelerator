@@ -1,7 +1,16 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Button } from 'reactstrap'
+import {
+  Button,
+  Container,
+  CardText,
+  CardTitle,
+  CardBody,
+  Input
+} from 'reactstrap'
 import { Link } from 'react-router-dom'
+
+import './index.css'
 
 class SignUp extends Component {
   render () {
@@ -9,39 +18,50 @@ class SignUp extends Component {
 
     return (
       <div>
-        <h2>Sign up</h2>
-        <div className='emailSignUp'>
-          <input
-            type='text'
-            name='email'
-            placeholder='email address'
-          />
-          <br />
-          <input
-            type={passwordShowing}
-            name='password'
-            placeholder='password'
-          />
-          <span
-            onClick={() => dispatch({
-              type: 'TOGGLE_PASSWORD_DISPLAY',
-              payload: passwordShowing
-            })}
-            >
-            show
-          </span>
-          <br />
-          <Link to='/register'><Button>
-            Register
-          </Button></Link>
-        </div>
-        <div className='socialSignUp'>
-          <Button>Sign in with Facebook</Button><br />
-          <Button>Sign in with Google</Button>
-        </div>
-        <div className='login'>
-          <span>already have an account?</span><span> Log in</span>
-        </div>
+        <Container>
+          <CardBody className='signUpForm'>
+            <CardTitle className='signUpHeading'>Sign up</CardTitle>
+            <CardText className='emailSignUp'>
+              <Input
+                type='text'
+                name='email'
+                placeholder='Email address'
+              />
+              <Input
+                type={passwordShowing}
+                name='password'
+                placeholder='Password'
+              />
+              <div
+                  className='showPasswordBtn'
+                  onClick={() => dispatch({
+                    type: 'TOGGLE_PASSWORD_DISPLAY',
+                    payload: passwordShowing
+                  })}
+                >
+                Show
+              </div>
+              <div>Or</div>
+              <div>
+                <Link to='/register'>
+                  <Button block className='facebookSignUp'>
+                    Sign up with Facebook
+                  </Button>
+                </Link>
+              </div>
+              <div>
+                <Link to='/register'>
+                  <Button block className='googleSignUp'>
+                    Sign up with Google
+                  </Button>
+                </Link>
+              </div>
+            </CardText>
+          </CardBody>
+          <div className='alreadyHaveAccount'>
+            Already have an account? <Link className='alreadyHaveAccountLink' to='login'>Log in</Link>
+          </div>
+        </Container>
       </div>
     )
   }
