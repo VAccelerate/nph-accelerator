@@ -20,7 +20,6 @@ class RewardPreview extends Component {
     const { brand, description, icon, id, title, disclaimer, points } = this.props.reward
     const cardStyle = this.props.pointsTotal > points ? 'rewardCard' : 'unavailableRewardCard'
     const availableReward = this.props.pointsTotal > points
-    const rewardIcon = this.props.rewardImg
 
     return (
       availableReward ?
@@ -29,7 +28,7 @@ class RewardPreview extends Component {
               <CardBody className={cardStyle}>
                 <Row>
                   <Col xs='3' className='rewardLogo'>
-                    <CardImg className='rewardLogoImg' alt='logo' src={require('../../img/vodafone/bitmap@3x.png')} />
+                    <CardImg className='rewardLogoImg' alt='logo' src={icon} />
                     <p>{points}pts</p>
                   </Col>
                   <Col xs='7'>
@@ -48,7 +47,7 @@ class RewardPreview extends Component {
           <CardBody className={cardStyle}>
             <Row>
               <Col xs='3' className='rewardLogo'>
-                <CardImg className='rewardLogoImg' alt='logo' src={require('../../img/vodafone/bitmap@3x.png')} />
+                <CardImg className='rewardLogoImg' alt='logo' src={icon} />
                 <p>{points}pts</p>
               </Col>
               <Col xs='7'>

@@ -10,7 +10,6 @@ import {
 import RewardPreview from './RewardPreview'
 
 import rewards from './data.js'
-import rewardImg from '../../img/rewardImgPlaceholder.png'
 import vodafoneLogo from '../../img/grayscale/vodafone/bitmap@3x.png'
 import foursquareLogo from '../../img/grayscale/foursquare/bitmap@3x.png'
 import gasLogo from '../../img/grayscale/gasolinealley/bitmap@3x.png'
@@ -101,7 +100,7 @@ class Rewards extends Component {
         </div>
         {rewardsToDisplay.map((reward, key) => {
           return (
-            <RewardPreview rewardImg={'../../img/' + reward.icon + '/bitmap.png'} reward={reward} key={key} />
+            <RewardPreview reward={reward} key={key} />
           )
         })}
         <Row>
