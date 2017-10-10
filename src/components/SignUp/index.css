@@ -11,6 +11,10 @@
     background-color: #ffffff;
 }
 
+.emailSignUp Input {
+    border-bottom: solid 1px #999999;
+}
+
 .facebookSignUp {
     margin-top: 1vh;
     border: 0;
@@ -39,4 +43,16 @@
 .alreadyHaveAccountLink {
     color: #fd7171;
     border-bottom: 1px solid #fd7171;
+}
+
+.passwordInput {
+    margin-top: 1vh;
+    position: relative;
+    display: inline-block;
+}
+
+.showPasswordBtn {
+    position: absolute;
+    right: 1vw;
+    top: 13px;
 }

@@ -27,19 +27,21 @@ class SignUp extends Component {
                 name='email'
                 placeholder='Email address'
               />
-              <Input
-                type={passwordShowing}
-                name='password'
-                placeholder='Password'
-              />
-              <div
+              <div className='passwordInput'>
+                <Input
+                  type={passwordShowing}
+                  name='password'
+                  placeholder='Password'
+                />
+                <div
                   className='showPasswordBtn'
                   onClick={() => dispatch({
                     type: 'TOGGLE_PASSWORD_DISPLAY',
                     payload: passwordShowing
                   })}
                 >
-                Show
+                  Show
+                </div>
               </div>
               <div>Or</div>
               <div>
