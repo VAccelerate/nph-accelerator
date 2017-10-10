@@ -1,18 +1,24 @@
 import React from 'react'
 
 import './landingPage.css'
-import SignUp from '../signUp'
-import NavBar from '../NavBar'
+import SignUp from '../SignUp'
 import Carousel from './Carousel'
+import {
+  Container,
+  Row
+} from 'reactstrap'
 
 const LandingPage = () => {
   return (
-    <div>
-      <div className='container'>
-        <NavBar />
-        <Carousel />
-        <SignUp />
-      </div>
+    <div className='bgColor'>
+      <Container>
+        <Row>
+          <Carousel />
+        </Row>
+        <Row>
+          <SignUp />
+        </Row>
+      </Container>
     </div>
   )
 }

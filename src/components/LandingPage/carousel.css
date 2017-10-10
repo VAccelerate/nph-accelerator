@@ -1,0 +1,15 @@
+.carouselHeading {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: center;
+    color: #35a5b5;
+}
+
+.carouselSubheading {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.25;
+    text-align: center;
+    color: #000000;
+}

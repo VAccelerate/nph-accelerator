@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Carousel } from 'react-responsive-carousel'
 import data from './landingPageData'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import './carousel.css'
 
 class Advice extends Component{
 
@@ -36,8 +37,8 @@ class Advice extends Component{
           {data.benefits.map(renderCarouselDiv)}
         </Carousel>
         <div>
-          <h3>{data.benefits[this.props.landingCarousel].title}</h3>
-          <p>{data.benefits[this.props.landingCarousel].description}</p>
+          <div className='carouselHeading'>{data.benefits[this.props.landingCarousel].title}</div>
+          <div className='carouselSubheading'>{data.benefits[this.props.landingCarousel].description}</div>
         </div>
       </div>
     )
