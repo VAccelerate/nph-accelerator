@@ -24,10 +24,10 @@ class YourPregnancy extends Component {
         <NavBar />
         <img className='bannerImg' src={babyAndToddlerImg} alt='' />
         <Container>
-          <h4 className='sectionPageTitle'>Your pregnancy</h4>
-          <p className='sectionPageContent'>This is where you can learn all about your pregnancy. Have a browse
-            through the sections below and don’t forget to unlock challenges for
-            rewards.</p>
+          <h4 className='sectionPageTitle'>Baby & Toddler</h4>
+          <p className='sectionPageContent'>Everything you need to know about
+            your little one. Have a browse through the sections below and don’t
+            forget to unlock challenges for rewards.</p>
           <Link to='/calendar'><Card className='myCalendarCard'>
             <Row>
               <Col xs='10'>
