@@ -16,27 +16,51 @@ import './rewardPreview.css'
 
 class RewardPreview extends Component {
   render () {
-    const { brand, description, id, title, disclaimer, points } = this.props.reward
+
+    const { brand, description, icon, id, title, disclaimer, points } = this.props.reward
+    const cardStyle = this.props.pointsTotal > points ? 'rewardCard' : 'unavailableRewardCard'
+    const availableReward = this.props.pointsTotal > points
+    const rewardIcon = this.props.rewardImg
+
     return (
-      <div>
-        <Link to={`/rewards/${id}`}>
-            <CardBody className='rewardCard'>
-              <Row>
-                <Col xs='3' className='rewardLogo'>
-                  <CardImg alt='logo' src={this.props.rewardImg} />
-                  <p>{points}pts</p>
-                </Col>
-                <Col xs='7'>
-                  <CardTitle className='rewardTitle'>{title}</CardTitle>
-                  <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
-                </Col>
-                <Col xs='2'>
-                  <FontAwesomeIcon name='angle-right fa-4x' />
-                </Col>
-              </Row>
-            </CardBody>
-        </Link>
-      </div>
+      availableReward ?
+        <div>
+          <Link to={`/rewards/${id}`}>
+              <CardBody className={cardStyle}>
+                <Row>
+                  <Col xs='3' className='rewardLogo'>
+                    <CardImg className='rewardLogoImg' alt='logo' src={require('../../img/vodafone/bitmap@3x.png')} />
+                    <p>{points}pts</p>
+                  </Col>
+                  <Col xs='7'>
+                    <CardTitle className='rewardTitle'>{title}</CardTitle>
+                    <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
+                  </Col>
+                  <Col xs='2'>
+                    <FontAwesomeIcon name='angle-right fa-4x' />
+                  </Col>
+                </Row>
+              </CardBody>
+          </Link>
+        </div>
+        :
+        <div>
+          <CardBody className={cardStyle}>
+            <Row>
+              <Col xs='3' className='rewardLogo'>
+                <CardImg className='rewardLogoImg' alt='logo' src={require('../../img/vodafone/bitmap@3x.png')} />
+                <p>{points}pts</p>
+              </Col>
+              <Col xs='7'>
+                <CardTitle className='rewardTitle'>{title}</CardTitle>
+                <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
+              </Col>
+              <Col xs='2'>
+                <FontAwesomeIcon name='angle-right fa-4x' />
+              </Col>
+            </Row>
+          </CardBody>
+        </div>
     )
   }
 }

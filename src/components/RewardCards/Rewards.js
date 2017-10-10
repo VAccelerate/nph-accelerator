@@ -99,7 +99,7 @@ class Rewards extends Component {
         </div>
         {rewardsToDisplay.map((reward, key) => {
           return (
-            <RewardPreview rewardImg={rewardImg} reward={reward} key={key} />
+            <RewardPreview rewardImg={'../../img/' + reward.icon + '/bitmap.png'} reward={reward} key={key} />
           )
         })}
       </div>
