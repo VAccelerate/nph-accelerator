@@ -7,6 +7,7 @@ import {
   CardBody
 } from 'reactstrap'
 import { Link } from 'react-router'
+import './earnMorePoints.css'
 
 
 
@@ -51,13 +52,12 @@ class EarnMorePoints extends Component {
 
         return(
             <Container>
-                <Card>
-                    <CardTitle>Earn more points</CardTitle>
-                    <CardBody>
-                        {shuffleArray(section).map(renderSubheader)}
-                    </CardBody>
-
-                </Card>
+              <h3 className='EMP-title'>Earn more points</h3>
+                <div className="EMP-list">
+                  <p>
+                    {shuffleArray(section).map(renderSubheader)}
+                  </p>
+                </div>
             </Container>
         )
     }

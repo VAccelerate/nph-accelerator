@@ -54,17 +54,6 @@ img.dropdown-arrow {
   display: inline-flex;
 }
 
-img#trophy-img {
-  width: 12vw;
-  max-height: 6vh;
-}
-
-.points-overview {
-  display: inline-block;
-  width: 100vw;
-  max-height: 200px;
-}
-
 .points-earned {
   float: left;
   width: 60vw;
