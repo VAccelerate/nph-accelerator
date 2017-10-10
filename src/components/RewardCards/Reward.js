@@ -35,7 +35,7 @@ class Reward extends Component {
 
   render () {
     const rewardId = this.props.match.params.id
-    const { id, title, disclaimer, points, icon, description } = data[rewardId]
+    const { title, disclaimer, points, icon, description } = data[rewardId]
     const { pointsTotal } = this.props
     const buttonDisplay = pointsTotal < points
       ? (
