@@ -6,13 +6,19 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button
+  Button,
+  Row,
+  Col,
+  Container
 } from 'reactstrap'
 import classnames from 'classnames'
 
 import NavBar from '../NavBar'
 import MyRewards from './MyRewards'
-import Rewards from '../RewardCards/Rewards'
+import Rewards from '../RewardCards'
+import Footer from '../Footer'
+
+import './index.css'
 
 class RewardsView extends React.Component {
   constructor (props) {
@@ -52,26 +58,28 @@ class RewardsView extends React.Component {
 
     return (
       <div>
-        <div className='container'>
+        <Container>
           <NavBar />
-          <Nav tabs>
+          <Nav tabs justified>
             <NavItem>
               <NavLink
                 className={classnames({ active: this.state.activeTab === 'catalogue' })}
                 onClick={() => { this.toggle('catalogue') }}
-            >
-              Catalogue
-            </NavLink>
+              >
+                Shop
+              </NavLink>
             </NavItem>
+            <div className='verticalDivider' />
             <NavItem>
               <NavLink
                 className={classnames({ active: this.state.activeTab === 'myRewards' })}
                 onClick={() => { this.toggle('myRewards') }}
-            >
-              My Rewards
-            </NavLink>
+              >
+                My Rewards
+              </NavLink>
             </NavItem>
           </Nav>
+          <div className='tabHR' />
           <TabContent activeTab={this.state.activeTab}>
             <TabPane tabId='catalogue'>
               <Rewards />
@@ -80,7 +88,8 @@ class RewardsView extends React.Component {
               {myRewardsDisplay}
             </TabPane>
           </TabContent>
-        </div>
+        </Container>
+        <Footer />
       </div>
     )
   }

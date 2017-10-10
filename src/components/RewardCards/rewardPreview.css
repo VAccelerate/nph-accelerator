@@ -1,18 +1,79 @@
-.points {
-  float: right;
-  color: blue;
-  font-size: 1.5em;
-}
-
 .reward {
   text-align: left;
 }
 
 .rewardCard {
-  color: black;
   margin-top: 10px;
+  border-radius: 6px;
+  background-color: #35a5b5;
+  border: solid 1px rgba(81, 86, 99, 0.24);
+  color: #ffffff;
+  padding: 0.5rem;
+  padding-bottom: 0;
 }
 
-.divider {
-  border-right: 1px solid #CCC;
+.unavailableRewardCard {
+  margin-top: 10px;
+  border-radius: 6px;
+  background-color: #35a5b5;
+  border: solid 1px rgba(81, 86, 99, 0.24);
+  color: #ffffff;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  opacity: 0.5;
+}
+
+.rewardTitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.19;
+  text-align: left;
+  color: #ffffff;
+}
+
+.rewardSubtitle {
+  font-weight: normal;
+  line-height: normal;
+  font-size: 12px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.rewardLogo {
+  font-size: 13px;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #35a5b5;
+  margin-top: -8px;
+  margin-left: 7px;
+  margin-right: -7px;
+  padding-top: 10px;
+  background-color: #ffffff;
+}
+
+.rewardLogoImg {
+  height: 15vw;
+  width: auto;
+}
+
+.angleRight {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }

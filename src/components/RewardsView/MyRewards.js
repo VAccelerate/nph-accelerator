@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import RewardPreview from '../RewardCards/RewardPreview'
 import rewards from '../RewardCards/data'
-import rewardImg from '../../img/rewardImgPlaceholder.png'
 
 class MyRewards extends Component {
   render () {
@@ -21,7 +20,7 @@ class MyRewards extends Component {
         <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
         {userRewards.map((reward, key) => {
           return (
-            <RewardPreview rewardImg={rewardImg} reward={reward} key={key} />
+            <RewardPreview reward={reward} key={key} />
           )
         })}
       </div>

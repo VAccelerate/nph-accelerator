@@ -1,45 +1,64 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
-  Card,
   CardBody,
   CardTitle,
   CardImg,
   CardSubtitle,
-  CardText,
-  Container,
   Row,
   Col
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
+import angle from '../../img/angle/angle.png'
 
 import './rewardPreview.css'
 
 class RewardPreview extends Component {
   render () {
-    const { brand, id, title, disclaimer, points } = this.props.reward
+
+    const { brand, id, title, disclaimer, points, icon } = this.props.reward
+    const cardStyle = this.props.pointsTotal >= points ? 'rewardCard' : 'unavailableRewardCard'
+    const availableReward = this.props.pointsTotal > points
+
     return (
-      <div>
-        <Container>
+      availableReward ?
+        <div>
           <Link to={`/rewards/${id}`}>
-            <Card className='rewardCard'>
-              <CardBody>
-                <Row>
-                  <Col xs='4' className='divider'>
-                    <h5>{brand}</h5>
-                    <CardImg alt='logo' src={this.props.rewardImg} />
-                  </Col>
-                  <Col xs='8'>
-                    <CardTitle className='reward'>{title}</CardTitle>
-                    <CardSubtitle className='reward'>{disclaimer}</CardSubtitle>
-                    <CardText className='points'>{points}pts</CardText>
-                  </Col>
-                </Row>
-              </CardBody>
-            </Card>
+            <CardBody className={cardStyle}>
+              <Row>
+                <Col xs='3' className='rewardLogo'>
+                  <CardImg className='rewardLogoImg' alt='logo' src={icon} />
+                  <p>{points}pts</p>
+                </Col>
+                <Col xs='7'>
+                  <CardTitle className='rewardTitle'>{title}</CardTitle>
+                  <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
+                </Col>
+                <Col xs='2'>
+                  <img className='angleRight' src={angle} alt='Angle link' />
+                </Col>
+              </Row>
+            </CardBody>
           </Link>
-        </Container>
-      </div>
+        </div>
+        :
+        <div>
+          <CardBody className={cardStyle}>
+            <Row>
+              <Col xs='3' className='rewardLogo'>
+                <CardImg className='rewardLogoImg' alt='logo' src={icon} />
+                <p>{points}pts</p>
+              </Col>
+              <Col xs='7'>
+                <CardTitle className='rewardTitle'>{title}</CardTitle>
+                <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
+              </Col>
+              <Col xs='2'>
+                <img className='angleRight' src={angle} alt='Angle link' />
+              </Col>
+            </Row>
+          </CardBody>
+        </div>
     )
   }
 }

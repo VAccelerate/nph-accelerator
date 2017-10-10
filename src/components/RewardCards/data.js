@@ -1,113 +1,47 @@
+import vodafoneLogo from '../../img/vodafone/bitmap@3x.png'
+import gasLogo from '../../img/gasolinealley/bitmap@3x.png'
+import foursquareLogo from '../../img/foursquare/bitmap@3x.png'
+
 const rewards = [
   {
     id: 0,
-    brand: 'Vodafone',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
+    brand: 'Four Square',
+    category: 'Food',
+    icon: foursquareLogo,
+    title: '$20 off Four Square',
     points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
+    description: 'Placeholder description',
+    disclaimer: 'Not available for any R18 goods.'
   },
   {
     id: 1,
-    brand: 'Spark',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
+    brand: 'Gasoline Alley',
+    category: 'Fuel',
+    icon: gasLogo,
+    title: '$10 off fuel',
     points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
+    description: 'Placeholder description',
+    disclaimer: 'At any Gasoline Alley'
   },
   {
     id: 2,
     brand: 'Vodafone',
     category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
+    icon: vodafoneLogo,
+    title: '$25 worth of data',
     points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
+    description: 'Placeholder description',
+    disclaimer: 'Prepay or account data worth $25. Claim it today and use straight away!'
   },
   {
     id: 3,
-    brand: 'Vodafone',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
-  },
-  {
-    id: 4,
-    brand: 'Vodafone',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
-  },
-  {
-    id: 5,
-    brand: 'Vodafone',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
-  },
-  {
-    id: 6,
-    brand: 'Vodafone',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
-  },
-  {
-    id: 7,
-    brand: 'Vodafone',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
-  },
-  {
-    id: 8,
-    brand: 'Vodafone',
-    category: 'Mobile',
-    icon: 'smiley',
-    title: '$20 FREE CREDIT',
-    points: 100,
-    description: 'Something something awesome',
-    disclaimer: 'Only available to Vodafone customers'
-  },
-  {
-    id: 9,
-    brand: 'Paknsave',
-    category: 'Food',
-    icon: 'smiley',
-    title: '50% grocery discount',
-    points: 200,
-    description: 'Epic!',
-    disclaimer: 'If you have enough points, you can have it!'
-  },
-  {
-    id: 10,
-    brand: 'BP',
+    brand: 'Gasoline Alley',
     category: 'Fuel',
-    icon: 'smiley',
-    title: '$10 Free Fuel',
-    points: 50,
-    description: 'Something something awesome',
-    disclaimer: 'Available to anyone!'
+    icon: gasLogo,
+    title: '$30 off fuel',
+    points: 300,
+    description: 'Placeholder description',
+    disclaimer: 'At any Gasoline Alley'
   }
 ]
 
