@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom'
 
 import NavBar from '../NavBar'
-import './yourPregnancy.css'
+import './sectionPage.css'
 import supportAndHelpArticles from './supportAndHelpArticles'
 import supportAndHelpImg from '../../img/SectionPages/supportAndHelp.png'
 import heartImg from '../../img/SectionPages/heart.png'
