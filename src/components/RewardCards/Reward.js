@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
-  Card,
   CardBody,
   CardTitle,
   CardImg,
@@ -18,6 +17,7 @@ import { Link } from 'react-router-dom'
 import './reward.css'
 import data from './data'
 import NavBar from '../NavBar'
+import Footer from '../Footer'
 
 class Reward extends Component {
   handlePurchase () {
@@ -62,16 +62,16 @@ class Reward extends Component {
       <div>
         <NavBar />
         <Container>
-          <Row className='pointsHeader'>
-            <Col className='pointsHeaderText'>
-              Points available
-            </Col>
-            <Col>
-              <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
-            </Col>
-          </Row>
-        </Container>
-        <Container>
+          <Container>
+            <Row className='pointsHeader'>
+              <Col className='pointsHeaderText'>
+                Points available
+              </Col>
+              <Col>
+                <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
+              </Col>
+            </Row>
+          </Container>
           <CardBody  className='rewardCard'>
             <Row>
               <Col xs='3' className='rewardUnclaimedLogo'>
@@ -90,8 +90,9 @@ class Reward extends Component {
               </Col>
             </Row>
           </CardBody>
-          <Link to={`/rewards/`} className='link'>Terms & conditions</Link>
+          <Link to={`/terms`} className='link'>Terms & conditions</Link>
         </Container>
+        <Footer />
       </div>
     )
   }
