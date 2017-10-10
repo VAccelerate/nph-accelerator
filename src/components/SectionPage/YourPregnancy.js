@@ -43,7 +43,7 @@ class YourPregnancy extends Component {
             yourPregnancyArticles.map((article, key) => {
               const { title, description } = article
               return (
-                <Link to={`/your-pregnancy/${article.id}`}><Card key={key} className='linkCard'>
+                <Link key={key} to={`/your-pregnancy/${article.id}`}><Card key={key} className='linkCard'>
                   <Row>
                     <Col xs='10'>
                       <CardTitle className='linkTitle'>{title}</CardTitle>

@@ -32,7 +32,7 @@ class SupportAndHelp extends Component {
             supportAndHelpArticles.map((article, key) => {
               const { title, description } = article
               return (
-                <Link to={`/support-and-help/${article.id}`}><Card key={key} className='linkCard'>
+                <Link key={key} to={`/support-and-help/${article.id}`}><Card key={key} className='linkCard'>
                   <Row>
                     <Col xs='10'>
                       <CardTitle className='linkTitle'>{title}</CardTitle>
