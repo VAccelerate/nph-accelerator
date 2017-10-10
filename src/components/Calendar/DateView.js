@@ -51,6 +51,8 @@ class DateView extends Component {
       eventDays: eventDays
     }
 
+    console.log(modifiers, 'look at this one');
+
     return (
       <div>
         <DayPicker
