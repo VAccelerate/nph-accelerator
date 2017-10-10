@@ -21,7 +21,7 @@ const data = {
         {name: '3 - 6 months'},
         {name: '6 - 12 months'},
         {name: '1-3 years'},
-        {name: '3 - 5 years'},
+        {name: '3 - 5 years'}
       ]
     },
     supportHelp: {
@@ -32,12 +32,10 @@ const data = {
         {name: 'Feeling unhappy?'},
         {name: 'Feeling unsafe?'},
         {name: 'Feeling unwell?'},
-        {name: 'Feeling alone?'},
+        {name: 'Feeling alone?'}
       ]
     }
   }
 }
-
-
 
 export default data

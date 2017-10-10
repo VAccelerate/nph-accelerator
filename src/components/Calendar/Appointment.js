@@ -14,7 +14,6 @@ import FontAwesomeIcon from '../FontAwesomeIcon'
 import './appointment.css'
 
 class Appointment extends Component {
-
   render () {
     return (
       <div>
@@ -27,12 +26,12 @@ class Appointment extends Component {
           <Card className='appointmentCard'>
             <CardBody>
               <Row>
-                <Col xs="3"><FontAwesomeIcon name='calendar-o fa-4x' /></Col>
-                <Col xs="7">
+                <Col xs='3'><FontAwesomeIcon name='calendar-o fa-4x' /></Col>
+                <Col xs='7'>
                   <CardTitle className='cardTitle'>Appointment</CardTitle>
                   <CardText className='cardBody'>Dating scan & Nuchal scan are now due.</CardText>
                 </Col>
-                <Col xs="2"><FontAwesomeIcon name='angle-right fa-5x' /></Col>
+                <Col xs='2'><FontAwesomeIcon name='angle-right fa-5x' /></Col>
               </Row>
             </CardBody>
           </Card>

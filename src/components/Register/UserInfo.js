@@ -11,7 +11,7 @@ import {
 } from 'reactstrap'
 
 class UserInfo extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -27,7 +27,6 @@ class UserInfo extends Component {
       payload: this.state.name
     })
   }
-
 
   handleChange (event) {
     const { name, value } = event.target
@@ -46,18 +45,18 @@ class UserInfo extends Component {
         <Card>
           <CardTitle>Enter your name</CardTitle>
           <CardBody>
-          <Form>
-            <Input
-              type='text'
-              name='name'
-              placeholder='Name'
-              onChange={this.handleChange}
-              required
+            <Form>
+              <Input
+                type='text'
+                name='name'
+                placeholder='Name'
+                onChange={this.handleChange}
+                required
             />
-            <br/>
-            <br/>
-            <Button disabled={!this.isValid()} color='secondary' onClick={this.handleSubmit}>Continue</Button>
-          </Form>
+              <br />
+              <br />
+              <Button disabled={!this.isValid()} color='secondary' onClick={this.handleSubmit}>Continue</Button>
+            </Form>
           </CardBody>
         </Card>
       </Container>

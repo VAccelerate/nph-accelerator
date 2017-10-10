@@ -9,7 +9,7 @@ import RewardPreview from './RewardPreview'
 import './rewards.css'
 
 class Rewards extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
 
@@ -20,7 +20,7 @@ class Rewards extends Component {
     }
   }
 
-  handleChange(event) {
+  handleChange (event) {
     const { name, value } = event.target
     this.setState({
       [name]: value
@@ -28,7 +28,6 @@ class Rewards extends Component {
   }
 
   render () {
-    const rewardsString = JSON.stringify(rewards)
     let rewardsToDisplay = rewards.filter(reward => {
       const rewardString = (reward.description +
         ' ' + reward.brand +
@@ -37,7 +36,8 @@ class Rewards extends Component {
         ' ' + reward.points).toLowerCase()
       return (
         rewardString.indexOf(this.state.searchString.toLowerCase()) !== -1
-      )}
+      )
+    }
     )
     rewardsToDisplay = rewardsToDisplay.filter(reward => {
       const brand = reward.brand.toLowerCase()

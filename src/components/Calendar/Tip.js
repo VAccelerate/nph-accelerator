@@ -13,7 +13,6 @@ import FontAwesomeIcon from '../FontAwesomeIcon'
 import './tip.css'
 
 class Tip extends Component {
-
   render () {
     return (
       <div>
@@ -26,8 +25,8 @@ class Tip extends Component {
           <Card className='tipCard'>
             <CardBody>
               <Row>
-                <Col xs="3"><FontAwesomeIcon name='lightbulb-o fa-5x' /></Col>
-                <Col xs="9">
+                <Col xs='3'><FontAwesomeIcon name='lightbulb-o fa-5x' /></Col>
+                <Col xs='9'>
                   <CardTitle className='cardTitle'>Tip</CardTitle>
                   <CardText className='cardBody'>Make sure you go to the dentist every 3 months.</CardText>
                 </Col>

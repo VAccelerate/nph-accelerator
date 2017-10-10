@@ -2,13 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
   Card,
-  Container,
   CardTitle,
   CardBody,
   Button,
   FormGroup,
-  Label,
-  Input
+  Label
 } from 'reactstrap'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
@@ -93,9 +91,9 @@ class PregnancyQuestions extends Component {
                 ? <FormGroup>
                   <Label for='dueDate'>Due date</Label>
                   <DatePicker
-                      selected={this.state.dueDate}
-                      onChange={this.dueDate}
-                      dateFormat='DD/MM/YYYY'
+                    selected={this.state.dueDate}
+                    onChange={this.dueDate}
+                    dateFormat='DD/MM/YYYY'
                   />
                   {
                     this.isDateValid()
@@ -108,18 +106,18 @@ class PregnancyQuestions extends Component {
               {
                 this.props.knowDueDate === false
                 ? <FormGroup>
-                    <Label for='lmpDate'>Do you the first day of your last period?</Label>
-                    <DatePicker
-                        selected={this.state.lmpDate}
-                        onChange={this.lmpDate}
-                        dateFormat='DD/MM/YYYY'
+                  <Label for='lmpDate'>Do you the first day of your last period?</Label>
+                  <DatePicker
+                    selected={this.state.lmpDate}
+                    onChange={this.lmpDate}
+                    dateFormat='DD/MM/YYYY'
                     />
-                    {
+                  {
                       moment().isAfter(this.state.lmpDate)
                       ? null
                       : <p>Pick a date in the past</p>
                     }
-                  </FormGroup>
+                </FormGroup>
                 : null
               }
             </CardBody>

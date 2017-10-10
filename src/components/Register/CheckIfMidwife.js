@@ -28,7 +28,7 @@ class CheckIfMidwife extends Component {
             <Button name='hasMidwife' onClick={() => this.checkIfMidwife('hasMidwife', 'true')} color='secondary'>Yes</Button>{' '}
             <Button name='hasMidwife' onClick={() => this.checkIfMidwife('hasMidwife', 'false')} color='secondary'>No</Button>
           </CardBody>
-          <SkipQuestion onSkip={() => this.checkIfMidwife('skipped', 'skipped')}/>
+          <SkipQuestion onSkip={() => this.checkIfMidwife('skipped', 'skipped')} />
         </Card>
       </Container>
     )

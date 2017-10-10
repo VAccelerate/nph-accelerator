@@ -54,7 +54,7 @@ const calendarEvents = [
     endDay: -28,
     description: '',
     pageLink: ''
-  },
+  }
 ]
 
 export default calendarEvents

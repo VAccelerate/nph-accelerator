@@ -1,17 +1,15 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import { Navbar, NavItem } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { slide as Menu } from 'react-burger-menu'
 import FontAwesomeIcon from '../FontAwesomeIcon'
 import nav from './styling.js'
 import './navBar.css'
-import hamburgerIcon from '../../img/hamburgerIcon.svg'
 import navName from '../../img/navName.png'
 
-class NavBar extends Component{
-
-  constructor(props) {
+class NavBar extends Component {
+  constructor (props) {
     super(props)
     this.toggleNavbar = this.toggleNavbar.bind(this)
     this.state = {
@@ -19,7 +17,7 @@ class NavBar extends Component{
     }
   }
 
-  toggleNavbar() {
+  toggleNavbar () {
     const toggle = !this.state.toggle
     this.setState({
       toggle: toggle
@@ -30,14 +28,14 @@ class NavBar extends Component{
     })
   }
 
-  render() {
+  render () {
     return (
       <div className='nav-bar'>
         <Menu
           left
           isOpen={this.props.navToggle}
-          styles={ nav }
-          disableOverlayClick={true}
+          styles={nav}
+          disableOverlayClick
           customCrossIcon={false}
           customBurgerIcon={false}>
           <a style={{position: 'absolute', top: 5, right: 30}} onClick={this.toggleNavbar}><FontAwesomeIcon name='close' /></a>
@@ -52,12 +50,12 @@ class NavBar extends Component{
         </Menu>
         <Navbar color='faded' light>
           <NavItem onClick={this.toggleNavbar}>
-          <FontAwesomeIcon className='hamburger-icon' name='bars' />
+            <FontAwesomeIcon className='hamburger-icon' name='bars' />
           </NavItem>
           <NavItem>
-          <Link to='/home' className='nav-link-to'>
-            <img src={navName}  className='nav-name'/>
-          </Link>
+            <Link to='/home' className='nav-link-to'>
+              <img src={navName} className='nav-name' />
+            </Link>
           </NavItem>
           <NavItem className='nav-icons'>
             <Link to='/calendar' className='nav-link-to'>
