@@ -17,6 +17,8 @@ import YourPregnancy from './components/SectionPage/YourPregnancy'
 import SupportAndHelp from './components/SectionPage/SupportAndHelp'
 import BabyAndToddler from './components/SectionPage/BabyAndToddler'
 // import ArticlePage from './components/ArticlePage'
+import ChallengesResult from './components/ChallengesResult'
+
 
 class App extends Component {
   render () {
@@ -35,6 +37,7 @@ class App extends Component {
         <Route exact path='/support-and-help' component={SupportAndHelp} />
         <Route exact path='/baby-and-toddler' component={BabyAndToddler} />
         {/* <Route exact path='/your-pregnancy/:articleId' component={ArticlePage} /> */}
+        <Route exact path='/challenges/:id/result' component={ChallengesResult} />
       </div>
     )
   }
