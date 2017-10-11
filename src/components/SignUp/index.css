@@ -1,5 +1,6 @@
 .signUpHeading {
     font-size: 20px;
+    font-weight: normal;
     text-align: center;
     color: #35a5b5;
 }
@@ -12,6 +13,10 @@
 }
 
 .emailSignUp Input {
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    background: transparent;
     border-bottom: solid 1px #999999;
 }
 
@@ -25,12 +30,6 @@
     margin-top: 1vh;
     border: 0;
     background-color: #df4a32;
-}
-
-.showPasswordBtn {
-    font-size: 9px;
-    text-align: left;
-    color: #fd7171;
 }
 
 .alreadyHaveAccount {
@@ -49,10 +48,21 @@
     margin-top: 1vh;
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .showPasswordBtn {
+    font-size: 9px;
+    text-align: left;
+    color: #fd7171;
     position: absolute;
     right: 1vw;
     top: 13px;
+}
+
+.orText {
+    margin-top: 1vh;
+    font-size: 18px;
+    text-align: center;
+    color: #35a5b5;
 }

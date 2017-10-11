@@ -43,7 +43,7 @@ class SignUp extends Component {
                   Show
                 </div>
               </div>
-              <div>Or</div>
+              <div className='orText'>Or</div>
               <div>
                 <Link to='/register'>
                   <Button block className='facebookSignUp'>
