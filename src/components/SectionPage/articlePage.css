@@ -37,6 +37,8 @@
   background-color: #ffffff;
   border: solid 1px #ef005c;
   margin-top: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .nextText {
@@ -49,6 +51,8 @@
 .hr {
   margin-top: 25px;
   margin-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .readMore {
@@ -59,6 +63,8 @@
   line-height: 1.06;
   text-align: left;
   color: #35a5b5;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .li {
@@ -149,4 +155,9 @@
   margin-top: 20px;
   margin-left: -6px;
   margin-right: 20px;
+}
+
+.addMargin {
+  margin-left: 15px;
+  margin-right: 15px;
 }

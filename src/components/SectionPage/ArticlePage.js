@@ -65,7 +65,7 @@ class ArticlePage extends Component {
             readMore
             ? <div>
               <h4 className='readMore'>Read more</h4>
-              <ul>
+              <ul className='addMargin'>
                 {
                   readMore.map((item, key) => {
                     return (
