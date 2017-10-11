@@ -3,7 +3,7 @@ const data = {
   earnPointsLinks: {
     pregnancy: {
       challenges: [
-          {name: 'Food', descText: 'Nutrition and Pregnancy', url: 'http://google.com', isCompleted: false},
+          {name: 'Food', descText: 'Nutrition and Pregnancy', url: '', isCompleted: false},
           {name: 'Exercise', descText: 'Exercising while Pregnant', url: '', isCompleted: false},
           {name: 'Symptoms', descText: 'Common symptoms of Pregnancy', url: '', isCompleted: false},
           {name: 'SmokingAlc', descText: 'Smoking, drugs, alcohol and Pregnancy', url: '', isCompleted: false},
