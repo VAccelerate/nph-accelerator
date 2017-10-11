@@ -31,7 +31,7 @@ class CheckIfMidwife extends Component {
               onClick={() => this.checkIfMidwife('hasMidwife', 'true')}
               color=''
               outline
-            >Yes</Button>{' '}
+            >Yes</Button>
             <Button
               className='button-yes-no'
               name='hasMidwife'
