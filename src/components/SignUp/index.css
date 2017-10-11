@@ -21,12 +21,14 @@
 }
 
 .facebookSignUp {
+    text-align: left;
     margin-top: 1vh;
     border: 0;
     background-color: #39579a;
 }
 
 .googleSignUp {
+    text-align: left;
     margin-top: 1vh;
     border: 0;
     background-color: #df4a32;

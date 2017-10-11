@@ -17,5 +17,9 @@
 }
 
 .landingCarousel {
+    margin-top: 4vh;
+}
+
+.carouselSlide {
     background: #f9f8f8;
 }

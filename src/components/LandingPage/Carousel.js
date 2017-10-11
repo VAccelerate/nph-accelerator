@@ -25,15 +25,15 @@ class Advice extends Component{
 
     function renderCarouselDiv (carouselDiv) {
       return (
-        <div className='landingCarousel'>
-          <img src={carouselDiv.imgSrc} alt='App feature screen-shot' />
+        <div>
+          <img src={carouselDiv.imgSrc} alt='App feature screen-shot' className='carouselSlide' />
         </div>
       )
     }
 
     return (
       <div>
-        <Carousel {...attributes} ref='carousel'>
+        <Carousel {...attributes} ref='carousel' className='landingCarousel'>
           {data.benefits.map(renderCarouselDiv)}
         </Carousel>
         <div>

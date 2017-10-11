@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
   Button,
@@ -6,9 +6,12 @@ import {
   CardText,
   CardTitle,
   CardBody,
-  Input
+  Input,
+  Row,
+  Col
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
+import FontAwesomeIcon from '../FontAwesomeIcon'
 
 import './index.css'
 
@@ -47,14 +50,28 @@ class SignUp extends Component {
               <div>
                 <Link to='/register'>
                   <Button block className='facebookSignUp'>
-                    Sign up with Facebook
+                    <Row>
+                      <Col xs='2'>
+                        <FontAwesomeIcon name='facebook pull-left' />
+                      </Col>
+                      <Col xs='10'>
+                        Sign up with Facebook
+                      </Col>
+                    </Row>
                   </Button>
                 </Link>
               </div>
               <div>
                 <Link to='/register'>
                   <Button block className='googleSignUp'>
-                    Sign up with Google
+                    <Row>
+                      <Col xs='2'>
+                        <FontAwesomeIcon name='google-plus pull-left' />
+                      </Col>
+                      <Col xs='10'>
+                        Sign up with Google
+                      </Col>
+                    </Row>
                   </Button>
                 </Link>
               </div>
