@@ -45,27 +45,51 @@ class PepiOraHelp extends Component {
             pepiOraHelpArticles.map((article, key) => {
               const { title, description } = article
               return (
-                <div key={key}>
-                  {
-                    key !== 3
-                    ? null
-                    : <h4 className='sectionPageTitle pepiOraSectionPadding'>More Useful Information</h4>
-                  }
-                  <Link to={`/pepi-ora-help/${article.id}`}><Card key={key} className='linkCard'>
-                    <Row>
-                      <Col xs='10'>
-                        <CardTitle className='linkTitle'>{title}</CardTitle>
-                        <CardText className='linkText'>{description}</CardText>
-                      </Col>
-                      <Col xs='2'>
-                        <img className='angleLink' src={angleLink} alt='' />
-                      </Col>
-                    </Row>
-                  </Card></Link>
-                </div>
+                <Link to={`/pepi-ora-help`} key={key}><Card className='linkCard'>
+                  <Row>
+                    <Col xs='10'>
+                      <CardTitle className='linkTitle'>{title}</CardTitle>
+                      <CardText className='linkText'>{description}</CardText>
+                    </Col>
+                    <Col xs='2'>
+                      <img className='angleLink' src={angleLink} alt='' />
+                    </Col>
+                  </Row>
+                </Card></Link>
               )
             })
           }
+          <h4 className='sectionPageTitle pepiOraSectionPadding'>More Useful Information</h4>
+          <Link to='/pepi-ora-help'><Card className='linkCard'>
+            <Row>
+              <Col xs='10'>
+                <CardTitle className='linkTitle'>
+                  About Us
+                </CardTitle>
+                <CardText className='linkText'>
+                  Find out more about us
+                </CardText>
+              </Col>
+              <Col xs='2'>
+                <img className='angleLink' src={angleLink} alt='' />
+              </Col>
+            </Row>
+          </Card></Link>
+          <Link to='/pepi-ora-help'><Card className='linkCard'>
+            <Row>
+              <Col xs='10'>
+                <CardTitle className='linkTitle'>
+                  Profile
+                </CardTitle>
+                <CardText className='linkText'>
+                  Edit your profile and information
+                </CardText>
+              </Col>
+              <Col xs='2'>
+                <img className='angleLink' src={angleLink} alt='' />
+              </Col>
+            </Row>
+          </Card></Link>
           <h4 className='sectionPageTitle furtherAssistanceTitle'>Need further assistance?</h4>
           <p className='sectionPageContent'>Just send us an email
             with your question, and we will get back to you ASAP.</p>
