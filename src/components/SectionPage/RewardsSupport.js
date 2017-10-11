@@ -27,7 +27,7 @@ class RewardsSupport extends Component {
         <img className='bannerImg' src={rewardsSupportImg} alt='' />
         <Container>
           <h4 className='sectionPageTitle'>How do I get and use rewards?</h4>
-          <p className='sectionPageContent pepiOraDescription'>You can win
+          <p className='sectionPageContent rewardsSupportMargin'>You can win
             points by completing challenges within the app. Or you gain points
             by visiting your healthcare professional. Find out more below:</p>
           {
