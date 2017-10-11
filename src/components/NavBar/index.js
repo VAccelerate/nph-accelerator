@@ -42,13 +42,13 @@ class NavBar extends Component {
           <a style={{position: 'absolute', top: 15, right: 35}} onClick={this.toggleNavbar}>
             <img src={hamburgerX} />
           </a>
-          <a id='home' className='menu-item' href='/home' onClick={this.toggleNavbar}>Home</a>
-          <a id='rewards' className='menu-item' href='/rewards' onClick={this.toggleNavbar}>Rewards</a>
-          <a id='calendar' className='menu-item' href='/calendar' onClick={this.toggleNavbar}>Calendar</a>
-          <a id='pregnancy' className='menu-item' href='/' onClick={this.toggleNavbar}>Pregnancy</a>
-          <a id='babyAndToddler' className='menu-item' href='/' onClick={this.toggleNavbar}>Baby & Toddler</a>
-          <a id='supportAndHelp' className='menu-item' href='/' onClick={this.toggleNavbar}>Support & Help</a>
-          <a id='contact' className='menu-item' href='/' onClick={this.toggleNavbar}>Contact</a>
+          <Link to='/home'><p id='home' className='menu-item' onClick={this.toggleNavbar}>Home</p></Link>
+          <Link to='/rewards'><p id='rewards' className='menu-item' onClick={this.toggleNavbar}>Rewards</p></Link>
+          <Link to='/calendar'><p id='calendar' className='menu-item' onClick={this.toggleNavbar}>Calendar</p></Link>
+          <Link to='/your-pregnancy'><p id='pregnancy' className='menu-item' onClick={this.toggleNavbar}>Pregnancy</p></Link>
+          <Link to='/'><p id='babyAndToddler' className='menu-item' onClick={this.toggleNavbar}>Baby & Toddler</p></Link>
+          <Link to='/support-and-help'><p id='supportAndHelp' className='menu-item' onClick={this.toggleNavbar}>Support & Help</p></Link>
+          <Link to='/'><p id='contact' className='menu-item' onClick={this.toggleNavbar}>Contact</p></Link>
         </Menu>
         <Navbar color='faded' light>
           <NavItem onClick={this.toggleNavbar}>
