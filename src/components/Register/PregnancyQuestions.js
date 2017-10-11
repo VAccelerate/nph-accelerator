@@ -12,8 +12,6 @@ import DatePicker from 'react-datepicker'
 import moment from 'moment'
 import 'react-datepicker/dist/react-datepicker.css'
 
-import SkipQuestion from './SkipQuestion'
-
 class PregnancyQuestions extends Component {
   constructor (props) {
     super(props)
@@ -39,12 +37,12 @@ class PregnancyQuestions extends Component {
     let dueDate = moment(state.lmpDate).add(40, 'w')
     dueDate = moment(dueDate).format('DD/MM/YYYY')
     let payload = 'skipped'
-    if (this.props.knowDueDate){
+    if (this.props.knowDueDate) {
       payload = due
-    }else if (this.props.knowLmp) {
+    } else if (this.props.knowLmp) {
       payload = dueDate
     }
-    console.log(payload);
+    console.log(payload)
     this.props.dispatch({
       type: 'DUE_DATE',
       payload: payload
@@ -86,7 +84,6 @@ class PregnancyQuestions extends Component {
   }
 
   render () {
-
     const { isPregnant, knowDueDate, knowLmp } = this.props
     const yesButtonIdPregnancy = knowDueDate === true
       ? 'button-selected'
@@ -101,34 +98,33 @@ class PregnancyQuestions extends Component {
       ? 'button-selected'
       : 'button-unselected'
 
-
     return (
       <div>
         {
           isPregnant === 'true'
           ? <Card className='question-card' id='pregnancy-questions-card'>
-              <CardTitle className='question-phrase'>
+            <CardTitle className='question-phrase'>
                 Do you know your due date?
               </CardTitle>
-              <CardBody className='question-yes-no' id='question-pregnancy'>
-                <Button
-                  className='button-yes-no'
-                  id={yesButtonIdPregnancy}
-                  name='knowDueDate'
-                  onClick={() => this.checkIfKnowDueDate('knowDueDate', true)}
-                  color=''
-                  outline
+            <CardBody className='question-yes-no' id='question-pregnancy'>
+              <Button
+                className='button-yes-no'
+                id={yesButtonIdPregnancy}
+                name='knowDueDate'
+                onClick={() => this.checkIfKnowDueDate('knowDueDate', true)}
+                color=''
+                outline
                 >Yes</Button>
-                <Button
-                  className='button-yes-no'
-                  id={noButtonIdPregnancy}
-                  name='knowDueDate'
-                  onClick={() => this.checkIfKnowDueDate('knowDueDate', false)}
-                  color=''
-                  outline
+              <Button
+                className='button-yes-no'
+                id={noButtonIdPregnancy}
+                name='knowDueDate'
+                onClick={() => this.checkIfKnowDueDate('knowDueDate', false)}
+                color=''
+                outline
                 >No</Button>
-              </CardBody>
-              <CardBody>
+            </CardBody>
+            <CardBody>
               {
                 knowDueDate
                 ? <FormGroup>

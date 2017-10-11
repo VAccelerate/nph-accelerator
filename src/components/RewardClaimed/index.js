@@ -23,7 +23,6 @@ import './index.css'
 
 class RewardClaimed extends React.Component {
   render () {
-
     const url = this.props.match.url
     const identifiers = url.split('/rewards/')[1].split('/')
     const id = Number(identifiers[0])

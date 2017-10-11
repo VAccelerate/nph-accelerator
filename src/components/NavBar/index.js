@@ -48,6 +48,7 @@ class NavBar extends Component {
           <Link to='/your-pregnancy'><p id='pregnancy' className='menu-item' onClick={this.toggleNavbar}>Your Pregnancy</p></Link>
           <Link to='/baby-and-toddler'><p id='babyAndToddler' className='menu-item' onClick={this.toggleNavbar}>Baby & Toddler</p></Link>
           <Link to='/support-and-help'><p id='supportAndHelp' className='menu-item' onClick={this.toggleNavbar}>Support & Help</p></Link>
+          <Link to='/pepi-ora-help'><p id='pepiOraHelp' className='menu-item' onClick={this.toggleNavbar}>Pepi Ora Help</p></Link>
           <Link to='/'><p id='contact' className='menu-item' onClick={this.toggleNavbar}>Contact</p></Link>
         </Menu>
         <Navbar color='faded' light>

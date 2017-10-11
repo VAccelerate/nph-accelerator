@@ -18,6 +18,8 @@ import SupportAndHelp from './components/SectionPage/SupportAndHelp'
 import BabyAndToddler from './components/SectionPage/BabyAndToddler'
 import ArticlePage from './components/SectionPage/ArticlePage'
 import ChallengesResult from './components/ChallengesResult'
+import PepiOraHelp from './components/SectionPage/PepiOraHelp'
+import RewardsSupport from './components/SectionPage/RewardsSupport'
 
 class App extends Component {
   render () {
@@ -39,6 +41,10 @@ class App extends Component {
         <Route exact path='/challenges/:id/result' component={ChallengesResult} />
         <Route exact path='/support-and-help/:articleId' component={ArticlePage} />
         <Route exact path='/baby-and-toddler/:articleId' component={ArticlePage} />
+        <Route exact path='/pepi-ora-help' component={PepiOraHelp} />
+        <Route exact path='/pepi-ora-help/:articleId' component={ArticlePage} />
+        <Route exact path='/rewards-support' component={RewardsSupport} />
+        <Route exact path='/rewards-support/:articleId' component={ArticlePage} />
       </div>
     )
   }

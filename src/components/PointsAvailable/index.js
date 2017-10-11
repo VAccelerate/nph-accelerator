@@ -24,7 +24,6 @@ class PointsAvailable extends Component {
       </Container>
     )
   }
-
 }
 
 export default connect(state => state)(PointsAvailable)

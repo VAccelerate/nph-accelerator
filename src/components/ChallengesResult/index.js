@@ -26,18 +26,18 @@ class ChallengesResult extends Component {
 
     const bannerImgId = `banner-img-${result}`
 
-    function renderButton(button){
+    function renderButton (button) {
       return (
         <Link to={button.link} key={button.name}>
           <Button
             className='results-button'
             outline
-            color="danger"
-          >{button.name}</Button><br/>
+            color='danger'
+          >{button.name}</Button><br />
         </Link>
       )
     }
-    console.log('id is: ', bannerImgId);
+    console.log('id is: ', bannerImgId)
 
     return (
       <div>
@@ -55,7 +55,7 @@ class ChallengesResult extends Component {
             </p>
           </div>
           <div className='results-banner-right'>
-            <img id={bannerImgId} src={bannerImg} alt=''/>
+            <img id={bannerImgId} src={bannerImg} alt='' />
           </div>
         </div>
         <div className='results-bottom-section'>
