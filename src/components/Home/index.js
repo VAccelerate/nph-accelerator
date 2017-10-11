@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 import data from './homeData'
 import Contact from './Contact'
 import Points from './Points'
 import UserMessage from './UserMessage'
 import NavBar from '../NavBar'
 import LinkBlockDropdown from '../LinkBlockDropdown'
+import Footer from '../Footer'
+import Partners from '../Partners'
 
 class Home extends Component {
   render () {
@@ -29,6 +30,8 @@ class Home extends Component {
           <LinkBlockDropdown section={data.homepageDropdowns.supportHelp} /><br />
         </div>
         <Contact />
+        <Partners />
+        <Footer />
       </div>
     )
   }

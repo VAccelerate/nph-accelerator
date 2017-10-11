@@ -6,6 +6,8 @@ import HowToGetRewards from './HowToGetRewards'
 import EarnMorePoints from './EarnMorePoints'
 import data from './rewardsData'
 import LinkBlockButton from '../LinkBlockButton'
+import Footer from '../Footer'
+
 import './pointsOverview.css'
 
 class Rewards extends Component {
@@ -19,6 +21,7 @@ class Rewards extends Component {
         <LinkBlockButton linkContent={{title: 'How Do Rewards Work?', descText: 'A quick guide to rewards', link: ''}} /><hr className='lines' />
         <HowToGetRewards /><hr className='lines' />
         <EarnMorePoints section={data.earnPointsLinks.pregnancy} />
+        <Footer />
       </div>
     )
   }
