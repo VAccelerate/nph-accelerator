@@ -1,0 +1,52 @@
+.send-div{
+  text-align: center;
+  height: 199px;
+  width:auto;
+  background-color: #f9f8f8;
+  padding-bottom: 10%
+}
+
+.send-heart{
+  height:60px;
+  width:60px;
+  padding-top: 25px;
+}
+
+.send-text{
+  padding-top: 17px;
+}
+
+.send-button{
+  margin-top: 19px;
+  margin-bottom: 20px;
+}
+
+.contact-div{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nph-div{
+  height: 83px;
+  width: auto;
+  background-color: #f9f8f8;
+}
+
+.nph-img{
+  height:72;
+  width:66px;
+  margin-top: 6px;
+  margin-bottom: 5px;
+  margin-left: 19px;
+}
+
+.nph-text{
+  font-size:18px;
+  font-weight:500;
+  line-height:1.06;
+  color: #777777;
+  text-align: left;
+  padding-top: 29px;
+
+}

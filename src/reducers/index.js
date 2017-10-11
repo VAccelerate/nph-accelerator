@@ -5,7 +5,7 @@ import userName from './userName'
 import isPregnant from './isPregnant'
 import hasChildren from './hasChildren'
 import hasMidwife from './hasMidwife'
-import homeDropdown from './homeDropdown'
+import linkDropdown from './linkDropdown'
 import knowDueDate from './knowDueDate'
 import dueDate from './dueDate'
 import children from './children'
@@ -21,7 +21,7 @@ const reducers = combineReducers({
   hasChildren,
   hasMidwife,
   passwordShowing,
-  homeDropdown,
+  linkDropdown,
   knowDueDate,
   dueDate,
   children,
