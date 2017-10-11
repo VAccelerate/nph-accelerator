@@ -20,16 +20,36 @@ class CheckIfMidwife extends Component {
   render () {
     return (
       <Container>
-        <Card>
-          <CardTitle>
+        <Card className='question-card'>
+          <CardTitle className='question-phrase'>
             Do you have a midwife?
           </CardTitle>
-          <CardBody>
-            <Button name='hasMidwife' onClick={() => this.checkIfMidwife('hasMidwife', 'true')} color='secondary'>Yes</Button>{' '}
-            <Button name='hasMidwife' onClick={() => this.checkIfMidwife('hasMidwife', 'false')} color='secondary'>No</Button>
+          <CardBody className='question-yes-no' id='question-midwife'>
+            <Button
+              className='button-yes-no'
+              name='hasMidwife'
+              onClick={() => this.checkIfMidwife('hasMidwife', 'true')}
+              color=''
+              outline
+            >Yes</Button>{' '}
+            <Button
+              className='button-yes-no'
+              name='hasMidwife'
+              onClick={() => this.checkIfMidwife('hasMidwife', 'false')}
+              color=''
+              outline
+            >No</Button>
           </CardBody>
-          <SkipQuestion onSkip={() => this.checkIfMidwife('skipped', 'skipped')} />
         </Card>
+        <Button
+          className='skip-question-button'
+          onClick={() => this.checkIfMidwife('skipped', 'skipped')}
+          color=''
+          outline
+        >Skip this question</Button>
+        <p className='skip-question-description'>
+          This information is not relevant to me
+        </p>
       </Container>
     )
   }

@@ -42,9 +42,9 @@ class UserInfo extends Component {
   render () {
     return (
       <Container>
-        <Card>
-          <CardTitle>Enter your name</CardTitle>
-          <CardBody>
+        <Card className='question-card'>
+          <CardTitle className='question-phrase'>Enter your name</CardTitle>
+          <CardBody >
             <Form>
               <Input
                 type='text'
@@ -55,7 +55,14 @@ class UserInfo extends Component {
             />
               <br />
               <br />
-              <Button disabled={!this.isValid()} color='secondary' onClick={this.handleSubmit}>Continue</Button>
+              <Button
+                className='continue-button'
+                disabled={!this.isValid()}
+                onClick={this.handleSubmit}
+                color=''
+              >
+                Continue
+              </Button>
             </Form>
           </CardBody>
         </Card>

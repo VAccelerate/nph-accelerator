@@ -1,5 +1,5 @@
 .challenges {
-  height: 110vh;
+  height: 120vh;
   background-color: #f9f8f8;
 }
 
@@ -86,6 +86,5 @@
   width: 283px;
   height: 40px;
   margin-top: 10vh;
-  margin-left: -15vw;
-  margin-bottom: 10vh;
+  margin-left: -10vw;
 }
