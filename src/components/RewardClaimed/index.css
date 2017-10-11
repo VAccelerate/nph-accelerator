@@ -11,3 +11,8 @@
     border: solid 1px #fd7171;
     background-color: #fd7171;
 }
+
+.reward-claim-desc-text {
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}

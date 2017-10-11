@@ -30,7 +30,7 @@ class RewardClaimed extends React.Component {
     const reward = rewards.find(reward => {
       return reward.id === id
     })
-    const { icon, points, title, disclaimer } = reward
+    const { icon, points, title, disclaimer, brand } = reward
 
     return (
       <div>
@@ -60,8 +60,8 @@ class RewardClaimed extends React.Component {
             </Row>
             <Row>
               <Col className='rewardUnclaimedDesc'>
-                <CardText>
-                  Just show this barcode on your phone to the checkout person at foursquare to claim.
+                <CardText className='reward-claim-desc-text'>
+                  Just show this barcode on your phone to the retail staff at your nearest {brand} to claim.
                 </CardText>
                 <div className='reward-scan-code'>
                   <img className='coupon-img' src={couponImg} alt='' />
