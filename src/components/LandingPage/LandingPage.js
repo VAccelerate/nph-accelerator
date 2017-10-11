@@ -12,9 +12,6 @@ import {
 import logo from '../../img/logo.png'
 
 class LandingPage extends Component {
-  constructor (props) {
-    super(props)
-  }
 
   render () {
     return (
