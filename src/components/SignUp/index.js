@@ -16,7 +16,7 @@ import FontAwesomeIcon from '../FontAwesomeIcon'
 import './index.css'
 
 class SignUp extends Component {
-  
+
   render () {
     const { passwordShowing, dispatch } = this.props
 
