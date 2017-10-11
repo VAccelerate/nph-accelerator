@@ -1,13 +1,21 @@
 .nav-tabs {
     border-bottom: 0;
     color: #9b9b9b;
+    margin-top: 1vh;
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color: #35a5b5 !important;
-    background-color: #fff;
-    border-color: #fff;
+    background-color: transparent;
+    border-color: transparent;
     border-bottom: 0;
+}
+
+.nav-link {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0.1vh;
+    margin-bottom: 0.5vh;
 }
 
 /* To make them shorter:

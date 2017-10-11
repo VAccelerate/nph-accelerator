@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import {
+  Container
+} from 'reactstrap'
 
+import PointsAvailable from '../PointsAvailable'
 import RewardPreview from '../RewardCards/RewardPreview'
 import rewards from '../RewardCards/data'
 
@@ -16,7 +20,8 @@ class MyRewards extends Component {
     const userRewards = userRewardIds.map(getRewardById)
 
     return (
-      <div className='container'>
+      <div>
+        <PointsAvailable />
         <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
         {userRewards.map((reward, key) => {
           return (
