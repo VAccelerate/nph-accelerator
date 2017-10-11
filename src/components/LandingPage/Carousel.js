@@ -19,6 +19,7 @@ class Advice extends Component{
       infiniteLoop: true,
       autoPlay: true,
       dynamicHeight: false,
+      interval: 5000,
       onChange: this.handleChange.bind(this),
       selectedItem: this.props.landingCarousel
     }

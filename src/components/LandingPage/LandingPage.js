@@ -19,7 +19,7 @@ class LandingPage extends Component {
   render () {
     return (
       <div>
-        <Container>
+        <Container className='bgColor'>
           <Row>
             <Col>
               <Carousel/>
