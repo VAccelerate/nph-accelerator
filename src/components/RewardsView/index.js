@@ -44,7 +44,7 @@ class RewardsView extends React.Component {
       ? (
         <div>
           <Container className='my-rewards-empty'>
-            You don’t currently have any rewards, check out your shop to see what's available.
+            You don’t currently have any rewards, check out your shop to see what’s available.
           </Container>
           <Button block outline className='my-shop-btn' onClick={() => { this.toggle('shop') }}>
             View my shop
