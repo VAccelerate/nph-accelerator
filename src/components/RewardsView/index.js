@@ -24,7 +24,7 @@ class RewardsView extends React.Component {
 
     this.toggle = this.toggle.bind(this)
     this.state = {
-      activeTab: this.rewardsActiveTab
+      activeTab: this.props.rewardsActiveTab
     }
   }
 
