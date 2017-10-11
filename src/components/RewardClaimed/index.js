@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component }  from 'react'
 import { connect } from 'react-redux'
 import {
   Button,
@@ -21,7 +21,22 @@ import couponImg from '../../img/couponImgPlaceholder.png'
 import angle from '../../img/angle/angle-left.svg'
 import './index.css'
 
-class RewardClaimed extends React.Component {
+class RewardClaimed extends Component {
+
+  constructor (props) {
+    super(props)
+  }
+
+  handleCancel (id, points) {
+    this.props.dispatch({type: 'CANCEL_REWARD',
+      payload: {
+        id: Number(id),
+        serial: '00001',
+        // serial to be set to unique once data structure added
+        points: points
+      }})
+  }
+
   render () {
 
     const url = this.props.match.url
@@ -68,7 +83,19 @@ class RewardClaimed extends React.Component {
                 </div>
                 <Button block className='reward-action-btn' color='primary'>Print</Button>
                 <Button block className='reward-action-btn' color='primary'>Email</Button>
-                <Button block className='reward-cancel-btn' outline color='secondary'>Cancel and Remove</Button>
+                <div className='reward-cancel-btn-div'>
+                  <Link to={`/rewards`}>
+                    <Button
+                      block
+                      outline
+                      onClick={() => this.handleCancel(id, points)}
+                      className='reward-cancel-btn'
+                      color='secondary'
+                    >
+                      Cancel and Remove
+                    </Button>
+                  </Link>
+                </div>
               </Col>
             </Row>
           </CardBody>
