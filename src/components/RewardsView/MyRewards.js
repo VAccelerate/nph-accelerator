@@ -10,6 +10,12 @@ import rewards from '../RewardCards/data'
 import './myRewards.css'
 
 class MyRewards extends Component {
+  constructor (props) {
+    super(props)
+
+    this.goToShop = this.goToShop.bind(this)
+  }
+
   goToShop () {
     this.props.dispatch({
       type: 'REWARDS_ACTIVE_TAB',
@@ -36,7 +42,7 @@ class MyRewards extends Component {
           <Container className='my-rewards-empty'>
             You don’t currently have any rewards, check out your shop to see what’s available.
           </Container>
-          <Button block outline className='my-shop-btn' onclick={this.goToShop}>
+          <Button block outline className='my-shop-btn' onClick={this.goToShop}>
             View my shop
           </Button>
         </div>
