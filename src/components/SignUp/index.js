@@ -46,10 +46,21 @@ class SignUp extends Component {
                   Show
                 </span>
               </span>
+              <span>
+                <Link to='/register'>
+                  <Button block outline className='emailSignUpBtn'>
+                    <Row>
+                      <Col>
+                        Sign up
+                      </Col>
+                    </Row>
+                  </Button>
+                </Link>
+              </span>
               <span className='orText'>Or</span>
               <span>
                 <Link to='/register'>
-                  <Button block className='facebookSignUp'>
+                  <Button block className='facebookSignUpBtn'>
                     <Row>
                       <Col xs='2'>
                         <FontAwesomeIcon name='facebook pull-left' />
@@ -63,7 +74,7 @@ class SignUp extends Component {
               </span>
               <span>
                 <Link to='/register'>
-                  <Button block className='googleSignUp'>
+                  <Button block className='googleSignUpBtn'>
                     <Row>
                       <Col xs='2'>
                         <FontAwesomeIcon name='google-plus pull-left' />
