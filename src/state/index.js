@@ -1,8 +1,8 @@
 const initialState = {
-  userName: 'Bill',
-  isPregnant: 'true',
-  hasChildren: 'true',
-  hasMidwife: 'true',
+  userName: null,
+  isPregnant: null,
+  hasChildren: null,
+  hasMidwife: null,
   passwordShowing: 'password',
   homeDropdown: null,
   knowDueDate: null,
