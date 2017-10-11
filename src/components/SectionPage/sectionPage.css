@@ -1,13 +1,9 @@
 
-body {
-  background-color: #ffffff;
-}
-
-.yourPregnancyImg {
+.bannerImg {
   width: 100%;
 }
 
-.yourPregnancyTitle {
+.sectionPageTitle {
   text-align: left;
   color: #35a5b5;
   width: 134px;
@@ -19,7 +15,7 @@ body {
   padding-top: 13px;
 }
 
-.yourPregnancyContent {
+.sectionPageContent {
   width: 300px;
   height: 84px;
   font-family: HelveticaNeue;
@@ -28,6 +24,10 @@ body {
   text-align: left;
   color: #373a3c;
   padding-top: 6px;
+}
+
+.sectionPageContent.supportAndHelp {
+  margin-bottom: 20px;
 }
 
 .myCalendarTitle {
@@ -48,6 +48,7 @@ body {
   border-radius: 4px;
   background-color: #35a5b5;
   border: none;
+  margin-top: 20px;
 }
 
 .myCalendarText {
@@ -114,11 +115,12 @@ body {
   color: #35a5b5;
 }
 
-hr {
-  margin-top: 20px;
+.hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-li {
+.li {
   list-style: none;
   font-family: HelveticaNeue;
   font-size: 16px;
@@ -127,4 +129,39 @@ li {
   color: #fd7171;
   text-decoration: underline;
   margin-left: -40px;
+}
+
+.helpLine {
+  height: 275px;
+  background-color: #f9f8f8;
+  border-radius: 0px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.heartImg {
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.helpLineTitle {
+  height: 16px;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  text-align: center;
+  color: #777777;
+  margin-bottom: 2px;
+}
+
+.helpLineText {
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-size: 19px;
+  line-height: 1.11;
+  text-align: center;
+  color: #ef005c;
 }
