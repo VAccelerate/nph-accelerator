@@ -1,7 +1,6 @@
 import React, {Component, Link} from 'react'
 import { connect } from 'react-redux'
 
-import PointsAvailable from '../PointsAvailable'
 import RewardPreview from '../RewardCards/RewardPreview'
 import rewards from '../RewardCards/data'
 import './myRewards.css'
@@ -19,7 +18,6 @@ class MyRewards extends Component {
 
     return (
       <div>
-        <PointsAvailable />
         <div className='myRewardsDiv'>
           <div className='myRewardsStaticHeading'>
             Ready to use&nbsp;

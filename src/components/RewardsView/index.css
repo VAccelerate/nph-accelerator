@@ -18,16 +18,30 @@
     margin-bottom: 0.5vh;
 }
 
-/* To make them shorter:
-Reduce height and increase the top & bottom margin from 0 so that
-height + top margin + bottom margin == 50px */
-.verticalDivider {
+.vertical-divider {
     height: 2.2rem;
     margin: 0 9px;
     border-right: 1px solid #ffffff;
     border-left: 1px solid #979797;
 }
 
-.tabHR {
+.tab-hr {
     border-top: solid 1px #cccccc;
+}
+
+.my-shop-btn {
+    border: solid 1px #ef005c;
+    font-size: 16px;
+    line-height: 1.31;
+    color: #ef005c;
+    margin-bottom: 5vh;
+}
+
+.my-rewards-empty {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #373a3c;
 }

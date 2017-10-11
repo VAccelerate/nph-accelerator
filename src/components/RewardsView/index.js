@@ -14,6 +14,7 @@ import classnames from 'classnames'
 import NavBar from '../NavBar'
 import MyRewards from './MyRewards'
 import Rewards from '../RewardCards'
+import PointsAvailable from '../PointsAvailable'
 import Footer from '../Footer'
 
 import './index.css'
@@ -24,7 +25,7 @@ class RewardsView extends React.Component {
 
     this.toggle = this.toggle.bind(this)
     this.state = {
-      activeTab: 'catalogue'
+      activeTab: 'shop'
     }
   }
 
@@ -42,11 +43,11 @@ class RewardsView extends React.Component {
     const myRewardsDisplay = userRewardIds.length === 0
       ? (
         <div>
-          <p>
-            You don't currently have any rewards, check out <u>your catalogue</u> to see what's available.
-          </p>
-          <Button onClick={() => { this.toggle('catalogue') }}>
-            View My Catalogue
+          <Container className='my-rewards-empty'>
+            You don’t currently have any rewards, check out your shop to see what's available.
+          </Container>
+          <Button block outline className='my-shop-btn' onClick={() => { this.toggle('shop') }}>
+            View my shop
           </Button>
         </div>
       )
@@ -56,18 +57,18 @@ class RewardsView extends React.Component {
 
     return (
       <div>
+        <NavBar />
         <Container>
-          <NavBar />
           <Nav tabs justified>
             <NavItem>
               <NavLink
-                className={classnames({ active: this.state.activeTab === 'catalogue' })}
-                onClick={() => { this.toggle('catalogue') }}
+                className={classnames({ active: this.state.activeTab === 'shop' })}
+                onClick={() => { this.toggle('shop') }}
               >
                 Shop
               </NavLink>
             </NavItem>
-            <div className='verticalDivider' />
+            <div className='vertical-divider' />
             <NavItem>
               <NavLink
                 className={classnames({ active: this.state.activeTab === 'myRewards' })}
@@ -77,12 +78,13 @@ class RewardsView extends React.Component {
               </NavLink>
             </NavItem>
           </Nav>
-          <div className='tabHR' />
+          <div className='tab-hr' />
           <TabContent activeTab={this.state.activeTab}>
-            <TabPane tabId='catalogue'>
+            <TabPane tabId='shop'>
               <Rewards />
             </TabPane>
             <TabPane tabId='myRewards'>
+              <PointsAvailable />
               {myRewardsDisplay}
             </TabPane>
           </TabContent>
