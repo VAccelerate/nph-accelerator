@@ -16,6 +16,8 @@ import yourPregnancyArticles from './yourPregnancyArticles'
 import supportAndHelpArticles from './supportAndHelpArticles'
 import babyAndToddlerArticles from './babyAndToddlerArticles'
 import backImg from '../../img/angle/angle-left.svg'
+import redAngleLeft from '../../img/angle/red-angle-left.png'
+import redAngleRight from '../../img/angle/red-angle-right.png'
 
 class ArticlePage extends Component {
   render () {
@@ -33,7 +35,7 @@ class ArticlePage extends Component {
       data = supportAndHelpArticles
     }
     const relevantData = data[id]
-    const { title, content, youtubeUrl, img, relatedSection, readMore } = relevantData
+    const { title, content, youtubeUrl, largeTitle, img, relatedSection, readMore } = relevantData
     return (
       <div>
         <NavBar />
@@ -53,11 +55,28 @@ class ArticlePage extends Component {
         </Link>
         <img className='mainImg' src={img} alt='' />
         <Container>
+          {
+            largeTitle
+            ? <div>
+              <Row className='scrollAge'>
+                <Col xs='2'>
+                  <img className='redAngle' src={redAngleLeft} alt='' />
+                </Col>
+                <Col xs='8'>
+                  <h4 className='ageScroll'>{largeTitle}</h4>
+                </Col>
+                <Col xs='2'>
+                  <img className='redAngle' src={redAngleRight} alt='' />
+                </Col>
+              </Row>
+            </div>
+            : null
+          }
           <h4 className='articleTitle'>{title}</h4>
           {content}
           {
             id < data.length
-            ? <Link to={`/your-pregnancy/${idPlusOne}`}><Card className='nextButton'><CardText className='nextText'>Next article > </CardText></Card></Link>
+            ? <Link to={`/${link}/${idPlusOne}`}><Card className='nextButton'><CardText className='nextText'>Next article > </CardText></Card></Link>
             : null
           }
           <hr className='hr' />
