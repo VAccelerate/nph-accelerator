@@ -26,6 +26,7 @@ class ArticlePage extends Component {
     const link = splitUrl[1]
     const id = splitUrl[2]
     const idPlusOne = Number(id) + 1
+    const idMinusOne = Number(id) - 1
     let data = []
     if (link === 'your-pregnancy') {
       data = yourPregnancyArticles
@@ -60,13 +61,21 @@ class ArticlePage extends Component {
             ? <div>
               <Row className='scrollAge'>
                 <Col xs='2'>
-                  <img className='redAngle' src={redAngleLeft} alt='' />
+                  {
+                    Number(id) === 0
+                    ? null
+                    : <Link to={`/${link}/${idMinusOne}`}><img className='redAngle' src={redAngleLeft} alt='' /></Link>
+                    }
                 </Col>
                 <Col xs='8'>
                   <h4 className='ageScroll'>{largeTitle}</h4>
                 </Col>
                 <Col xs='2'>
-                  <img className='redAngle' src={redAngleRight} alt='' />
+                  {
+                    id < (data.length - 1)
+                    ? <Link to={`/${link}/${idPlusOne}`}><img className='redAngle' src={redAngleRight} alt='' /></Link>
+                    : null
+                  }
                 </Col>
               </Row>
             </div>
@@ -75,7 +84,7 @@ class ArticlePage extends Component {
           <h4 className='articleTitle'>{title}</h4>
           {content}
           {
-            id < data.length
+            id < (data.length - 1)
             ? <Link to={`/${link}/${idPlusOne}`}><Card className='nextButton'><CardText className='nextText'>Next article > </CardText></Card></Link>
             : null
           }

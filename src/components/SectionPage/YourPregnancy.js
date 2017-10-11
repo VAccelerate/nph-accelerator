@@ -59,7 +59,7 @@ class YourPregnancy extends Component {
           }
           <hr className='hr' />
           <h4 className='readMore'>Read more</h4>
-          <ul>
+          <ul className='addMargin'>
             <li className='li'>
               Getting ready for baby
             </li>

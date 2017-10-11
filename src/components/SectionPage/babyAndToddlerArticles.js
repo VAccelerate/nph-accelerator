@@ -2,6 +2,9 @@ import React from 'react'
 
 import stageOneImg from '../../img/ArticlePages/0-3months.png'
 import stageTwoImg from '../../img/ArticlePages/3-6months.png'
+import stageThreeImg from '../../img/ArticlePages/6-12months.jpg'
+import stageFourImg from '../../img/ArticlePages/1-3years.jpg'
+import stageFiveImg from '../../img/ArticlePages/3-5years.jpg'
 
 const babyAndToddlerArticles = [
   {
@@ -9,7 +12,7 @@ const babyAndToddlerArticles = [
     relatedSection: 'baby & toddler',
     largeTitle: '0 - 3 Months',
     title: 'Breast Feeding',
-    description: 'Help with your diet',
+    description: 'Help with your new baby',
     content: (
       <div>
         <div className='contentStyle'>
@@ -35,12 +38,12 @@ const babyAndToddlerArticles = [
     img: stageOneImg,
     readMore: [
       {
-        title: 'Health & Nutrition',
-        link: '/support-and-health'
+        title: '1-3 Years',
+        link: '/baby-and-toddler/3'
       },
       {
-        title: 'Exercise & Fitness',
-        link: '/support-and-health'
+        title: '6 - 12 Months',
+        link: '/baby-and-toddler/2'
       }
     ]
   },
@@ -68,41 +71,113 @@ const babyAndToddlerArticles = [
     img: stageTwoImg,
     readMore: [
       {
-        title: 'Health & Nutrition',
-        link: '/support-and-health'
+        title: '1-3 Years',
+        link: '/baby-and-toddler/3'
       },
       {
-        title: 'Exercise & Fitness',
-        link: '/support-and-health'
+        title: '6 - 12 Months',
+        link: '/baby-and-toddler/2'
       }
     ]
   },
   {
     id: 2,
     relatedSection: 'baby & toddler',
-    title: '6 - 12 Months',
+    largeTitle: '6 - 12 Months',
+    title: 'Learning to walk',
     description: 'Coming up to 1 year',
-    content: '',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          Exclusively breastfeeding for around the first 6 months of your baby’s
+          life and then continuing once your baby starts solids until 12 months
+          and beyond gives your baby the best start in life.
+        </div>
+        <div className='contentStyle'>
+          Breast milk is free, fresh and requires no preparation. It is easy for
+          your baby to digest, changes with your baby’s needs, and contains the
+          nutrients your baby needs for around the first 6 months of life.
+        </div>
+      </div>
+    ),
     youtubeUrl: '',
-    img: ''
+    img: stageThreeImg,
+    readMore: [
+      {
+        title: '1-3 Years',
+        link: '/baby-and-toddler/3'
+      },
+      {
+        title: '0 - 3 Months',
+        link: '/baby-and-toddler/0'
+      }
+    ]
   },
   {
-    id: 2,
+    id: 3,
     relatedSection: 'baby & toddler',
-    title: '1 - 3 Years',
+    largeTitle: '1 - 3 Years',
+    title: 'Terrible twos',
     description: 'What to look for',
-    content: '',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          Exclusively breastfeeding for around the first 6 months of your baby’s
+          life and then continuing once your baby starts solids until 12 months
+          and beyond gives your baby the best start in life.
+        </div>
+        <div className='contentStyle'>
+          Breast milk is free, fresh and requires no preparation. It is easy for
+          your baby to digest, changes with your baby’s needs, and contains the
+          nutrients your baby needs for around the first 6 months of life.
+        </div>
+      </div>
+    ),
     youtubeUrl: '',
-    img: ''
+    img: stageFourImg,
+    readMore: [
+      {
+        title: '3 - 5 Months',
+        link: '/baby-and-toddler/4'
+      },
+      {
+        title: '6 - 12 Months',
+        link: '/baby-and-toddler/2'
+      }
+    ]
   },
   {
-    id: 2,
+    id: 4,
     relatedSection: 'baby & toddler',
-    title: '3 - 5 Years',
+    largeTitle: '3 - 5 Years',
+    title: 'Supporting development',
     description: 'Advise on what you can do',
-    content: '',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          Exclusively breastfeeding for around the first 6 months of your baby’s
+          life and then continuing once your baby starts solids until 12 months
+          and beyond gives your baby the best start in life.
+        </div>
+        <div className='contentStyle'>
+          Breast milk is free, fresh and requires no preparation. It is easy for
+          your baby to digest, changes with your baby’s needs, and contains the
+          nutrients your baby needs for around the first 6 months of life.
+        </div>
+      </div>
+    ),
     youtubeUrl: '',
-    img: ''
+    img: stageFiveImg,
+    readMore: [
+      {
+        title: '1-3 Years',
+        link: '/baby-and-toddler/3'
+      },
+      {
+        title: '6 - 12 Months',
+        link: '/baby-and-toddler/2'
+      }
+    ]
   }
 ]
 
