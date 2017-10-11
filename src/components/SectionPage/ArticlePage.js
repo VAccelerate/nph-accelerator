@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import {
   Container,
   Row,
@@ -20,6 +21,9 @@ import redAngleLeft from '../../img/angle/red-angle-left.png'
 import redAngleRight from '../../img/angle/red-angle-right.png'
 
 class ArticlePage extends Component {
+  componentDidUpdate () {
+    ReactDOM.findDOMNode(this.refs.topOfPage).scrollIntoView()
+  }
   render () {
     const section = window.location.pathname
     const splitUrl = section.split('/')
@@ -39,6 +43,7 @@ class ArticlePage extends Component {
     const { title, content, youtubeUrl, largeTitle, img, relatedSection, readMore } = relevantData
     return (
       <div>
+        <div ref='topOfPage' />
         <NavBar />
         <Link to={`/${link}`}>
           <Row>
