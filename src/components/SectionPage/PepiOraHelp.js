@@ -45,7 +45,7 @@ class PepiOraHelp extends Component {
             pepiOraHelpArticles.map((article, key) => {
               const { title, description } = article
               return (
-                <Link to={`/pepi-ora-help`} key={key}><Card className='linkCard'>
+                <Link to={`/pepi-ora-help/${article.id}`} key={key}><Card className='linkCard'>
                   <Row>
                     <Col xs='10'>
                       <CardTitle className='linkTitle'>{title}</CardTitle>
