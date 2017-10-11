@@ -34,25 +34,25 @@ class Challenges extends Component {
         <div className='answers'>
           <div className='answer-option'>
             <Label check>
-              <span><Input type='radio' name='radio2'/></span>
-              <span className='answer-text'>You can drink when pregnant</span><br/>
+              <span><Input type='radio' name='radio2' /></span>
+              <span className='answer-text'>You can drink when pregnant</span><br />
             </Label>
           </div>
           <div className='answer-option'>
             <Label check>
-              <span><Input type='radio' name='radio2'/></span>
-              <span className='answer-text'>You can smoke while pregnant</span><br/>
+              <span><Input type='radio' name='radio2' /></span>
+              <span className='answer-text'>You can smoke while pregnant</span><br />
             </Label>
           </div>
           <div className='answer-option'>
             <Label check>
-              <span><Input type='radio' name='radio2'/></span>
-              <span className='answer-text'>You can take drugs while pregnant</span><br/>
+              <span><Input type='radio' name='radio2' /></span>
+              <span className='answer-text'>You can take drugs while pregnant</span><br />
             </Label>
           </div>
           <div className='answer-option'>
             <Label check>
-              <span><Input type='radio' name='radio2'/></span>
+              <span><Input type='radio' name='radio2' /></span>
               <span className='answer-text'>
               Any form of drinking, smoking or taking drugs, no matter how little
               can cause severe problems with your unborn baby.
