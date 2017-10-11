@@ -6,7 +6,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button,
   Container
 } from 'reactstrap'
 import classnames from 'classnames'
@@ -38,8 +37,6 @@ class RewardsView extends React.Component {
   }
 
   render () {
-    const { userRewardIds } = this.props
-
     return (
       <div>
         <NavBar />

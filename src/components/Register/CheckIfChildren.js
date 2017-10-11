@@ -9,8 +9,6 @@ import {
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-import SkipQuestion from './SkipQuestion'
-
 class CheckIfChildren extends Component {
   checkIfChildren (name, value) {
     this.props.dispatch({
@@ -22,17 +20,40 @@ class CheckIfChildren extends Component {
   render () {
     return (
       <Container>
-        <Card>
-          <CardTitle>
+        <Card className='question-card'>
+          <CardTitle className='question-phrase'>
             Do you have any children?
           </CardTitle>
-          <CardBody>
-            <Button name='hasChildren' onClick={() => this.checkIfChildren('hasChildren', 'true')} color='secondary'>Yes</Button>{' '}
-            <Link to={'/home'}><Button name='hasChildren' onClick={() => this.checkIfChildren('hasChildren', 'false')} color='secondary'>No</Button></Link>
+          <CardBody className='question-yes-no' id='question-midwife'>
+            <Button
+              className='button-yes-no'
+              name='hasMidwife'
+              onClick={() => this.checkIfChildren('hasChildren', 'true')}
+              color=''
+              outline
+            >Yes</Button>
+            <Link to='/home'>
+              <Button
+                className='button-yes-no'
+                name='hasMidwife'
+                onClick={() => this.checkIfChildren('hasChildren', 'false')}
+                color=''
+                outline
+              >No</Button>
+            </Link>
           </CardBody>
-          <Link to={'/home'}><SkipQuestion onSkip={() => this.checkIfChildren('skipped', 'skipped')} /></Link>
-          <span>This information is not relevant to me</span>
         </Card>
+        <Link to='/home'>
+          <Button
+            className='skip-question-button'
+            onClick={() => this.checkIfChildren('skipped', 'skipped')}
+            color=''
+            outline
+          >Skip this question</Button>
+        </Link>
+        <p className='skip-question-description'>
+          This information is not relevant to me
+        </p>
       </Container>
     )
   }

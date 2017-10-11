@@ -23,7 +23,8 @@ class RewardPreview extends Component {
 
     return (
       isAvailable
-        ? <div>
+      ? (
+        <div>
           <Link to={`/rewards/${id}${linkSuffix}`}>
             <CardBody className={cardStyle}>
               <Row>
@@ -42,23 +43,26 @@ class RewardPreview extends Component {
             </CardBody>
           </Link>
         </div>
-        : <div>
-          <CardBody className={cardStyle}>
-            <Row>
-              <Col xs='3' className='rewardLogo'>
-                <CardImg className='rewardLogoImg' alt='logo' src={icon} />
-                <p>{points}pts</p>
-              </Col>
-              <Col xs='7'>
-                <CardTitle className='rewardTitle'>{title}</CardTitle>
-                <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
-              </Col>
-              <Col xs='2'>
-                <img className='angleRight' src={angle} alt='Angle link' />
-              </Col>
-            </Row>
-          </CardBody>
-        </div>
+        )
+        : (
+          <div>
+            <CardBody className={cardStyle}>
+              <Row>
+                <Col xs='3' className='rewardLogo'>
+                  <CardImg className='rewardLogoImg' alt='logo' src={icon} />
+                  <p>{points}pts</p>
+                </Col>
+                <Col xs='7'>
+                  <CardTitle className='rewardTitle'>{title}</CardTitle>
+                  <CardSubtitle className='rewardSubtitle'>{disclaimer}</CardSubtitle>
+                </Col>
+                <Col xs='2'>
+                  <img className='angleRight' src={angle} alt='Angle link' />
+                </Col>
+              </Row>
+            </CardBody>
+          </div>
+      )
     )
   }
 }
