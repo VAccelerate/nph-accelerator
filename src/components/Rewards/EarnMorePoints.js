@@ -15,7 +15,7 @@ class EarnMorePoints extends Component {
     function renderSubheader (subheader) {
       return (
         <NavItem key={subheader.name}>
-          <NavLink key={subheader.name} href={subheader.url} className={subheader.name}>{subheader.descText}</NavLink>
+          <NavLink key={subheader.name} href={subheader.url} className='EMP-list-item'>{subheader.descText}</NavLink>
         </NavItem>
       )
     }
