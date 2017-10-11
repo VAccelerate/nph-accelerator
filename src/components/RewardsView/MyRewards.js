@@ -1,12 +1,10 @@
-import React, {Component} from 'react'
+import React, {Component, Link} from 'react'
 import { connect } from 'react-redux'
-import {
-  Container
-} from 'reactstrap'
 
 import PointsAvailable from '../PointsAvailable'
 import RewardPreview from '../RewardCards/RewardPreview'
 import rewards from '../RewardCards/data'
+import './myRewards.css'
 
 class MyRewards extends Component {
   render () {
@@ -22,12 +20,33 @@ class MyRewards extends Component {
     return (
       <div>
         <PointsAvailable />
-        <p>Showing {userRewards.length} of {userRewards.length} rewards</p>
-        {userRewards.map((reward, key) => {
-          return (
-            <RewardPreview reward={reward} key={key} />
-          )
-        })}
+        <div className='myRewardsDiv'>
+          <div className='myRewardsStaticHeading'>
+            Ready to use&nbsp;
+          </div>
+          <div className='myRewardsDynamicHeading'>
+            - Showing {userRewards.length} of {userRewards.length} rewards
+          </div>
+          <div>
+            {userRewards.map((reward, key) => {
+              // Reward is always available as the user has already spent points on it
+              return (
+                  <RewardPreview reward={reward} isAvailable={true} key={key} />
+              )
+            })}
+          </div>
+        </div>
+        {/*The following reward is a placeholder as there's no logic for used rewards*/}
+        <div className='myUsedRewardsDiv'>
+          <div className='myRewardsStaticHeading'>
+            Used&nbsp;
+          </div>
+          <div className='myRewardsDynamicHeading'>
+            - Showing 1 of 1 rewards
+          </div>
+          {/*Reward is unavailable as it has already been used*/}
+          <RewardPreview reward={userRewards[0]} isAvailable={false} key={0} />
+        </div>
       </div>
     )
   }

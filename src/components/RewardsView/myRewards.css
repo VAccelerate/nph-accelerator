@@ -1,0 +1,21 @@
+.myRewardsStaticHeading {
+    display: inline-block;
+    color: #35a5b5;
+    font-size: 14px;
+    padding-left: 2vw;
+}
+
+.myRewardsDynamicHeading {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.myRewardsDiv {
+    text-align: left;
+    margin-top: 2vh;
+}
+
+.myUsedRewardsDiv {
+    text-align: left;
+    margin-top: 5vh;
+}

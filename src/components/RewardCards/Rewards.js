@@ -89,8 +89,9 @@ class Rewards extends Component {
           Showing {rewardsToDisplay.length} of {rewards.length} rewards
         </div>
         {rewardsToDisplay.map((reward, key) => {
+          const isAvailable = this.props.pointsTotal >= reward.points
           return (
-            <RewardPreview reward={reward} key={key} />
+            <RewardPreview reward={reward} isAvailable={isAvailable} key={key} />
           )
         })}
         <Row>
