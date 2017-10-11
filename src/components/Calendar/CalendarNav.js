@@ -1,8 +1,7 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 import calendarPrev from '../../img/calendarPrev.svg'
 import calendarNext from '../../img/calendarNext.svg'
-
 
 const CalendarNav = ({
   onPreviousClick,
@@ -12,18 +11,18 @@ const CalendarNav = ({
   date
 }) => {
   const styleLeft = {
-    float: 'left',
+    float: 'left'
 
   }
   const styleRight = {
-    float: 'right',
+    float: 'right'
   }
   return (
     <div className={className}>
       <img src={calendarNext} style={styleRight} onClick={() => onNextClick()} />
       <img src={calendarPrev} style={styleLeft} onClick={() => onPreviousClick()} />
     </div>
-  );
+  )
 }
 
 export default CalendarNav

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Card, Container, Col, Row, CardFooter } from 'reactstrap'
+import { Card, Container, Col, Row } from 'reactstrap'
 import './pointsOverview.css'
 
 class PointsOverview extends Component {

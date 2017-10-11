@@ -12,24 +12,23 @@ import {
 import logo from '../../img/logo.png'
 
 class LandingPage extends Component {
-
   render () {
     return (
       <div className='bgColor'>
         <Container>
           <Row>
             <Col>
-              <Carousel/>
+              <Carousel />
             </Col>
           </Row>
           <Row>
             <Col>
-              <SignUp/>
+              <SignUp />
             </Col>
           </Row>
           <Row className='landingFooter'>
             <Col xs='3'>
-              <img src={logo} className='landingFooterLogo' alt='Generic placeholder '/>
+              <img src={logo} className='landingFooterLogo' alt='Generic placeholder ' />
             </Col>
             <Col xs='9'>
               <div className='landingFooterText'>by Ngati Porou Hauora</div>

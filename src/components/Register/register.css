@@ -37,6 +37,16 @@ img.app-name {
   margin-right: 4vw;
 }
 
+#dob-question {
+  margin-top: 0.5vh;
+}
+
+#gender-select {
+  font-size: 16px;
+  line-height: 1.31;
+  color: #999999;
+}
+
 #lmp-question-phrase {
   margin-left: -1vw;
   margin-right: -1vw;
@@ -53,6 +63,11 @@ img.app-name {
 
 #pregnancy-continue {
   margin-top: 3vh;
+}
+
+#add-child-continue {
+  margin-top: 1vh;
+  margin-bottom: 5vh;
 }
 
 .question-yes-no {
@@ -75,6 +90,30 @@ img.app-name {
   font-size: 12px;
   margin-left: 2vw;
   margin-right: 2vw;
+}
+
+#plus-button {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 44px;
+  width: 71px;
+  padding-left: 12px;
+  background-color: #ffffff;
+  border: solid 1px;
+  border-color: #ef005c;
+  color: #ef005c;
+  margin-right: 4vw;
+}
+
+.add-child-section {
+  display: flex;
+}
+
+.add-child-description {
+  margin-top: 2.5vh;
+  font-size: 16px;
+  line-height: 1.31;
+  color: #999999;
 }
 
 .skip-question-button {
@@ -110,11 +149,46 @@ img.app-name {
 
 .date-picker {
   margin-top: 2.5vh;
-  width: 251px;
+  width: 79vw;
   height: 40px;
   border-radius: 3px;
   background-color: #ffffff;
   border: solid 1px #cccccc;
   color: #999999;
   padding-left: 3vw;
+}
+
+.child-details {
+  height: 72px;
+  padding-left: 3.5vw;
+  padding-top: 6.5px;
+  margin-bottom: 3vh;
+}
+
+.child-details-pair {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.31;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+}
+
+.child-details-key {
+  width: 65px;
+  display: inline-block;
+  color: #35a5b5;
+}
+
+.child-details-value {
+  width: auto;
+  color: #656565;
+}
+
+.child-details-delete {
+  margin-top: -65px;
+  padding-bottom: 4vh;
+}
+
+#nth-child-details {
+  margin-bottom: 3vh;
 }

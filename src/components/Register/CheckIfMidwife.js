@@ -7,7 +7,6 @@ import {
   CardBody,
   Button
 } from 'reactstrap'
-import SkipQuestion from './SkipQuestion'
 
 class CheckIfMidwife extends Component {
   checkIfMidwife (name, value) {

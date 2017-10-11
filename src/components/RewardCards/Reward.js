@@ -83,7 +83,7 @@ class Reward extends Component {
               </Col>
             </Row>
           </Container>
-          <CardBody  className='rewardCard'>
+          <CardBody className='rewardCard'>
             <Row>
               <Col xs='3' className='rewardUnclaimedLogo'>
                 <CardImg className='rewardLogoImg' alt='logo' src={icon} />

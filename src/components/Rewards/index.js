@@ -14,9 +14,9 @@ class Rewards extends Component {
       <div>
         <NavBar />
         <PointsOverview />
-        <LinkBlockButton linkContent={{title: 'My Rewards', descText: 'View claimed rewards', link:''}}/>
-        <LinkBlockButton linkContent={{title: 'Rewards Shop', descText: 'View all your points deals', link:''}}/>
-        <LinkBlockButton linkContent={{title: 'How Do Rewards Work?', descText: 'A quick guide to rewards', link:''}}/><hr className='lines' />
+        <LinkBlockButton linkContent={{title: 'My Rewards', descText: 'View claimed rewards', link: ''}} />
+        <LinkBlockButton linkContent={{title: 'Rewards Shop', descText: 'View all your points deals', link: ''}} />
+        <LinkBlockButton linkContent={{title: 'How Do Rewards Work?', descText: 'A quick guide to rewards', link: ''}} /><hr className='lines' />
         <HowToGetRewards /><hr className='lines' />
         <EarnMorePoints section={data.earnPointsLinks.pregnancy} />
       </div>

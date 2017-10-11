@@ -7,8 +7,6 @@ import {
   NavItem,
   NavLink,
   Button,
-  Row,
-  Col,
   Container
 } from 'reactstrap'
 import classnames from 'classnames'

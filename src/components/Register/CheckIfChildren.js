@@ -9,8 +9,6 @@ import {
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-import SkipQuestion from './SkipQuestion'
-
 class CheckIfChildren extends Component {
   checkIfChildren (name, value) {
     this.props.dispatch({
@@ -18,7 +16,6 @@ class CheckIfChildren extends Component {
       payload: value
     })
   }
-
 
   render () {
     return (

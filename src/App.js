@@ -19,7 +19,6 @@ import BabyAndToddler from './components/SectionPage/BabyAndToddler'
 // import ArticlePage from './components/ArticlePage'
 import ChallengesResult from './components/ChallengesResult'
 
-
 class App extends Component {
   render () {
     return (
