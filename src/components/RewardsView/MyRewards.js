@@ -18,11 +18,11 @@ class MyRewards extends Component {
 
     return (
       <div>
-        <div className='myRewardsDiv'>
-          <div className='myRewardsStaticHeading'>
+        <div className='my-rewards-div'>
+          <div className='my-rewards-static-heading'>
             Ready to use&nbsp;
           </div>
-          <div className='myRewardsDynamicHeading'>
+          <div className='my-rewards-dynamic-heading'>
             - Showing {userRewards.length} of {userRewards.length} rewards
           </div>
           <div>
@@ -35,11 +35,11 @@ class MyRewards extends Component {
           </div>
         </div>
         {/*The following reward is a placeholder as there's no logic for used rewards*/}
-        <div className='myUsedRewardsDiv'>
-          <div className='myRewardsStaticHeading'>
+        <div className='my-used-rewards-div'>
+          <div className='my-rewards-static-heading'>
             Used&nbsp;
           </div>
-          <div className='myRewardsDynamicHeading'>
+          <div className='my-rewards-dynamic-heading'>
             - Showing 1 of 1 rewards
           </div>
           {/*Reward is unavailable as it has already been used*/}
