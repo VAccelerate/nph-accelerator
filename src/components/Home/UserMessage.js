@@ -12,7 +12,7 @@ const items = [
   {
     key: 'item1',
     src: '',
-    altText: 'hello things are still here'
+    altText: 'Welcome to your Pepi Ora app. If you want to learn more, click the link below'
   },
   {
     key: 'item2',

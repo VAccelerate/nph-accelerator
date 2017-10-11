@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
-  Input,
-  Row,
-  Col
+  Input
 } from 'reactstrap'
 import RewardPreview from './RewardPreview'
 import PointsAvailable from '../PointsAvailable'
+import Partners from '../Partners'
 
 import rewards from './data.js'
-import vodafoneLogo from '../../img/grayscale/vodafone/bitmap@3x.png'
-import foursquareLogo from '../../img/grayscale/foursquare/bitmap@3x.png'
-import gasLogo from '../../img/grayscale/gasolinealley/bitmap@3x.png'
 import './rewards.css'
 
 class Rewards extends Component {
@@ -95,26 +91,7 @@ class Rewards extends Component {
             <RewardPreview reward={reward} isAvailable={isAvailable} key={key} />
           )
         })}
-        <Row>
-          <Col>
-            <div className='partnerText'>
-              Some of our partners
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <img src={foursquareLogo} className='partnerLogo' alt='4Square logo' />
-          </Col>
-          <Col>
-            <img src={vodafoneLogo} className='partnerLogo' alt='VF logo' />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <img src={gasLogo} className='partnerLogo' alt='g.a.s. logo' />
-          </Col>
-        </Row>
+        <Partners />
       </div>
     )
   }
