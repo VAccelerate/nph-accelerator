@@ -37,6 +37,8 @@ class App extends Component {
         <Route exact path='/baby-and-toddler' component={BabyAndToddler} />
         <Route exact path='/your-pregnancy/:articleId' component={ArticlePage} />
         <Route exact path='/challenges/:id/result' component={ChallengesResult} />
+        <Route exact path='/support-and-help/:articleId' component={ArticlePage} />
+        <Route exact path='/baby-and-toddler/:articleId' component={ArticlePage} />
       </div>
     )
   }

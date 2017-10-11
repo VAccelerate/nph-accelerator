@@ -21,7 +21,7 @@
 
 .articleTitle {
   padding-top: 15px;
-  padding-left: 5px;
+  padding-left: 15px;
   height: 23px;
   font-family: HelveticaNeue;
   font-size: 18px;
@@ -80,10 +80,11 @@
   text-align: left;
   color: #373a3c;
   margin-top: 20px;
-  margin-left: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
-.nameStyle {
+.highlightPink {
   text-decoration: none;
   color: #fd7171;
 }
@@ -92,14 +93,15 @@
   margin-bottom: 40px;
 }
 
-.midwifeName {
+.boldGreyTitle {
   font-family: HelveticaNeue;
   font-size: 19px;
   font-weight: 500;
   line-height: 1.12;
   text-align: left;
   color: #4a4a4a;
-  margin-left: 5px;
+  font-weight: 500;
+  margin-left: 15px;
 }
 
 .midwifeLocations {
@@ -109,7 +111,7 @@
   line-height: 1.5;
   text-align: left;
   color: #373a3c;
-  margin-left: -35px;
+  margin-left: -25px;
 }
 
 .midwifeContact {
@@ -119,14 +121,32 @@
   line-height: 1.5;
   text-align: left;
   color: #373a3c;
-  margin-left: -35px;
+  margin-left: -25px;
 }
 
 .midwifeContactType {
   color: #35a5b5;
 }
 
-.midwifeEmail {
+.pinkUnderline {
   color: #fd7171;
   text-decoration: underline;
+}
+
+.youtubeEmbed {
+  width: 100%;
+}
+
+.dangerSignsList {
+  list-style-type: circle;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  color: #373a3c;
+  margin-top: 20px;
+  margin-left: -6px;
+  margin-right: 20px;
 }

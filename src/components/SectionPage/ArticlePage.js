@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 import './articlePage.css'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
+import Embedly from '../Embedly'
 import yourPregnancyArticles from './yourPregnancyArticles'
 import supportAndHelpArticles from './supportAndHelpArticles'
 import babyAndToddlerArticles from './babyAndToddlerArticles'
@@ -39,7 +40,11 @@ class ArticlePage extends Component {
         <Link to={`/${link}`}>
           <Row>
             <Col xs='2'>
-              <img className='backImg' src={backImg} alt='' />
+              {
+                youtubeUrl
+                ? <div className='youtubeEmbed'><Embedly href={youtubeUrl} /></div>
+                : <img className='backImg' src={backImg} alt='' />
+              }
             </Col>
             <Col className='back' xs='10'>
               Back to {relatedSection}
