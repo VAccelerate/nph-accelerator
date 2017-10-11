@@ -6,6 +6,10 @@ export default function pointsTotal (state = initialState.pointsTotal, action) {
       state -= action.payload.points
       return state
 
+    case 'CANCEL_REWARD':
+      state += action.payload.points
+      return state
+
     default:
       return state
   }

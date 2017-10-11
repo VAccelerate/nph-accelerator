@@ -62,17 +62,17 @@ class Reward extends Component {
     return (
       <div>
         <NavBar />
-        <Link to={`/rewards`}>
-          <Row className='backHeader'>
-            <Col xs='2' className='backHeaderCol'>
-              <img className='angleLeft' src={angle} alt='Angle link' />
-            </Col>
-            <Col xs='10' className='backHeaderCol'>
-              Back to Shop
-            </Col>
-          </Row>
-        </Link>
         <Container>
+          <Link to={`/rewards`}>
+            <Row className='backHeader'>
+              <Col xs='2' className='backHeaderCol'>
+                <img className='angleLeft' src={angle} alt='Angle link' />
+              </Col>
+              <Col xs='10' className='backHeaderCol'>
+                Back to Shop
+              </Col>
+            </Row>
+          </Link>
           <PointsAvailable />
           <CardBody className='rewardCard'>
             <Row>
