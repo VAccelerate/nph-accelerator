@@ -23,10 +23,6 @@ import './index.css'
 
 class RewardClaimed extends Component {
 
-  constructor (props) {
-    super(props)
-  }
-
   handleCancel (id, points) {
     this.props.dispatch({type: 'CANCEL_REWARD',
       payload: {
