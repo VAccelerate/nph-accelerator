@@ -34,9 +34,37 @@ class PregnancyQuestions extends Component {
     })
   }
 
+  handleSubmit (state) {
+    const due = moment(state.dueDate).format('DD/MM/YYYY')
+    let dueDate = moment(state.lmpDate).add(40, 'w')
+    dueDate = moment(dueDate).format('DD/MM/YYYY')
+    let payload = 'skipped'
+    if (this.props.knowDueDate){
+      payload = due
+    }else if (this.props.knowLmp) {
+      payload = dueDate
+    }
+    console.log(payload);
+    this.props.dispatch({
+      type: 'DUE_DATE',
+      payload: payload
+    })
+  }
+
+  isContinueValid () {
+    return true
+  }
+
   checkIfKnowDueDate (name, value) {
     this.props.dispatch({
       type: 'KNOW_DUE_DATE',
+      payload: value
+    })
+  }
+
+  checkIfKnowLmp (value) {
+    this.props.dispatch({
+      type: 'KNOW_LMP',
       payload: value
     })
   }
@@ -49,80 +77,140 @@ class PregnancyQuestions extends Component {
     this.setState({
       dueDate: date
     })
-    const due = moment(date).format('DD/MM/YYYY')
-
-    if (moment().isBefore(date)) {
-      this.props.dispatch({
-        type: 'DUE_DATE',
-        payload: due
-      })
-    }
   }
 
   lmpDate (date) {
     this.setState({
       lmpDate: date
     })
-    let dueDate = moment(date).add(40, 'w')
-    dueDate = moment(dueDate).format('DD/MM/YYYY')
-
-    if (moment().isBefore(dueDate)) {
-      this.props.dispatch({
-        type: 'DUE_DATE',
-        payload: dueDate
-      })
-    }
   }
 
   render () {
+
+    const { isPregnant, knowDueDate, knowLmp } = this.props
+    const yesButtonIdPregnancy = knowDueDate === true
+      ? 'button-selected'
+      : 'button-unselected'
+    const noButtonIdPregnancy = knowDueDate === false
+      ? 'button-selected'
+      : 'button-unselected'
+    const yesButtonIdLmp = knowLmp === true
+      ? 'button-selected'
+      : 'button-unselected'
+    const noButtonIdLmp = knowLmp === false
+      ? 'button-selected'
+      : 'button-unselected'
+
+
     return (
       <div>
         {
-          this.props.isPregnant === 'true'
-          ? <Card>
-            <CardTitle>
-              Do you know your due date?
-              <Button name='knowDueDate' onClick={() => this.checkIfKnowDueDate('knowDueDate', true)} color='secondary'>Yes</Button>{' '}
-              <Button name='knowDueDate' onClick={() => this.checkIfKnowDueDate('knowDueDate', false)} color='secondary'>No</Button>
-            </CardTitle>
-            <CardBody>
+          isPregnant === 'true'
+          ? <Card className='question-card' id='pregnancy-questions-card'>
+              <CardTitle className='question-phrase'>
+                Do you know your due date?
+              </CardTitle>
+              <CardBody className='question-yes-no' id='question-pregnancy'>
+                <Button
+                  className='button-yes-no'
+                  id={yesButtonIdPregnancy}
+                  name='knowDueDate'
+                  onClick={() => this.checkIfKnowDueDate('knowDueDate', true)}
+                  color=''
+                  outline
+                >Yes</Button>
+                <Button
+                  className='button-yes-no'
+                  id={noButtonIdPregnancy}
+                  name='knowDueDate'
+                  onClick={() => this.checkIfKnowDueDate('knowDueDate', false)}
+                  color=''
+                  outline
+                >No</Button>
+              </CardBody>
+              <CardBody>
               {
-                this.props.knowDueDate
+                knowDueDate
                 ? <FormGroup>
-                  <Label for='dueDate'>Due date</Label>
+                  <Label for='dueDate' className='question-phrase'>
+                    Enter your due date
+                  </Label>
                   <DatePicker
+                    className='date-picker'
                     selected={this.state.dueDate}
                     onChange={this.dueDate}
                     dateFormat='DD/MM/YYYY'
                   />
-                  {
-                    this.isDateValid()
-                    ? null
-                    : <p>Pick a date in the future</p>
-                  }
+                  <Button
+                    className='continue-button'
+                    id='pregnancy-continue'
+                    disabled={!this.isContinueValid()}
+                    onClick={() => this.handleSubmit(this.state, this.props)}
+                    color=''
+                  >
+                    Continue
+                  </Button>
                 </FormGroup>
                 : null
               }
               {
-                this.props.knowDueDate === false
+                knowDueDate === false
                 ? <FormGroup>
-                  <Label for='lmpDate'>Do you the first day of your last period?</Label>
-                  <DatePicker
-                    selected={this.state.lmpDate}
-                    onChange={this.lmpDate}
-                    dateFormat='DD/MM/YYYY'
-                    />
+                  <Label
+                    for='lmpDate'
+                    className='question-phrase'
+                    id='lmp-question-phrase'
+                  >
+                    Do you know when the first day of your last period was?
+                  </Label>
+                  <CardBody className='question-yes-no' id='question-pregnancy'>
+                    <Button
+                      className='button-yes-no'
+                      id={yesButtonIdLmp}
+                      name='knowLmp'
+                      onClick={() => this.checkIfKnowLmp(true)}
+                      color=''
+                      outline
+                    >Yes</Button>
+                    <Button
+                      className='button-yes-no'
+                      id={noButtonIdLmp}
+                      name='knowLmp'
+                      onClick={() => this.handleSubmit(this.state, this.props)}
+                      color=''
+                      outline
+                    >No</Button>
+                  </CardBody>
                   {
-                      moment().isAfter(this.state.lmpDate)
+                    knowLmp === null
                       ? null
-                      : <p>Pick a date in the past</p>
-                    }
+                      : knowLmp
+                        ? <FormGroup>
+                          <Label for='dueDate' className='question-phrase'>
+                            Enter your due date
+                          </Label>
+                          <DatePicker
+                            className='date-picker'
+                            selected={this.state.lmpDate}
+                            onChange={this.lmpDate}
+                            dateFormat='DD/MM/YYYY'
+                          />
+                          <Button
+                            className='continue-button'
+                            id='pregnancy-continue'
+                            disabled={!this.isContinueValid()}
+                            onClick={() => this.handleSubmit(this.state, this.props)}
+                            color=''
+                          >
+                            Continue
+                          </Button>
+                        </FormGroup>
+                        : null
+                      }
                 </FormGroup>
                 : null
               }
             </CardBody>
-            <SkipQuestion onSkip={() => this.dueDate('skipped', 'skipped')} />
-            <span>This information is not relevant to me</span>
           </Card>
           : null
         }

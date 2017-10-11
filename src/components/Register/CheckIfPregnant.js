@@ -20,16 +20,34 @@ class CheckIfPregnant extends Component {
   render () {
     return (
       <Container>
-        <Card>
-          <CardTitle>
+        <Card className='question-card'>
+          <CardTitle className='question-phrase'>
             Are you or your partner expecting a child?
           </CardTitle>
-          <CardBody>
-            <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', 'true')} color='secondary'>Yes</Button>{' '}
-            <Button name='isPregnant' onClick={() => this.checkIfPregnant('isPregnant', 'false')} color='secondary'>No</Button>
+          <CardBody className='question-yes-no'>
+            <Button
+            className='button-yes-no'
+            name='isPregnant'
+            onClick={() => this.checkIfPregnant('isPregnant', 'true')}
+            color=''
+            >Yes</Button>
+            <Button
+              className='button-yes-no'
+              name='isPregnant'
+              onClick={() => this.checkIfPregnant('isPregnant', 'false')}
+              color=''
+              >No</Button>
           </CardBody>
-          <SkipQuestion onSkip={() => this.checkIfPregnant('skipped', 'skipped')} />
         </Card>
+        <Button
+          className='skip-question-button'
+          onClick={() => this.checkIfPregnant('skipped', 'skipped')}
+          color=''
+          outline
+        >Skip this question</Button>
+        <p className='skip-question-description'>
+          This information is not relevant to me
+        </p>
       </Container>
     )
   }
