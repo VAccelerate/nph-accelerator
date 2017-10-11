@@ -45,7 +45,7 @@ class Reward extends Component {
           disabled
           className='rewardClaimButton'
         >
-        Claim for {points} points
+          Claim for {points} points
         </Button>
       )
       : (
