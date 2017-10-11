@@ -1,0 +1,18 @@
+.reward-scan-code {
+    text-align: center;
+}
+
+.reward-cancel-btn {
+    color: #ef005c;
+    border: solid 1px #ef005c;
+}
+
+.reward-action-btn {
+    border: solid 1px #fd7171;
+    background-color: #fd7171;
+}
+
+.reward-claim-desc-text {
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}
