@@ -4,7 +4,8 @@ import {
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators
+  CarouselIndicators,
+  Container
 } from 'reactstrap'
 
 const items = [
@@ -78,7 +79,7 @@ class UserMessage extends Component {
     })
 
     return (
-      <div>
+      <Container>
         <h2>Kia Ora {hasName}</h2>
         <Carousel
           activeIndex={activeIndex}
@@ -90,7 +91,7 @@ class UserMessage extends Component {
           <CarouselControl direction='prev' directionText='Previous' onClickHandler={this.previous} />
           <CarouselControl direction='next' directionText='Next' onClickHandler={this.next} />
         </Carousel>
-      </div>
+      </Container>
     )
   }
 }
