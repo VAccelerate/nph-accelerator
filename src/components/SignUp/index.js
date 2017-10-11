@@ -30,13 +30,13 @@ class SignUp extends Component {
                 name='email'
                 placeholder='Email address'
               />
-              <div className='passwordInput'>
+              <span className='passwordInput'>
                 <Input
                   type={passwordShowing}
                   name='password'
                   placeholder='Password'
                 />
-                <div
+                <span
                   className='showPasswordBtn'
                   onClick={() => dispatch({
                     type: 'TOGGLE_PASSWORD_DISPLAY',
@@ -44,10 +44,10 @@ class SignUp extends Component {
                   })}
                 >
                   Show
-                </div>
-              </div>
-              <div className='orText'>Or</div>
-              <div>
+                </span>
+              </span>
+              <span className='orText'>Or</span>
+              <span>
                 <Link to='/register'>
                   <Button block className='facebookSignUp'>
                     <Row>
@@ -60,8 +60,8 @@ class SignUp extends Component {
                     </Row>
                   </Button>
                 </Link>
-              </div>
-              <div>
+              </span>
+              <span>
                 <Link to='/register'>
                   <Button block className='googleSignUp'>
                     <Row>
@@ -74,7 +74,7 @@ class SignUp extends Component {
                     </Row>
                   </Button>
                 </Link>
-              </div>
+              </span>
             </CardText>
           </CardBody>
           <div className='alreadyHaveAccount'>

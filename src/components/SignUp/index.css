@@ -48,6 +48,7 @@
 
 .passwordInput {
     margin-top: 1vh;
+    margin-bottom: 1.2vh;
     position: relative;
     display: inline-block;
     width: 100%;
@@ -63,7 +64,6 @@
 }
 
 .orText {
-    margin-top: 1vh;
     font-size: 18px;
     text-align: center;
     color: #35a5b5;
