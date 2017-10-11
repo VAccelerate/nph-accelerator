@@ -1,8 +1,8 @@
 import initialState from '../state'
 
-export default function homeDropdown (state = initialState.homeDropdown, action) {
+export default function linkDropdown (state = initialState.linkDropdown, action) {
   switch (action.type) {
-    case 'SET_HOME_DROPDOWN':
+    case 'SET_LINK_DROPDOWN':
       return action.payload
     default:
       return state

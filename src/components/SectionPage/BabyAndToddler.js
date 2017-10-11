@@ -41,12 +41,16 @@ class YourPregnancy extends Component {
           </Card></Link>
           {
             babyAndToddlerArticles.map((article, key) => {
-              const { title, description } = article
+              const { title, description, largeTitle } = article
               return (
-                <Link key={key} to={`/your-pregnancy/${article.id}`}><Card key={key} className='linkCard'>
+                <Link key={key} to={`/baby-and-toddler/${article.id}`}><Card key={key} className='linkCard'>
                   <Row>
                     <Col xs='10'>
-                      <CardTitle className='linkTitle'>{title}</CardTitle>
+                      {
+                        largeTitle
+                        ? <CardTitle className='linkTitle'>{largeTitle}</CardTitle>
+                        : <CardTitle className='linkTitle'>{title}</CardTitle>
+                      }
                       <CardText className='linkText'>{description}</CardText>
                     </Col>
                     <Col xs='2'>
@@ -59,7 +63,7 @@ class YourPregnancy extends Component {
           }
           <hr className='hr' />
           <h4 className='readMore'>Read more</h4>
-          <ul>
+          <ul className='addMargin'>
             <li className='li'>
               Getting ready for baby
             </li>

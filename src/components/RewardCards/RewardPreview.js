@@ -15,15 +15,17 @@ import './rewardPreview.css'
 
 class RewardPreview extends Component {
   render () {
+    // Nasty way to directly link to 'claimed' voucher for the My Rewards tab
+    const linkSuffix = this.props.isClaimed ? '/00001' : ''
     const { id, title, disclaimer, points, icon } = this.props.reward
-    const cardStyle = this.props.pointsTotal >= points ? 'rewardCard' : 'unavailableRewardCard'
-    const availableReward = this.props.pointsTotal > points
+    const isAvailable = this.props.isAvailable
+    const cardStyle = isAvailable ? 'rewardCard' : 'unavailableRewardCard'
 
     return (
-      availableReward
+      isAvailable
       ? (
         <div>
-          <Link to={`/rewards/${id}`}>
+          <Link to={`/rewards/${id}${linkSuffix}`}>
             <CardBody className={cardStyle}>
               <Row>
                 <Col xs='3' className='rewardLogo'>

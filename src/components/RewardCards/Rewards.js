@@ -3,11 +3,10 @@ import { connect } from 'react-redux'
 import {
   Input,
   Row,
-  Col,
-  Badge,
-  Container
+  Col
 } from 'reactstrap'
 import RewardPreview from './RewardPreview'
+import PointsAvailable from '../PointsAvailable'
 
 import rewards from './data.js'
 import vodafoneLogo from '../../img/grayscale/vodafone/bitmap@3x.png'
@@ -57,16 +56,7 @@ class Rewards extends Component {
 
     return (
       <div>
-        <Container>
-          <Row className='pointsHeader'>
-            <Col className='pointsHeaderText'>
-              Points available
-            </Col>
-            <Col>
-              <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
-            </Col>
-          </Row>
-        </Container>
+        <PointsAvailable />
         <Input className='searchInput'
           onChange={this.handleChange}
           type='text' name='searchString'
@@ -100,8 +90,9 @@ class Rewards extends Component {
           Showing {rewardsToDisplay.length} of {rewards.length} rewards
         </div>
         {rewardsToDisplay.map((reward, key) => {
+          const isAvailable = this.props.pointsTotal >= reward.points
           return (
-            <RewardPreview reward={reward} key={key} />
+            <RewardPreview reward={reward} isAvailable={isAvailable} key={key} />
           )
         })}
         <Row>

@@ -6,6 +6,9 @@ export default function userRewardIds (state = initialState.userRewardIds, actio
       state.unshift(action.payload.id)
       return state
 
+    case 'CANCEL_REWARD':
+      return state.filter((val, i) => val !== action.payload.id)
+
     default:
       return state
   }

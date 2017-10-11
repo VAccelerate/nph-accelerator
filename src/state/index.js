@@ -4,7 +4,7 @@ const initialState = {
   hasChildren: 'true',
   hasMidwife: 'true',
   passwordShowing: 'password',
-  homeDropdown: null,
+  linkDropdown: null,
   knowDueDate: null,
   knowLmp: null,
   dueDate: '22/12/2017',

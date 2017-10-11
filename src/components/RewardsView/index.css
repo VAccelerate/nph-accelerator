@@ -1,25 +1,30 @@
 .nav-tabs {
     border-bottom: 0;
     color: #9b9b9b;
+    margin-top: 1vh;
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     color: #35a5b5 !important;
-    background-color: #fff;
-    border-color: #fff;
+    background-color: transparent;
+    border-color: transparent;
     border-bottom: 0;
 }
 
-/* To make them shorter:
-Reduce height and increase the top & bottom margin from 0 so that
-height + top margin + bottom margin == 50px */
-.verticalDivider {
+.nav-link {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0.1vh;
+    margin-bottom: 0.5vh;
+}
+
+.vertical-divider {
     height: 2.2rem;
     margin: 0 9px;
     border-right: 1px solid #ffffff;
     border-left: 1px solid #979797;
 }
 
-.tabHR {
+.tab-hr {
     border-top: solid 1px #cccccc;
 }

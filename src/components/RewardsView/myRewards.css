@@ -1,0 +1,39 @@
+.my-rewards-static-heading {
+    display: inline-block;
+    color: #35a5b5;
+    font-size: 14px;
+    padding-left: 2vw;
+}
+
+.my-rewards-dynamic-heading {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.my-rewards-div {
+    text-align: left;
+    margin-top: 2vh;
+}
+
+.my-used-rewards-div {
+    text-align: left;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+}
+
+.my-shop-btn {
+    border: solid 1px #ef005c;
+    font-size: 16px;
+    line-height: 1.31;
+    color: #ef005c;
+    margin-bottom: 3vh;
+}
+
+.my-rewards-empty {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #373a3c;
+}

@@ -7,7 +7,6 @@ import {
   CardSubtitle,
   CardText,
   Button,
-  Badge,
   Container,
   Row,
   Col
@@ -18,6 +17,7 @@ import './reward.css'
 import data from './data'
 import NavBar from '../NavBar'
 import Footer from '../Footer'
+import PointsAvailable from '../PointsAvailable'
 import angle from '../../img/angle/angle-left.svg'
 
 class Reward extends Component {
@@ -45,7 +45,7 @@ class Reward extends Component {
           disabled
           className='rewardClaimButton'
         >
-        Claim for {points} points
+          Claim for {points} points
         </Button>
       )
       : (
@@ -62,27 +62,18 @@ class Reward extends Component {
     return (
       <div>
         <NavBar />
-        <Link to={`/rewards`}>
-          <Row className='backHeader'>
-            <Col xs='2' className='backHeaderCol'>
-              <img className='angleLeft' src={angle} alt='Angle link' />
-            </Col>
-            <Col xs='10' className='backHeaderCol'>
-              Back to Shop
-            </Col>
-          </Row>
-        </Link>
         <Container>
-          <Container>
-            <Row className='pointsHeader'>
-              <Col className='pointsHeaderText'>
-                Points available
+          <Link to={`/rewards`}>
+            <Row className='backHeader'>
+              <Col xs='2' className='backHeaderCol'>
+                <img className='angleLeft' src={angle} alt='Angle link' />
               </Col>
-              <Col>
-                <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
+              <Col xs='10' className='backHeaderCol'>
+                Back to Shop
               </Col>
             </Row>
-          </Container>
+          </Link>
+          <PointsAvailable />
           <CardBody className='rewardCard'>
             <Row>
               <Col xs='3' className='rewardUnclaimedLogo'>
