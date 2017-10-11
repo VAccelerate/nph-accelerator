@@ -9,7 +9,7 @@ const initialState = {
   dueDate: '22/06/2018',
   children: [],
   landingCarousel: 0,
-  userRewardIds: [],
+  userRewardIds: [1, 2],
   navToggle: false,
   pointsTotal: 200
 }

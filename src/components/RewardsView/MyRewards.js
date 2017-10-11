@@ -1,4 +1,4 @@
-import React, {Component, Link} from 'react'
+import React, {Component} from 'react'
 import { connect } from 'react-redux'
 
 import RewardPreview from '../RewardCards/RewardPreview'
@@ -29,7 +29,7 @@ class MyRewards extends Component {
             {userRewards.map((reward, key) => {
               // Reward is always available as the user has already spent points on it
               return (
-                  <RewardPreview reward={reward} isAvailable={true} key={key} />
+                  <RewardPreview reward={reward} isAvailable={true} isClaimed={true} key={key} />
               )
             })}
           </div>
