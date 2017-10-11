@@ -24,7 +24,7 @@ class RewardsView extends React.Component {
 
     this.toggle = this.toggle.bind(this)
     this.state = {
-      activeTab: 'shop'
+      activeTab: this.rewardsActiveTab
     }
   }
 
@@ -32,6 +32,11 @@ class RewardsView extends React.Component {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab
+      })
+
+      this.props.dispatch({
+        type: 'REWARDS_ACTIVE_TAB',
+        payload: tab
       })
     }
   }
