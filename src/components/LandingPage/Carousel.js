@@ -5,7 +5,7 @@ import data from './landingPageData'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './carousel.css'
 
-class Advice extends Component{
+class LandingCarousel extends Component {
 
   handleChange () {
     this.props.dispatch({type: 'CHANGE_LANDING_DISPLAY', payload: this.refs.carousel.state.selectedItem})
@@ -26,7 +26,7 @@ class Advice extends Component{
 
     function renderCarouselDiv (carouselDiv) {
       return (
-        <div>
+        <div key={carouselDiv.id}>
           <img src={carouselDiv.imgSrc} alt='App feature screen-shot' className='carouselSlide' />
         </div>
       )
@@ -46,4 +46,4 @@ class Advice extends Component{
   }
 }
 
-export default connect(state => state)(Advice)
+export default connect(state => state)(LandingCarousel)

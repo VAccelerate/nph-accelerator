@@ -94,7 +94,7 @@ class SignUp extends Component {
             </CardText>
           </CardBody>
           <div className='alreadyHaveAccount'>
-            Already have an account? <Link className='alreadyHaveAccountLink' to='login'>Log in</Link>
+            Already have an account? <Link className='alreadyHaveAccountLink' to='/home'>Log in</Link>
           </div>
         </Container>
       </div>
