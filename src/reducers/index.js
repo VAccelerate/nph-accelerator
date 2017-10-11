@@ -15,6 +15,7 @@ import landingCarousel from './landingCarousel'
 import userRewardIds from './userRewardIds'
 import navToggle from './navToggle'
 import knowLmp from './knowLmp'
+import rewardsActiveTab from './rewardsActiveTab'
 
 const reducers = combineReducers({
   userName,
@@ -31,7 +32,8 @@ const reducers = combineReducers({
   pointsTotal,
   userRewardIds,
   navToggle,
-  knowLmp
+  knowLmp,
+  rewardsActiveTab
 })
 
 export default reducers

@@ -12,7 +12,8 @@ const initialState = {
   landingCarousel: 0,
   userRewardIds: [1, 2],
   navToggle: false,
-  pointsTotal: 200
+  pointsTotal: 200,
+  rewardsActiveTab: 'shop'
 }
 
 export default initialState
