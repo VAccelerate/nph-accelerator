@@ -6,7 +6,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Button,
   Container
 } from 'reactstrap'
 import classnames from 'classnames'
@@ -43,23 +42,6 @@ class RewardsView extends React.Component {
   }
 
   render () {
-    const { userRewardIds } = this.props
-
-    const myRewardsDisplay = userRewardIds.length === 0
-      ? (
-        <div>
-          <Container className='my-rewards-empty'>
-            You don’t currently have any rewards, check out your shop to see what’s available.
-          </Container>
-          <Button block outline className='my-shop-btn' onClick={() => { this.toggle('shop') }}>
-            View my shop
-          </Button>
-        </div>
-      )
-      : (
-        <MyRewards />
-      )
-
     return (
       <div>
         <NavBar />
@@ -90,7 +72,7 @@ class RewardsView extends React.Component {
             </TabPane>
             <TabPane tabId='myRewards'>
               <PointsAvailable />
-              {myRewardsDisplay}
+              <MyRewards />
             </TabPane>
           </TabContent>
         </Container>

@@ -5,13 +5,12 @@ import navName from '../../img/navName.png'
 import './register.css'
 
 class AppBar extends Component {
-
   render () {
     return (
       <div className='app-bar'>
         <Navbar>
           <NavItem>
-              <img src={navName} alt='' className='app-name' />
+            <img src={navName} alt='' className='app-name' />
           </NavItem>
         </Navbar>
       </div>

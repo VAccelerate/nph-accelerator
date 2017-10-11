@@ -7,7 +7,6 @@ import {
   CardBody,
   Button
 } from 'reactstrap'
-import SkipQuestion from './SkipQuestion'
 
 class CheckIfMidwife extends Component {
   checkIfMidwife (name, value) {
@@ -31,7 +30,7 @@ class CheckIfMidwife extends Component {
               onClick={() => this.checkIfMidwife('hasMidwife', 'true')}
               color=''
               outline
-            >Yes</Button>{' '}
+            >Yes</Button>
             <Button
               className='button-yes-no'
               name='hasMidwife'

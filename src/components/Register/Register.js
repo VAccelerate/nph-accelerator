@@ -16,7 +16,6 @@ import './register.css'
 
 class Register extends Component {
   render () {
-    console.log(this.props);
     const { userName, isPregnant, dueDate, hasChildren, hasMidwife } = this.props
     let display = null
     if (userName === null) {

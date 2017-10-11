@@ -1,4 +1,4 @@
-import React, { Component }  from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
   Button,
@@ -22,11 +22,6 @@ import angle from '../../img/angle/angle-left.svg'
 import './index.css'
 
 class RewardClaimed extends Component {
-
-  constructor (props) {
-    super(props)
-  }
-
   handleCancel (id, points) {
     this.props.dispatch({type: 'CANCEL_REWARD',
       payload: {
@@ -38,7 +33,6 @@ class RewardClaimed extends Component {
   }
 
   render () {
-
     const url = this.props.match.url
     const identifiers = url.split('/rewards/')[1].split('/')
     const id = Number(identifiers[0])

@@ -6,6 +6,8 @@ import HowToGetRewards from './HowToGetRewards'
 import EarnMorePoints from './EarnMorePoints'
 import data from './rewardsData'
 import LinkBlockButton from '../LinkBlockButton'
+import Footer from '../Footer'
+
 import './pointsOverview.css'
 
 class Rewards extends Component {
@@ -14,11 +16,12 @@ class Rewards extends Component {
       <div>
         <NavBar />
         <PointsOverview />
-        <LinkBlockButton linkContent={{title: 'My Rewards', descText: 'View claimed rewards', link:'../../rewards'}}/>
-        <LinkBlockButton linkContent={{title: 'Rewards Shop', descText: 'View all your points deals', link:'../../rewards'}}/>
-        <LinkBlockButton linkContent={{title: 'How Do Rewards Work?', descText: 'A quick guide to rewards', link:''}}/><hr className='lines' />
+        <LinkBlockButton linkContent={{title: 'My Rewards', descText: 'View claimed rewards', link: '../../rewards'}} />
+        <LinkBlockButton linkContent={{title: 'Rewards Shop', descText: 'View all your points deals', link: '../../rewards'}} />
+        <LinkBlockButton linkContent={{title: 'How Do Rewards Work?', descText: 'A quick guide to rewards', link: ''}} /><hr className='lines' />
         <HowToGetRewards /><hr className='lines' />
         <EarnMorePoints section={data.earnPointsLinks.pregnancy} />
+        <Footer />
       </div>
     )
   }

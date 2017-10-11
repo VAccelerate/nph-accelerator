@@ -6,7 +6,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import './carousel.css'
 
 class LandingCarousel extends Component {
-
   handleChange () {
     this.props.dispatch({type: 'CHANGE_LANDING_DISPLAY', payload: this.refs.carousel.state.selectedItem})
   }
