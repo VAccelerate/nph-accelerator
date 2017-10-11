@@ -1,0 +1,70 @@
+.signUpHeading {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: #35a5b5;
+}
+
+.signUpForm {
+    margin-top: 2vh;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.emailSignUp Input {
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: solid 1px #999999;
+}
+
+.facebookSignUp {
+    text-align: left;
+    margin-top: 1vh;
+    border: 0;
+    background-color: #39579a;
+}
+
+.googleSignUp {
+    text-align: left;
+    margin-top: 1vh;
+    border: 0;
+    background-color: #df4a32;
+}
+
+.alreadyHaveAccount {
+    margin-top: 1vh;
+    font-size: 12px;
+    text-align: center;
+    color: #666666;
+}
+
+.alreadyHaveAccountLink {
+    color: #fd7171;
+    border-bottom: 1px solid #fd7171;
+}
+
+.passwordInput {
+    margin-top: 1vh;
+    margin-bottom: 1.2vh;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.showPasswordBtn {
+    font-size: 9px;
+    text-align: left;
+    color: #fd7171;
+    position: absolute;
+    right: 1vw;
+    top: 13px;
+}
+
+.orText {
+    font-size: 18px;
+    text-align: center;
+    color: #35a5b5;
+}
