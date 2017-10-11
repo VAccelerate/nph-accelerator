@@ -16,6 +16,10 @@ import FontAwesomeIcon from '../FontAwesomeIcon'
 import './index.css'
 
 class SignUp extends Component {
+  constructor (props) {
+    super(props)
+  }
+
   render () {
     const { passwordShowing, dispatch } = this.props
 
@@ -43,7 +47,11 @@ class SignUp extends Component {
                     payload: passwordShowing
                   })}
                 >
-                  Show
+                  {
+                    passwordShowing === 'password'
+                      ? 'Show'
+                      : 'Hide'
+                  }
                 </span>
               </span>
               <span>
