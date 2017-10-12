@@ -30,8 +30,8 @@ class ContactPage extends Component {
             <h4 className='boldGreyTitle'>Frances King</h4>
             <ul className='midwifeContact'>
               <li>Ngati Porou Hauora</li>
-              <li><span className='midwifeContactType'>Mobile: </span><span>027 237 8467</span></li>
-              <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>lizzie.andre@xtra.co.nz</span></li>
+              <li><span className='midwifeContactType'>Mobile: </span><span>021 861 426</span></li>
+              <li><span className='midwifeContactType'>Email: </span><a className='pinkUnderline' href='mailto:frances.king@nph.org.nz'>frances.king@nph.org.nz</a></li>
             </ul>
             <h4 className='articleTitle'>Midwives</h4>
             <h4 className='boldGreyTitle'>Liz Tamepo</h4>
@@ -43,16 +43,16 @@ class ContactPage extends Component {
             <ul className='midwifeContact'>
               <li><span className='midwifeContactType'>Phone: </span>06 864 7788</li>
               <li><span className='midwifeContactType'>Mobile: </span><span>027 237 8467</span></li>
-              <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>lizzie.andre@xtra.co.nz</span></li>
+              <li><span className='midwifeContactType'>Email: </span><a className='pinkUnderline' href='mailto:lizzie.andre@xtra.co.nz'>lizzie.andre@xtra.co.nz</a></li>
             </ul>
             <h4 className='boldGreyTitle'>Corrina Parata</h4>
             <ul className='midwifeLocations'>
               <li>Ngati Porou Hauora</li>
             </ul>
             <ul className='midwifeContact'>
-              <li><span className='midwifeContactType'>Phone: </span>06 864 7788</li>
-              <li><span className='midwifeContactType'>Mobile: </span><span>027 237 8467</span></li>
-              <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>lizzie.andre@xtra.co.nz</span></li>
+              <li><span className='midwifeContactType'>Phone: </span>06 864 6803</li>
+              <li><span className='midwifeContactType'>Mobile: </span><span>021 765 053</span></li>
+              <li><span className='midwifeContactType'>Email: </span><a className='pinkUnderline' href='mailto:corrina.parata@nph.org.nz'>corrina.parata@nph.org.nz</a></li>
             </ul>
           </div>
         </Container>

@@ -52,7 +52,7 @@ class ArticlePage extends Component {
         <div ref='topOfPage' />
         <NavBar />
         <Link to={`/${link}`}>
-          <Row>
+          <Row className='articleRemoveMargin'>
             <Col xs='2'>
               <img className='backImg' src={backImg} alt='' />
             </Col>
@@ -72,7 +72,7 @@ class ArticlePage extends Component {
           {
             largeTitle
             ? <div>
-              <Row className='scrollAge'>
+              <Row className='scrollAge articleRemoveMargin'>
                 <Col xs='2'>
                   {
                     Number(id) === 0

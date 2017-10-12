@@ -197,3 +197,8 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+.articleRemoveMargin {
+  margin-left: 0px;
+  margin-right: 0px;
+}

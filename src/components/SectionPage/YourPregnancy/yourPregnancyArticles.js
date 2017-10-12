@@ -40,8 +40,8 @@ const yourPregnancyArticles = [
         </ul>
         <ul className='midwifeContact'>
           <li><span className='midwifeContactType'>Phone: </span>06 864 7788</li>
-          <li><span className='midwifeContactType'>Mobile: </span><span>027 237 8467</span></li>
-          <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>lizzie.andre@xtra.co.nz</span></li>
+          <li><span className='midwifeContactType'>Mobile: </span><span>021 765 053</span></li>
+          <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>corrina.parata@nph.org.nz</span></li>
         </ul>
       </div>
     ),
