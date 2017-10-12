@@ -6,7 +6,8 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  Container
+  Container,
+  CarouselCaption
 } from 'reactstrap'
 
 import './userMessage.css'
@@ -14,18 +15,21 @@ import './userMessage.css'
 const items = [
   {
     key: 'item1',
-    src: '',
-    altText: 'Welcome to your Pepi Ora app. If you want to learn more, click the link below'
+    src: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+    altText: '',
+    caption: 'Welcome to your Pepi Ora app. If you want to learn more, click the link below'
   },
   {
     key: 'item2',
-    src: '',
-    altText: 'We notice we did not get your due date. That means you need to contact a midwife.'
+    src: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+    altText: '',
+    caption: 'We notice we did not get your due date. That means you need to contact a midwife.'
   },
   {
     key: 'item3',
-    src: '',
-    altText: "Today's top tip: Drinking during pregnancy can seriously harm your unborn baby"
+    src: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+    altText: '',
+    caption: "Today's top tip: Drinking during pregnancy can seriously harm your unborn baby"
   }
 ]
 
@@ -67,7 +71,7 @@ class UserMessage extends Component {
 
   render () {
     const { activeIndex } = this.state
-    const { hasName } = this.props
+    const { userName } = this.props
 
     const slides = items.map((item) => {
       return (
@@ -77,13 +81,15 @@ class UserMessage extends Component {
           key={item.key}
           src={item.src}
           altText={item.altText}
-        />
+        >
+          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        </CarouselItem>
       )
     })
 
     return (
       <Container className='carousel-container'>
-        <h2 className='carousel-greeting'>Kia Ora {hasName}</h2>
+        <h2 className='carousel-greeting'>"Kia Ora {userName}"</h2>
         <Carousel
           activeIndex={activeIndex}
           next={this.next}
