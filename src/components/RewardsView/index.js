@@ -23,17 +23,10 @@ class RewardsView extends React.Component {
     super(props)
 
     this.toggle = this.toggle.bind(this)
-    this.state = {
-      activeTab: this.rewardsActiveTab
-    }
   }
 
   toggle (tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
-      })
-
+    if (this.props.rewardsActiveTab !== tab) {
       this.props.dispatch({
         type: 'REWARDS_ACTIVE_TAB',
         payload: tab
@@ -49,7 +42,7 @@ class RewardsView extends React.Component {
           <Nav tabs justified>
             <NavItem>
               <NavLink
-                className={classnames({ active: this.state.activeTab === 'shop' })}
+                className={classnames({ active: this.props.rewardsActiveTab === 'shop' })}
                 onClick={() => { this.toggle('shop') }}
               >
                 Shop
@@ -58,7 +51,7 @@ class RewardsView extends React.Component {
             <div className='vertical-divider' />
             <NavItem>
               <NavLink
-                className={classnames({ active: this.state.activeTab === 'myRewards' })}
+                className={classnames({ active: this.props.rewardsActiveTab === 'myRewards' })}
                 onClick={() => { this.toggle('myRewards') }}
               >
                 My Rewards
@@ -66,7 +59,7 @@ class RewardsView extends React.Component {
             </NavItem>
           </Nav>
           <div className='tab-hr' />
-          <TabContent activeTab={this.state.activeTab}>
+          <TabContent activeTab={this.props.rewardsActiveTab}>
             <TabPane tabId='shop'>
               <Rewards />
             </TabPane>
