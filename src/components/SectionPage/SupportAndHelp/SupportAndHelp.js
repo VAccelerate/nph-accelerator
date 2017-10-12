@@ -9,13 +9,13 @@ import {
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-import NavBar from '../NavBar'
-import './sectionPage.css'
+import NavBar from '../../NavBar'
+import '../sectionPage.css'
 import supportAndHelpArticles from './supportAndHelpArticles'
-import supportAndHelpImg from '../../img/SectionPages/supportAndHelp.png'
-import heartImg from '../../img/SectionPages/heart.png'
-import angleLink from '../../img/darkAngle/angle@2x.png'
-import Footer from '../Footer'
+import supportAndHelpImg from '../../../img/SectionPages/supportAndHelp.png'
+import heartImg from '../../../img/SectionPages/heart.png'
+import angleLink from '../../../img/darkAngle/angle@2x.png'
+import Footer from '../../Footer'
 
 class SupportAndHelp extends Component {
   render () {

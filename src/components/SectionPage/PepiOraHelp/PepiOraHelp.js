@@ -9,12 +9,12 @@ import {
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-import NavBar from '../NavBar'
-import './sectionPage.css'
+import NavBar from '../../NavBar'
+import '../sectionPage.css'
 import pepiOraHelpArticles from './pepiOraHelpArticles'
-import pepiOraHelpImg from '../../img/SectionPages/pepiOraHelp.png'
-import angleLink from '../../img/darkAngle/angle@2x.png'
-import Footer from '../Footer'
+import pepiOraHelpImg from '../../../img/SectionPages/pepiOraHelp.png'
+import angleLink from '../../../img/darkAngle/angle@2x.png'
+import Footer from '../../Footer'
 
 class PepiOraHelp extends Component {
   render () {
