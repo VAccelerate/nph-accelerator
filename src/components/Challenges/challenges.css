@@ -1,5 +1,5 @@
 .challenges {
-  height: 120vh;
+  height: 100%;
   background-color: #f9f8f8;
 }
 
@@ -61,6 +61,8 @@
   font-size: 14px;
   color: #35a5b5;
   margin-top: 1vh;
+  margin-right: 3vw;
+  margin-bottom: 3vh;
 }
 
 .answers {
@@ -74,17 +76,18 @@
   color: #000000;
   margin-left: 0;
   margin-bottom: 2.5vh;
+  margin-right: 3vw;
 }
 
 .answer-text {
   margin-left: 4vw;
-  position: absolute;
   margin-right: 8vw;
 }
 
 .answer-submit-button {
   width: 283px;
   height: 40px;
-  margin-top: 10vh;
+  margin-top: 4vh;
   margin-left: -10vw;
+  margin-bottom: 4vh;
 }

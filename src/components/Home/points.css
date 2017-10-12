@@ -3,6 +3,9 @@
   height: 79px;
   border-radius: 4px;
   background-color: #fd7171;
+  padding-left: -10px;
+  margin-top: 25px;
+  border: none;
 }
 
 .home-points-row{
@@ -19,23 +22,33 @@
 }
 
 .home-points-total{
+  height: 23px;
+  font-family: HelveticaNeue;
   font-size: 18px;
+  font-weight: 500;
   line-height: 1.06;
+  text-align: left;
   color: #ffffff;
   margin-left: 10px;
+  margin-bottom: 5px;
+  width: 200px;
 }
 
 .home-points-check{
+  height: 24px;
+  font-family: HelveticaNeue;
   font-size: 16px;
   line-height: 1.5;
+  text-align: left;
   color: #373a3c;
   margin-left: 10px;
+  width: 200px;
 }
 
 .home-points-img{
   display:inline-block;
   text-align: center;
-  margin-left: 15px;
+  margin-top: 3vh;
   height: 40px;
   width: 40px;
 }

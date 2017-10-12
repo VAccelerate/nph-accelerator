@@ -16,22 +16,20 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <div className='container'>
-          <NavBar />
-          <UserMessage /><hr />
-          <Points />
-          {
+        <NavBar />
+        <UserMessage />
+        <Points />
+        {
             this.props.isPregnant === 'false'
             ? null
             : <div><LinkBlockDropdown section={yourPregnancyArticles} title='Pregnancy' description='Help with your pregnancy' /></div>
           }
-          {
+        {
             this.props.hasChildren === 'false'
             ? null
             : <div><LinkBlockDropdown section={babyAndToddlerArticles} title='Baby & Toddler' description='Help with your kids' /></div>
-          }
-          <LinkBlockDropdown section={supportAndHelpArticles} title='Support & Help' description='Let us help you' /><br />
-        </div>
+        }
+        <LinkBlockDropdown section={supportAndHelpArticles} title='Support & Help' description='Let us help you' /><br />
         <Contact />
         <Partners />
         <Footer />

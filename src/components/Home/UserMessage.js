@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import {
   Carousel,
   CarouselItem,
@@ -7,6 +8,8 @@ import {
   CarouselIndicators,
   Container
 } from 'reactstrap'
+
+import './userMessage.css'
 
 const items = [
   {
@@ -17,12 +20,12 @@ const items = [
   {
     key: 'item2',
     src: '',
-    altText: 'Slide 2'
+    altText: 'We notice we did not get your due date. That means you need to contact a midwife.'
   },
   {
     key: 'item3',
     src: '',
-    altText: 'Slide 3'
+    altText: "Today's top tip: Drinking during pregnancy can seriously harm your unborn baby"
   }
 ]
 
@@ -79,18 +82,35 @@ class UserMessage extends Component {
     })
 
     return (
-      <Container>
-        <h2>Kia Ora {hasName}</h2>
+      <Container className='carousel-container'>
+        <h2 className='carousel-greeting'>Kia Ora {hasName}</h2>
         <Carousel
           activeIndex={activeIndex}
           next={this.next}
           previous={this.previous}
-      >
+        >
           <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {slides}
           <CarouselControl direction='prev' directionText='Previous' onClickHandler={this.previous} />
           <CarouselControl direction='next' directionText='Next' onClickHandler={this.next} />
         </Carousel>
+        <div>
+          {
+            this.state.activeIndex === 0
+            ? <Link to='/pepi-ora-help'><span className='carousel-link'>How to use the app ></span></Link>
+            : null
+          }
+          {
+            this.state.activeIndex === 1
+            ? <Link to='/your-pregnancy/0'><span className='carousel-link'>Find out how ></span></Link>
+            : null
+          }
+          {
+            this.state.activeIndex === 2
+            ? <Link to='/your-pregnancy'><span className='carousel-link'>See more tips ></span></Link>
+            : null
+          }
+        </div>
       </Container>
     )
   }

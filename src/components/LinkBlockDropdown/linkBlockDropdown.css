@@ -23,7 +23,7 @@
 .dropdown-descText {
   width: 300px;
   height: 24px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   text-align: left;
   color: #373a3c ;
@@ -65,4 +65,9 @@
 .home-remove-margin {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.dropdown-link{
+  text-align: left;
+  color: #4a4a4a;
 }

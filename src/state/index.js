@@ -16,7 +16,11 @@ const initialState = {
   navToggle: false,
   pointsTotal: 200,
   sectionIndex: sectionIndex,
-  rewardsActiveTab: 'shop'
+  rewardsActiveTab: 'shop',
+  challengeResult: {
+    correct: null,
+    total: null
+  }
 }
 
 export default initialState
