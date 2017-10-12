@@ -1,16 +1,16 @@
 import React from 'react'
 
-import feelingSadImg from '../../img/ArticlePages/feelingSad.png'
-import feelingAloneImg from '../../img/ArticlePages/feelingAlone.jpg'
-import feelingUnwellImg from '../../img/ArticlePages/feelingUnwell.jpg'
-import feelingUnsafeImg from '../../img/ArticlePages/feelingUnsafe.jpg'
-import feelingStressedImg from '../../img/ArticlePages/feelingStressed.jpg'
-import notSleepingImg from '../../img/ArticlePages/notSleeping.jpg'
+import feelingSadImg from '../../../img/ArticlePages/feelingSad.png'
+import feelingAloneImg from '../../../img/ArticlePages/feelingAlone.jpg'
+import feelingUnwellImg from '../../../img/ArticlePages/feelingUnwell.jpg'
+import feelingUnsafeImg from '../../../img/ArticlePages/feelingUnsafe.jpg'
+import feelingStressedImg from '../../../img/ArticlePages/feelingStressed.jpg'
+import notSleepingImg from '../../../img/ArticlePages/notSleeping.jpg'
 
 const supportAndHelpArticles = [
   {
     id: 0,
-    relatedSection: 'support & help',
+    relatedSection: 'Support & Help',
     title: 'Feeling Stressed?',
     description: 'We can help you',
     content: (
@@ -69,7 +69,7 @@ const supportAndHelpArticles = [
   },
   {
     id: 1,
-    relatedSection: 'support & help',
+    relatedSection: 'Support & Help',
     title: 'Not sleeping well?',
     description: 'Get a good nights sleep',
     content: (
@@ -177,7 +177,7 @@ const supportAndHelpArticles = [
   },
   {
     id: 3,
-    relatedSection: 'support & help',
+    relatedSection: 'Support & Help',
     title: 'Feeling Unsafe?',
     description: 'Are you in danger',
     content: (
@@ -245,7 +245,7 @@ const supportAndHelpArticles = [
   },
   {
     id: 4,
-    relatedSection: 'support & help',
+    relatedSection: 'Support & Help',
     title: 'Feeling Unwell?',
     description: 'Advise on what you can do',
     content: (
@@ -299,7 +299,7 @@ const supportAndHelpArticles = [
   },
   {
     id: 5,
-    relatedSection: 'support & help',
+    relatedSection: 'Support & Help',
     title: 'Feeling Alone?',
     description: 'Advise on what you can do',
     content: (

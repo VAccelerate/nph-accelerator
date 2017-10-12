@@ -1,9 +1,9 @@
 import React from 'react'
 
-import navigationHelpImg from '../../img/ArticlePages/navigationHelp.png'
-import navigationHelpStepOneImg from '../../img/ArticlePages/navigationHelpStepOne.png'
-import pepiOraLogo from '../../img/ArticlePages/pepiOraLogo.png'
-import navigationHelpStepThreeImg from '../../img/ArticlePages/navigationHelpStepThree.png'
+import navigationHelpImg from '../../../img/ArticlePages/navigationHelp.png'
+import navigationHelpStepOneImg from '../../../img/ArticlePages/navigationHelpStepOne.png'
+import pepiOraLogo from '../../../img/ArticlePages/pepiOraLogo.png'
+import navigationHelpStepThreeImg from '../../../img/ArticlePages/navigationHelpStepThree.png'
 
 const pepiOraHelpArticles = [
   {

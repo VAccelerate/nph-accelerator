@@ -1,9 +1,9 @@
 import React from 'react'
 
-import visitHealthcareProfessionalImg from '../../img/ArticlePages/visitHealthcareProfessional.png'
-import winPointsImg from '../../img/ArticlePages/winPoints.png'
-import winPointsStepOne from '../../img/ArticlePages/winPointsStepOne.png'
-import winPointsStepTwo from '../../img/ArticlePages/winPointsStepTwo.png'
+import visitHealthcareProfessionalImg from '../../../img/ArticlePages/visitHealthcareProfessional.png'
+import winPointsImg from '../../../img/ArticlePages/winPoints.png'
+import winPointsStepOne from '../../../img/ArticlePages/winPointsStepOne.png'
+import winPointsStepTwo from '../../../img/ArticlePages/winPointsStepTwo.png'
 
 const rewardsSupportArticles = [
   {

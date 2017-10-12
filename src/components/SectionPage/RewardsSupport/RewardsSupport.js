@@ -10,13 +10,13 @@ import {
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-import NavBar from '../NavBar'
-import './sectionPage.css'
+import NavBar from '../../NavBar'
+import '../sectionPage.css'
 import rewardsSupportArticles from './rewardsSupportArticles'
-import rewardsSupportImg from '../../img/SectionPages/rewardsSupport.png'
-import trophyImg from '../../img/SectionPages/trophyImg.png'
-import angleLink from '../../img/darkAngle/angle@2x.png'
-import Footer from '../Footer'
+import rewardsSupportImg from '../../../img/SectionPages/rewardsSupport.png'
+import trophyImg from '../../../img/SectionPages/trophyImg.png'
+import angleLink from '../../../img/darkAngle/angle@2x.png'
+import Footer from '../../Footer'
 
 class RewardsSupport extends Component {
   render () {

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import gettingAMidwifeImg from '../../img/ArticlePages/gettingAMidwife.png'
-import foodAndNutritionImg from '../../img/ArticlePages/foodAndNutrition.png'
-import whatNotToEatImg from '../../img/ArticlePages/whatNotToEat.png'
-import dangerSignsImg from '../../img/ArticlePages/dangerSigns.png'
+import gettingAMidwifeImg from '../../../img/ArticlePages/gettingAMidwife.png'
+import foodAndNutritionImg from '../../../img/ArticlePages/foodAndNutrition.png'
+import whatNotToEatImg from '../../../img/ArticlePages/whatNotToEat.png'
+import dangerSignsImg from '../../../img/ArticlePages/dangerSigns.png'
 
 const yourPregnancyArticles = [
   {
