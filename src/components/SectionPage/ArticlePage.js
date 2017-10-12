@@ -54,18 +54,20 @@ class ArticlePage extends Component {
         <Link to={`/${link}`}>
           <Row>
             <Col xs='2'>
-              {
-                youtubeUrl
-                ? <div className='youtubeEmbed'><Embedly href={youtubeUrl} /></div>
-                : <img className='backImg' src={backImg} alt='' />
-              }
+              <img className='backImg' src={backImg} alt='' />
             </Col>
             <Col className='back' xs='10'>
               Back to {relatedSection}
             </Col>
           </Row>
         </Link>
-        <img className='mainImg' src={img} alt='' />
+        {
+          youtubeUrl
+          ? <div className='youtubeEmbed'>
+            <Embedly href={youtubeUrl} />
+          </div>
+          : <img className='mainImg' src={img} alt='' />
+        }
         <Container>
           {
             largeTitle
