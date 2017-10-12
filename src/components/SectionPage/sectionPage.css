@@ -7,7 +7,6 @@
   text-align: left;
   color: #35a5b5;
   height: 23px;
-  font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
@@ -16,7 +15,6 @@
 
 .sectionPageContent {
   height: 84px;
-  font-family: HelveticaNeue;
   font-size: 16px;
   line-height: 1.31;
   text-align: left;
@@ -30,7 +28,6 @@
 
 .myCalendarTitle {
   height: 23px;
-  font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
@@ -51,7 +48,6 @@
 
 .myCalendarText {
   height: 24px;
-  font-family: HelveticaNeue;
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
@@ -67,7 +63,6 @@
 
 .linkText {
   height: 24px;
-  font-family: HelveticaNeue;
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
@@ -78,7 +73,6 @@
 
 .linkTitle {
   height: 23px;
-  font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
@@ -105,7 +99,6 @@
 
 .readMore {
   height: 23px;
-  font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
@@ -120,7 +113,6 @@
 
 .li {
   list-style: none;
-  font-family: HelveticaNeue;
   font-size: 16px;
   line-height: 2;
   text-align: left;
@@ -148,7 +140,6 @@
 
 .helpLineTitle {
   height: 16px;
-  font-family: HelveticaNeue;
   font-size: 14px;
   text-align: center;
   color: #777777;
@@ -157,7 +148,6 @@
 
 .helpLineText {
   height: 22px;
-  font-family: HelveticaNeue;
   font-size: 19px;
   line-height: 1.11;
   text-align: center;
@@ -176,7 +166,6 @@
 
 .furtherAssistanceEmail {
   margin-top: -25px;
-  font-family: HelveticaNeue;
   font-size: 16px;
   color: #fd7171;
   text-decoration: underline;
@@ -198,7 +187,6 @@
 
 .pointsCardTitle {
   height: 23px;
-  font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
@@ -210,7 +198,6 @@
 
 .pointsCardText {
   height: 24px;
-  font-family: HelveticaNeue;
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
