@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Card, Container, Col, Row } from 'reactstrap'
+import bronzeTrophy from '../../img/trophy-bronze.svg'
 import './pointsOverview.css'
 
 class PointsOverview extends Component {
@@ -11,7 +12,7 @@ class PointsOverview extends Component {
     const pointsToReward = 200
     const challengesCompleted = 25
     const rank = {
-      icon: 'https://image.flaticon.com/icons/svg/179/179587.svg',
+      icon: bronzeTrophy,
       title: 'Bronze'
     }
 
@@ -24,14 +25,12 @@ class PointsOverview extends Component {
                 <div className='points-earned'>
                   <p className='points-overview-total'>{pointsTotal}</p>
                   <h4 className='points-overview-header'>Points Earned</h4>
-                  <div className='points-overview-rank'>
                     <img
                       src={rank.icon}
                       alt=''
                       className='points-overview-rank-img'
                       />
                     <p className='points-overview-rank-title'>{rank.title}</p>
-                  </div>
                 </div>
               </Col>
               <Col className='points-stats-col' xs='6'>

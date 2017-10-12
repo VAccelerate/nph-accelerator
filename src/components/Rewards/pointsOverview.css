@@ -40,12 +40,19 @@ width: auto
 }
 
 .points-overview-rank-img{
-
+  text-align: left;
+  height: 39px;
+  width: 39px;
+  margin-left: 0px;
+  display: inline-block;
 }
 
 .points-overview-rank-title{
   text-align: center;
   margin-left: 10px;
+  color: #6b7897;
+  display: inline-block;
+
 }
 
 
