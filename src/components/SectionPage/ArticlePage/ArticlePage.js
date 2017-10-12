@@ -10,17 +10,17 @@ import {
 import { Link } from 'react-router-dom'
 
 import './articlePage.css'
-import NavBar from '../NavBar'
-import Footer from '../Footer'
-import Embedly from '../Embedly'
-import yourPregnancyArticles from './yourPregnancyArticles'
-import supportAndHelpArticles from './supportAndHelpArticles'
-import babyAndToddlerArticles from './babyAndToddlerArticles'
-import pepiOraHelpArticles from './pepiOraHelpArticles'
-import rewardsSupportArticles from './rewardsSupportArticles'
-import backImg from '../../img/angle/angle-left.svg'
-import redAngleLeft from '../../img/angle/red-angle-left.png'
-import redAngleRight from '../../img/angle/red-angle-right.png'
+import NavBar from '../../NavBar'
+import Footer from '../../Footer'
+import Embedly from '../../Embedly'
+import yourPregnancyArticles from '../YourPregnancy/yourPregnancyArticles'
+import supportAndHelpArticles from '../SupportAndHelp/supportAndHelpArticles'
+import babyAndToddlerArticles from '../BabyAndToddler/babyAndToddlerArticles'
+import pepiOraHelpArticles from '../PepiOraHelp/pepiOraHelpArticles'
+import rewardsSupportArticles from '../RewardsSupport/rewardsSupportArticles'
+import backImg from '../../../img/angle/angle-left.svg'
+import redAngleLeft from '../../../img/angle/red-angle-left.png'
+import redAngleRight from '../../../img/angle/red-angle-right.png'
 
 class ArticlePage extends Component {
   componentDidUpdate () {
@@ -52,25 +52,27 @@ class ArticlePage extends Component {
         <div ref='topOfPage' />
         <NavBar />
         <Link to={`/${link}`}>
-          <Row>
+          <Row className='articleRemoveMargin'>
             <Col xs='2'>
-              {
-                youtubeUrl
-                ? <div className='youtubeEmbed'><Embedly href={youtubeUrl} /></div>
-                : <img className='backImg' src={backImg} alt='' />
-              }
+              <img className='backImg' src={backImg} alt='' />
             </Col>
             <Col className='back' xs='10'>
               Back to {relatedSection}
             </Col>
           </Row>
         </Link>
-        <img className='mainImg' src={img} alt='' />
+        {
+          youtubeUrl
+          ? <div className='youtubeEmbed'>
+            <Embedly href={youtubeUrl} />
+          </div>
+          : <img className='mainImg' src={img} alt='' />
+        }
         <Container>
           {
             largeTitle
             ? <div>
-              <Row className='scrollAge'>
+              <Row className='scrollAge articleRemoveMargin'>
                 <Col xs='2'>
                   {
                     Number(id) === 0

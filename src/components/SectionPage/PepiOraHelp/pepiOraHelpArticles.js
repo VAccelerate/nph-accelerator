@@ -1,9 +1,9 @@
 import React from 'react'
 
-import navigationHelpImg from '../../img/ArticlePages/navigationHelp.png'
-import navigationHelpStepOneImg from '../../img/ArticlePages/navigationHelpStepOne.png'
-// import navigationHelpStepTwoImg from '../../img/ArticlePages/navigationHelpStepTwo.png'
-import navigationHelpStepThreeImg from '../../img/ArticlePages/navigationHelpStepThree.png'
+import navigationHelpImg from '../../../img/ArticlePages/navigationHelp.png'
+import navigationHelpStepOneImg from '../../../img/ArticlePages/navigationHelpStepOne.png'
+import pepiOraLogo from '../../../img/ArticlePages/pepiOraLogo.png'
+import navigationHelpStepThreeImg from '../../../img/ArticlePages/navigationHelpStepThree.png'
 
 const pepiOraHelpArticles = [
   {
@@ -27,7 +27,7 @@ const pepiOraHelpArticles = [
         <div className='contentStyle'>
           If you select the logo it will take you back to your home page.
         </div>
-        <img src={navigationHelpStepThreeImg} alt='' className='stepsImg' />
+        <img src={pepiOraLogo} alt='' className='logoStyle' />
         <h4 className='articleTitle'>Rewards Icon</h4>
         <div className='contentStyle'>
           Selecting the rewards icon will take you to your rewards overview page.

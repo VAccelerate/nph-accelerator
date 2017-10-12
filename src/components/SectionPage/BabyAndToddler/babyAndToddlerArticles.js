@@ -1,15 +1,15 @@
 import React from 'react'
 
-import stageOneImg from '../../img/ArticlePages/0-3months.png'
-import stageTwoImg from '../../img/ArticlePages/3-6months.png'
-import stageThreeImg from '../../img/ArticlePages/6-12months.jpg'
-import stageFourImg from '../../img/ArticlePages/1-3years.jpg'
-import stageFiveImg from '../../img/ArticlePages/3-5years.jpg'
+import stageOneImg from '../../../img/ArticlePages/0-3months.png'
+import stageTwoImg from '../../../img/ArticlePages/3-6months.png'
+import stageThreeImg from '../../../img/ArticlePages/6-12months.jpg'
+import stageFourImg from '../../../img/ArticlePages/1-3years.jpg'
+import stageFiveImg from '../../../img/ArticlePages/3-5years.jpg'
 
 const babyAndToddlerArticles = [
   {
     id: 0,
-    relatedSection: 'baby & toddler',
+    relatedSection: 'Baby & Toddler',
     largeTitle: '0 - 3 Months',
     title: 'Breast Feeding',
     description: 'Help with your new baby',
@@ -49,7 +49,7 @@ const babyAndToddlerArticles = [
   },
   {
     id: 1,
-    relatedSection: 'baby & toddler',
+    relatedSection: 'Baby & Toddler',
     largeTitle: '3 - 6 Months',
     title: 'Food & Nutrition',
     description: 'As they grow',
@@ -82,7 +82,7 @@ const babyAndToddlerArticles = [
   },
   {
     id: 2,
-    relatedSection: 'baby & toddler',
+    relatedSection: 'Baby & Toddler',
     largeTitle: '6 - 12 Months',
     title: 'Learning to walk',
     description: 'Coming up to 1 year',
@@ -115,7 +115,7 @@ const babyAndToddlerArticles = [
   },
   {
     id: 3,
-    relatedSection: 'baby & toddler',
+    relatedSection: 'Baby & Toddler',
     largeTitle: '1 - 3 Years',
     title: 'Terrible twos',
     description: 'What to look for',
@@ -148,7 +148,7 @@ const babyAndToddlerArticles = [
   },
   {
     id: 4,
-    relatedSection: 'baby & toddler',
+    relatedSection: 'Baby & Toddler',
     largeTitle: '3 - 5 Years',
     title: 'Supporting development',
     description: 'Advise on what you can do',

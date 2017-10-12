@@ -5,7 +5,6 @@ import {
   Row,
   Col
 } from 'reactstrap'
-import FontAwesomeIcon from '../FontAwesomeIcon/index'
 import logo from '../../img/logo.png'
 import './footer.css'
 
@@ -13,37 +12,23 @@ class Footer extends Component {
   render () {
     return (
       <div>
-        <div className='madeBy'>
-          <Container>
-            <Row>
+        <Container>
+          <a
+            href='https://www.facebook.com/ngatiporouhauora/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='footerWebLink'
+          >
+            <Row className='footer'>
               <Col xs='3'>
-                <img src={logo} className='footerLogo' alt='Generic placeholder ' />
+                <img src={logo} className='footerLogo' alt='Footer NPH logo' />
               </Col>
               <Col xs='9'>
                 <div className='footerText'>by Ngati Porou Hauora</div>
               </Col>
             </Row>
-          </Container>
-        </div>
-
-        <div className='socialIcons'>
-          <Container>
-            <Row>
-              <Col>
-                <FontAwesomeIcon name='facebook-square fa-3x' />
-              </Col>
-              <Col>
-                <FontAwesomeIcon name='twitter fa-3x' />
-              </Col>
-              <Col>
-                <FontAwesomeIcon name='instagram fa-3x' />
-              </Col>
-              <Col>
-                <FontAwesomeIcon name='envelope-o fa-3x' />
-              </Col>
-            </Row>
-          </Container>
-        </div>
+          </a>
+        </Container>
       </div>
     )
   }

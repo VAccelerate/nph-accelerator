@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import gettingAMidwifeImg from '../../img/ArticlePages/gettingAMidwife.png'
-import foodAndNutritionImg from '../../img/ArticlePages/foodAndNutrition.png'
-import whatNotToEatImg from '../../img/ArticlePages/whatNotToEat.png'
-import dangerSignsImg from '../../img/ArticlePages/dangerSigns.png'
+import gettingAMidwifeImg from '../../../img/ArticlePages/gettingAMidwife.png'
+import foodAndNutritionImg from '../../../img/ArticlePages/foodAndNutrition.png'
+import whatNotToEatImg from '../../../img/ArticlePages/whatNotToEat.png'
+import dangerSignsImg from '../../../img/ArticlePages/dangerSigns.png'
 
 const yourPregnancyArticles = [
   {
@@ -40,8 +40,8 @@ const yourPregnancyArticles = [
         </ul>
         <ul className='midwifeContact'>
           <li><span className='midwifeContactType'>Phone: </span>06 864 7788</li>
-          <li><span className='midwifeContactType'>Mobile: </span><span>027 237 8467</span></li>
-          <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>lizzie.andre@xtra.co.nz</span></li>
+          <li><span className='midwifeContactType'>Mobile: </span><span>021 765 053</span></li>
+          <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>corrina.parata@nph.org.nz</span></li>
         </ul>
       </div>
     ),

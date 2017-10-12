@@ -13,13 +13,15 @@ import RewardsView from './components/RewardsView'
 import RewardClaimed from './components/RewardClaimed'
 import Calendar from './components/Calendar'
 import Challenges from './components/Challenges'
-import YourPregnancy from './components/SectionPage/YourPregnancy'
-import SupportAndHelp from './components/SectionPage/SupportAndHelp'
-import BabyAndToddler from './components/SectionPage/BabyAndToddler'
-import ArticlePage from './components/SectionPage/ArticlePage'
-import ChallengesResult from './components/ChallengesResult'
-import PepiOraHelp from './components/SectionPage/PepiOraHelp'
-import RewardsSupport from './components/SectionPage/RewardsSupport'
+import YourPregnancy from './components/SectionPage/YourPregnancy/'
+import SupportAndHelp from './components/SectionPage/SupportAndHelp/'
+import BabyAndToddler from './components/SectionPage/BabyAndToddler/'
+import ArticlePage from './components/SectionPage/ArticlePage/'
+import ChallengesResult from './components/ChallengesResult/'
+import PepiOraHelp from './components/SectionPage/PepiOraHelp/'
+import RewardsSupport from './components/SectionPage/RewardsSupport/'
+import ContactPage from './components/ContactPage/'
+import AboutPage from './components/AboutPage/'
 
 class App extends Component {
   render () {
@@ -45,6 +47,8 @@ class App extends Component {
         <Route exact path='/pepi-ora-help/:articleId' component={ArticlePage} />
         <Route exact path='/rewards-support' component={RewardsSupport} />
         <Route exact path='/rewards-support/:articleId' component={ArticlePage} />
+        <Route exact path='/contact' component={ContactPage} />
+        <Route exact path='/about' component={AboutPage} />
       </div>
     )
   }
