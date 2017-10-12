@@ -25,12 +25,14 @@ class PointsOverview extends Component {
                 <div className='points-earned'>
                   <p className='points-overview-total'>{pointsTotal}</p>
                   <h4 className='points-overview-header'>Points Earned</h4>
+                  <div className='points-overview-rank'>
                     <img
                       src={rank.icon}
                       alt=''
                       className='points-overview-rank-img'
-                      />
+                        />
                     <p className='points-overview-rank-title'>{rank.title}</p>
+                  </div>
                 </div>
               </Col>
               <Col className='points-stats-col' xs='6'>
