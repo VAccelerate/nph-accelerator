@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 import {
   Container,
   Row,
@@ -23,10 +23,44 @@ import redAngleLeft from '../../../img/angle/red-angle-left.png'
 import redAngleRight from '../../../img/angle/red-angle-right.png'
 
 class ArticlePage extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      message: 'not at bottom'
+    }
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+
+  handleScroll () {
+    const windowHeight = 'innerHeight' in window ? window.innerHeight : document.documentElement.offsetHeight
+    const body = document.body
+    const html = document.documentElement
+    const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+    const windowBottom = windowHeight + window.pageYOffset
+    if (windowBottom >= docHeight) {
+      this.setState({
+        message: 'bottom reached'
+      })
+    } else {
+      this.setState({
+        message: 'not at bottom'
+      })
+    }
+  }
+
+  componentDidMount () {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
   componentDidUpdate () {
-    ReactDOM.findDOMNode(this.refs.topOfPage).scrollIntoView()
+    // ReactDOM.findDOMNode(this.refs.topOfPage).scrollIntoView()
   }
   render () {
+    console.log(this.state)
     const section = window.location.pathname
     const splitUrl = section.split('/')
     const link = splitUrl[1]
@@ -129,4 +163,9 @@ class ArticlePage extends Component {
   }
 }
 
+ArticlePage.propTypes = {
+}
+
+ArticlePage.defaultProps = {
+}
 export default ArticlePage
