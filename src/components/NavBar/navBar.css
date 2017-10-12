@@ -29,7 +29,6 @@
 }
 
 .hamburger-icon {
-  margin-left: 5vw;
   color: #ffffff;
   font-size: 25px;
   margin-top: 3px;
@@ -52,7 +51,6 @@ img.nav-img {
 .menu-item {
   width: 134px;
   height: 32px;
-  font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
