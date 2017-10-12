@@ -8,7 +8,6 @@ import {
   NavLink,
   Container
 } from 'reactstrap'
-import classnames from 'classnames'
 
 import NavBar from '../NavBar'
 import MyRewards from './MyRewards'
@@ -39,19 +38,19 @@ class RewardsView extends React.Component {
       <div>
         <NavBar />
         <Container>
-          <Nav tabs justified>
-            <NavItem>
+          <Nav justified className='rewards-view-nav-tab'>
+            <NavItem className='rewards-view-nav-item'>
               <NavLink
-                className={classnames({ active: this.props.rewardsActiveTab === 'shop' })}
+                className={this.props.rewardsActiveTab === 'shop' ? 'active rewards-view-nav-link' : 'rewards-view-nav-link'}
                 onClick={() => { this.toggle('shop') }}
               >
                 Shop
               </NavLink>
             </NavItem>
             <div className='vertical-divider' />
-            <NavItem>
+            <NavItem className='rewards-view-nav-item'>
               <NavLink
-                className={classnames({ active: this.props.rewardsActiveTab === 'myRewards' })}
+                className={this.props.rewardsActiveTab === 'myRewards' ? 'active rewards-view-nav-link' : 'rewards-view-nav-link'}
                 onClick={() => { this.toggle('myRewards') }}
               >
                 My Rewards
