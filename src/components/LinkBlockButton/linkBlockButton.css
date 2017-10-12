@@ -1,4 +1,4 @@
-.button{
+.button {
   width: auto;
   height: 79px;
   border-radius: 4px;
@@ -7,7 +7,7 @@
   margin-top: 9px;
 }
 
-.button-title{
+.button-title {
   height: 23px;
   font-size: 18px;
   font-weight: 500;
@@ -18,7 +18,7 @@
   padding-top: 17px;
 }
 
-.button-descText{
+.button-descText {
   height: 24px;
   font-size: 16px;
   line-height: 1.5;
@@ -28,7 +28,7 @@
   padding-top: 6px;
 }
 
-.button-chevron{
+.button-chevron {
   margin-top: 25px;
   margin-right: 15px;
   height: 30px;

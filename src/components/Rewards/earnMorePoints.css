@@ -1,4 +1,4 @@
-.EMP-title{
+.EMP-title {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
@@ -6,13 +6,13 @@
   color: #4a4a4a;
 }
 
-.EMP-list{
+.EMP-list {
   list-style: none;
   text-align: left;
   display: block;
 }
 
-.EMP-list-item{
+.EMP-list-item {
   font-size: 16px;
   text-align: left;
   color: #fd7171;
