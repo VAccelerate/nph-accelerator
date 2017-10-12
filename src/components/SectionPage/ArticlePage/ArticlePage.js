@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import ReactDOM from 'react-dom'
+import { connect } from 'react-redux'
 import {
   Container,
   Row,
@@ -26,7 +26,8 @@ class ArticlePage extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      message: 'not at bottom'
+      atPageBottom: false,
+      navigated: false
     }
     this.handleScroll = this.handleScroll.bind(this)
   }
@@ -39,17 +40,18 @@ class ArticlePage extends Component {
     const windowBottom = windowHeight + window.pageYOffset
     if (windowBottom >= docHeight) {
       this.setState({
-        message: 'bottom reached'
+        atPageBottom: true
       })
     } else {
       this.setState({
-        message: 'not at bottom'
+        atPageBottom: false
       })
     }
   }
 
   componentDidMount () {
     window.addEventListener('scroll', this.handleScroll)
+    window.scrollTo(0, 0)
   }
 
   componentWillUnmount () {
@@ -57,10 +59,21 @@ class ArticlePage extends Component {
   }
 
   componentDidUpdate () {
-    // ReactDOM.findDOMNode(this.refs.topOfPage).scrollIntoView()
+    const pathname = window.location.pathname
+    const section = pathname.split('/')[1]
+    const articleId = pathname.split('/')[2]
+    if (this.state.atPageBottom && !this.state.navigated && !this.props.sectionIndex.find(index => {
+      return index.section === section
+    }).articles[articleId].challengeCompleted) {
+      this.setState({
+        navigated: true
+      })
+      setTimeout(() => {
+        this.props.history.push(`/challenges${window.location.pathname}`)
+      }, 1000)
+    }
   }
   render () {
-    console.log(this.state)
     const section = window.location.pathname
     const splitUrl = section.split('/')
     const link = splitUrl[1]
@@ -132,7 +145,18 @@ class ArticlePage extends Component {
           {content}
           {
             id < (data.length - 1)
-            ? <Link to={`/${link}/${idPlusOne}`}><Card className='nextButton'><CardText className='nextText'>Next article > </CardText></Card></Link>
+            ? (
+              <Link
+                to={`/${link}/${idPlusOne}`}
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                <Card className='nextButton'>
+                  <CardText className='nextText'>
+                  Next article >
+                  </CardText>
+                </Card>
+              </Link>
+            )
             : null
           }
           <hr className='hr' />
@@ -163,9 +187,4 @@ class ArticlePage extends Component {
   }
 }
 
-ArticlePage.propTypes = {
-}
-
-ArticlePage.defaultProps = {
-}
-export default ArticlePage
+export default connect(state => state)(ArticlePage)

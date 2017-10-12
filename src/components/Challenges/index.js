@@ -8,10 +8,6 @@ import gamepad from '../../img/gamepad.svg'
 import hamburgerX from '../../img/hamburgerX.svg'
 import challengeData from './challengeData'
 
-const pathname = window.location.pathname
-const section = pathname.split('/')[2]
-const articleId = pathname.split('/')[3]
-
 class Challenges extends Component {
   constructor (props) {
     super(props)
@@ -25,18 +21,28 @@ class Challenges extends Component {
     }
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0)
+  }
+
   componentWillMount () {
+    const pathname = window.location.pathname
+    const section = pathname.split('/')[2]
+    const articleId = pathname.split('/')[3]
     const { history, sectionIndex } = this.props
     if (
       sectionIndex.find(index => {
         return index.section === section
-      }).articles[articleId].challengeCompleted === true
+      }).articles[articleId].challengeCompleted
     ) {
       history.push('/rewards')
     }
   }
 
   submitAnswer () {
+    const pathname = window.location.pathname
+    const section = pathname.split('/')[2]
+    const articleId = pathname.split('/')[3]
     if (this.state.answerSelected === challengeData[section][articleId].questions[0].correct) {
       this.setState({
         questionsCorrect: this.state.questionsCorrect + 1
@@ -55,6 +61,9 @@ class Challenges extends Component {
   }
 
   render () {
+    const pathname = window.location.pathname
+    const section = pathname.split('/')[2]
+    const articleId = pathname.split('/')[3]
     const question = challengeData[section][articleId].questions[this.state.questionNumber] || {
       question: null,
       answers: [],
@@ -74,6 +83,7 @@ class Challenges extends Component {
     }
     return (
       <div className='challenges'>
+        <div ref='topOfPage' />
         <div>
           <Link to={`/${section}/${articleId}`} >
             <img className='X-img' src={hamburgerX} alt='Hambuger menu icon' />
