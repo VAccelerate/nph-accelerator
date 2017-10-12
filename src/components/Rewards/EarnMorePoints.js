@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
   Container,
-  NavItem,
-  NavLink
+  NavItem
 } from 'reactstrap'
+import { Link } from 'react-router-dom'
 import './earnMorePoints.css'
 
 class EarnMorePoints extends Component {
@@ -14,7 +14,7 @@ class EarnMorePoints extends Component {
     function renderSubheader (subheader) {
       return (
         <NavItem key={subheader.name}>
-          <NavLink key={subheader.name} href={subheader.url} className='EMP-list-item'>{subheader.descText}</NavLink>
+          <Link to={subheader.url}><span key={subheader.name} className='EMP-list-item'>{subheader.descText}</span></Link><br />
         </NavItem>
       )
     }
