@@ -6,9 +6,7 @@ import calendarNext from '../../img/calendarNext.svg'
 const CalendarNav = ({
   onPreviousClick,
   onNextClick,
-  className,
-  localeUtils,
-  date
+  className
 }) => {
   const styleLeft = {
     float: 'left'
@@ -19,8 +17,8 @@ const CalendarNav = ({
   }
   return (
     <div className={className}>
-      <img src={calendarNext} style={styleRight} onClick={() => onNextClick()} />
-      <img src={calendarPrev} style={styleLeft} onClick={() => onPreviousClick()} />
+      <img src={calendarNext} style={styleRight} onClick={() => onNextClick()} alt='Calendar next icon' />
+      <img src={calendarPrev} style={styleLeft} onClick={() => onPreviousClick()} alt='Calendar back icon' />
     </div>
   )
 }

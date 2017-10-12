@@ -15,7 +15,8 @@ const initialState = {
   userRewardIds: [1, 2],
   navToggle: false,
   pointsTotal: 200,
-  sectionIndex: sectionIndex
+  sectionIndex: sectionIndex,
+  rewardsActiveTab: 'shop'
 }
 
 export default initialState

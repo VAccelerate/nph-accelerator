@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {
   Container,
@@ -10,6 +10,19 @@ import rewards from '../RewardCards/data'
 import './myRewards.css'
 
 class MyRewards extends Component {
+  constructor (props) {
+    super(props)
+
+    this.goToShop = this.goToShop.bind(this)
+  }
+
+  goToShop () {
+    this.props.dispatch({
+      type: 'REWARDS_ACTIVE_TAB',
+      payload: 'shop'
+    })
+  }
+
   render () {
     const { userRewardIds } = this.props
 
@@ -29,7 +42,7 @@ class MyRewards extends Component {
           <Container className='my-rewards-empty'>
             You don’t currently have any rewards, check out your shop to see what’s available.
           </Container>
-          <Button block outline className='my-shop-btn' onClick={() => { this.toggle('shop') }}>
+          <Button block outline className='my-shop-btn' onClick={this.goToShop}>
             View my shop
           </Button>
         </div>
@@ -56,7 +69,6 @@ class MyRewards extends Component {
     return (
       <div>
         {myRewardsDisplay}
-        {/* The following reward is a placeholder as there's no logic for used rewards */}
         <div className='my-used-rewards-div'>
           <div className='my-rewards-static-heading'>
             Used&nbsp;
@@ -64,7 +76,6 @@ class MyRewards extends Component {
           <div className='my-rewards-dynamic-heading'>
             - Showing 1 of 1 rewards
           </div>
-          {/* Reward is unavailable as it has already been used */}
           <RewardPreview reward={rewards[0]} isAvailable={false} key={0} />
         </div>
       </div>

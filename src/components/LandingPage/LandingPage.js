@@ -28,7 +28,7 @@ class LandingPage extends Component {
           </Row>
           <Row className='landingFooter'>
             <Col xs='3'>
-              <img src={logo} className='landingFooterLogo' alt='Generic placeholder ' />
+              <img src={logo} className='landingFooterLogo' alt='Generic placeholder' />
             </Col>
             <Col xs='9'>
               <div className='landingFooterText'>by Ngati Porou Hauora</div>

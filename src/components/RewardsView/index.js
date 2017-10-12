@@ -8,7 +8,6 @@ import {
   NavLink,
   Container
 } from 'reactstrap'
-import classnames from 'classnames'
 
 import NavBar from '../NavBar'
 import MyRewards from './MyRewards'
@@ -23,15 +22,13 @@ class RewardsView extends React.Component {
     super(props)
 
     this.toggle = this.toggle.bind(this)
-    this.state = {
-      activeTab: 'shop'
-    }
   }
 
   toggle (tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
+    if (this.props.rewardsActiveTab !== tab) {
+      this.props.dispatch({
+        type: 'REWARDS_ACTIVE_TAB',
+        payload: tab
       })
     }
   }
@@ -41,19 +38,19 @@ class RewardsView extends React.Component {
       <div>
         <NavBar />
         <Container>
-          <Nav tabs justified>
-            <NavItem>
+          <Nav justified className='rewards-view-nav-tab'>
+            <NavItem className='rewards-view-nav-item'>
               <NavLink
-                className={classnames({ active: this.state.activeTab === 'shop' })}
+                className={this.props.rewardsActiveTab === 'shop' ? 'active rewards-view-nav-link' : 'rewards-view-nav-link'}
                 onClick={() => { this.toggle('shop') }}
               >
                 Shop
               </NavLink>
             </NavItem>
             <div className='vertical-divider' />
-            <NavItem>
+            <NavItem className='rewards-view-nav-item'>
               <NavLink
-                className={classnames({ active: this.state.activeTab === 'myRewards' })}
+                className={this.props.rewardsActiveTab === 'myRewards' ? 'active rewards-view-nav-link' : 'rewards-view-nav-link'}
                 onClick={() => { this.toggle('myRewards') }}
               >
                 My Rewards
@@ -61,7 +58,7 @@ class RewardsView extends React.Component {
             </NavItem>
           </Nav>
           <div className='tab-hr' />
-          <TabContent activeTab={this.state.activeTab}>
+          <TabContent activeTab={this.props.rewardsActiveTab}>
             <TabPane tabId='shop'>
               <Rewards />
             </TabPane>

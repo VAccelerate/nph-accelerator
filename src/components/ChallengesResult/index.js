@@ -43,7 +43,7 @@ class ChallengesResult extends Component {
       <div>
         <div className='results-top-section'>
           <Link to='/' >
-            <img className='X-img' src={hamburgerX} />
+            <img className='X-img' src={hamburgerX} alt='Hamburger menu icon' />
           </Link>
         </div>
         <div className='result-banner' id={styleId}>

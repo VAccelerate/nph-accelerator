@@ -13,9 +13,9 @@ class Challenges extends Component {
       <div className='challenges'>
         <div>
           <Link to='/' >
-            <img className='X-img' src={hamburgerX} />
+            <img className='X-img' src={hamburgerX} alt='Hambuger menu icon' />
           </Link>
-          <img className='gamepad-img' src={gamepad} />
+          <img className='gamepad-img' src={gamepad} alt='Game controller icon' />
         </div>
         <div className='challenge-messages'>
           <p className='challenge-title' >

@@ -6,7 +6,6 @@
 .sectionPageTitle {
   text-align: left;
   color: #35a5b5;
-  width: 134px;
   height: 23px;
   font-family: HelveticaNeue;
   font-size: 18px;
@@ -16,7 +15,6 @@
 }
 
 .sectionPageContent {
-  width: 300px;
   height: 84px;
   font-family: HelveticaNeue;
   font-size: 16px;
@@ -164,4 +162,68 @@
   line-height: 1.11;
   text-align: center;
   color: #ef005c;
+}
+
+.pepiOraSectionPadding {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.furtherAssistanceTitle {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.furtherAssistanceEmail {
+  margin-top: -25px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  color: #fd7171;
+  text-decoration: underline;
+  margin-bottom: -30px;
+}
+
+.pepiOraDescription {
+  margin-bottom: -20px;
+}
+
+.pointsCard {
+  height: 79px;
+  border-radius: 4px;
+  background-color: #fd7171;
+  border: none;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.pointsCardTitle {
+  height: 23px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.06;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.pointsCardText {
+  height: 24px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #373a3c;
+  margin-left: 20px;
+}
+
+.pointsCardTrophyImg {
+  height: 38px;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+.rewardsSupportMargin {
+  margin-bottom: 20px;
 }
