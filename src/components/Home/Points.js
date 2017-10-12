@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { Card, Container, Col, Row, CardTitle, CardText } from 'reactstrap'
 import trophy from '../../img/resultsTrophy.svg'
 
@@ -11,6 +12,7 @@ class Points extends Component {
 
     return (
       <Container>
+        <Link to='/rewards'>
         <Card className='home-points'>
           <Row className='home-points-row'>
             <Col className='home-points-text' xs='9'>
@@ -22,6 +24,7 @@ class Points extends Component {
             </Col>
           </Row>
         </Card>
+        </Link>
       </Container>
     )
   }
