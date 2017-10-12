@@ -79,8 +79,8 @@ class Rewards extends Component {
           <option value=''>Brands</option>
           <option value='vodafone'>Vodafone</option>
           <option value='spark'>Spark</option>
-          <option value='bp'>BP</option>
-          <option value='paknsave'>Pak n Save</option>
+          <option value='gasoline alley'>Gasoline Alley</option>
+          <option value='four square'>Four Square</option>
         </Input>
         <div className='rewardCount'>
           Showing {rewardsToDisplay.length} of {rewards.length} rewards

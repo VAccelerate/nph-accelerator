@@ -183,7 +183,7 @@ class PregnancyQuestions extends Component {
                       : knowLmp
                         ? <FormGroup>
                           <Label for='dueDate' className='question-phrase'>
-                            Enter your due date
+                            Enter the the first day of your last period
                           </Label>
                           <DatePicker
                             className='date-picker'
