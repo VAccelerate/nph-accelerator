@@ -17,6 +17,7 @@ import navToggle from './navToggle'
 import knowLmp from './knowLmp'
 import sectionIndex from './sectionIndex'
 import rewardsActiveTab from './rewardsActiveTab'
+import challengeResult from './challengeResult'
 
 const reducers = combineReducers({
   userName,
@@ -35,7 +36,8 @@ const reducers = combineReducers({
   navToggle,
   knowLmp,
   sectionIndex,
-  rewardsActiveTab
+  rewardsActiveTab,
+  challengeResult
 })
 
 export default reducers

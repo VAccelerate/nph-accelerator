@@ -35,12 +35,12 @@ class App extends Component {
         <Route exact path='/rewards/:id' component={Reward} />
         <Route exact path='/rewards/:id/:serial' component={RewardClaimed} />
         <Route exact path='/calendar' component={Calendar} />
-        <Route exact path='/challenges/:id' component={Challenges} />
         <Route exact path='/your-pregnancy' component={YourPregnancy} />
         <Route exact path='/support-and-help' component={SupportAndHelp} />
         <Route exact path='/baby-and-toddler' component={BabyAndToddler} />
         <Route exact path='/your-pregnancy/:articleId' component={ArticlePage} />
-        <Route exact path='/challenges/:id/result' component={ChallengesResult} />
+        <Route exact path='/challenges/:sectionId/:articleId/' component={Challenges} />
+        <Route exact path='/challenges/:sectionId/:articleId/result' component={ChallengesResult} />
         <Route exact path='/support-and-help/:articleId' component={ArticlePage} />
         <Route exact path='/baby-and-toddler/:articleId' component={ArticlePage} />
         <Route exact path='/pepi-ora-help' component={PepiOraHelp} />
