@@ -26,7 +26,7 @@ class DateView extends Component {
   }
 
   render () {
-    const dateDue = this.props.dueDate.split('/')
+    const dateDue = this.props.dueDate ? this.props.dueDate.split('/') : ''
     let dueDate = {
       year: Number(dateDue[2]),
       month: (Number(dateDue[1]) - 1),
