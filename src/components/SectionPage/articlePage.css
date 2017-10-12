@@ -22,7 +22,6 @@
 .articleTitle {
   padding-top: 15px;
   padding-left: 15px;
-  height: 23px;
   font-family: HelveticaNeue;
   font-size: 18px;
   font-weight: 500;
@@ -187,6 +186,14 @@
   width: 60%;
   margin-left: 66px;
   margin-right: 66px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.logoStyle {
+  width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
