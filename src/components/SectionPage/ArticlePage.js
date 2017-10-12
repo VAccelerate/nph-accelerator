@@ -16,6 +16,8 @@ import Embedly from '../Embedly'
 import yourPregnancyArticles from './yourPregnancyArticles'
 import supportAndHelpArticles from './supportAndHelpArticles'
 import babyAndToddlerArticles from './babyAndToddlerArticles'
+import pepiOraHelpArticles from './pepiOraHelpArticles'
+import rewardsSupportArticles from './rewardsSupportArticles'
 import backImg from '../../img/angle/angle-left.svg'
 import redAngleLeft from '../../img/angle/red-angle-left.png'
 import redAngleRight from '../../img/angle/red-angle-right.png'
@@ -38,6 +40,10 @@ class ArticlePage extends Component {
       data = babyAndToddlerArticles
     } else if (link === 'support-and-help') {
       data = supportAndHelpArticles
+    } else if (link === 'pepi-ora-help') {
+      data = pepiOraHelpArticles
+    } else if (link === 'rewards-support') {
+      data = rewardsSupportArticles
     }
     const relevantData = data[id]
     const { title, content, youtubeUrl, largeTitle, img, relatedSection, readMore } = relevantData
@@ -102,7 +108,7 @@ class ArticlePage extends Component {
                 {
                   readMore.map((item, key) => {
                     return (
-                      <Link to={item.link}>
+                      <Link to={item.link} key={key}>
                         <li className='li'>
                           {item.title}
                         </li>

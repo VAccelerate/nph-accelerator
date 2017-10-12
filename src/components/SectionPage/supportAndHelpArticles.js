@@ -171,7 +171,7 @@ const supportAndHelpArticles = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     relatedSection: 'support & help',
     title: 'Feeling Unsafe?',
     description: 'Are you in danger',
@@ -225,7 +225,7 @@ const supportAndHelpArticles = [
     ]
   },
   {
-    id: 2,
+    id: 4,
     relatedSection: 'support & help',
     title: 'Feeling Unwell?',
     description: 'Advise on what you can do',
@@ -279,7 +279,7 @@ const supportAndHelpArticles = [
     ]
   },
   {
-    id: 2,
+    id: 5,
     relatedSection: 'support & help',
     title: 'Feeling Alone?',
     description: 'Advise on what you can do',
