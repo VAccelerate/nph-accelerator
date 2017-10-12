@@ -48,7 +48,7 @@ challengeData['support-and-help'][3] = {
   ]
 }
 
-challengeData['your-pregnancy'] = {
+challengeData['your-pregnancy'][3] = {
   title: 'Smoking, Drugs & Alcohol',
   questions: [
     {

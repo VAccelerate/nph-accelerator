@@ -13,6 +13,10 @@ import {
 
 class LandingPage extends Component {
   render () {
+    const { userName, dueDate } = this.props
+    if (userName && dueDate) {
+      this.props.history.push('/home')
+    }
     return (
       <div className='bgColor'>
         <Container>

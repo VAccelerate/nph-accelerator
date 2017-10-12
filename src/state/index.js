@@ -12,9 +12,9 @@ const initialState = {
   dueDate: null,
   children: [],
   landingCarousel: 0,
-  userRewardIds: [1, 2],
+  userRewardIds: [],
   navToggle: false,
-  pointsTotal: 200,
+  pointsTotal: 100,
   sectionIndex: sectionIndex,
   rewardsActiveTab: 'shop',
   challengeResult: {
