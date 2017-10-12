@@ -10,7 +10,7 @@ class Contact extends Component {
       <div>
         <div className='send-div'>
           <Container>
-            <img className='send-heart' src={heart} />
+            <img className='send-heart' src={heart} alt='Heart icon' />
             <p className='send-text'>
             Do you have a friend or family member you think would benefit from our app?
           </p>

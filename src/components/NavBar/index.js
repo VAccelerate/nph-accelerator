@@ -40,7 +40,7 @@ class NavBar extends Component {
           customCrossIcon={false}
           customBurgerIcon={false}>
           <a style={{position: 'absolute', top: 15, right: 35}} onClick={this.toggleNavbar}>
-            <img src={hamburgerX} />
+            <img src={hamburgerX} alt='Hamburger menu icon' />
           </a>
           <Link to='/home'><p id='home' className='menu-item' onClick={this.toggleNavbar}>Home</p></Link>
           <Link to='/rewards'><p id='rewards' className='menu-item' onClick={this.toggleNavbar}>Rewards</p></Link>
