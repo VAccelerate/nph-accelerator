@@ -1,6 +1,33 @@
-
+.carousel-container{
+  z-index: -1;
+}
 .carousel-greeting{
   font-size:18px;
   color:#35a5b5;
   margin-top: 2vh;
+}
+
+.d-block{
+  height: 25vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-color: white;
+  border: none;
+}
+
+.carousel-indicators li{
+  background-color: black;
+}
+
+.carousel-indicators .active{
+  background-color: #35a5b5;
+}
+
+.carousel-link{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #fd7171;
 }

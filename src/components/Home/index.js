@@ -13,22 +13,22 @@ class Home extends Component {
   render () {
     return (
       <div>
-          <NavBar />
-          <UserMessage /><hr />
-          <Points />
-          {
+        <NavBar />
+        <UserMessage />
+        <Points />
+        {
             this.props.isPregnant === 'false'
             ? null
             : <div><LinkBlockDropdown section={data.homepageDropdowns.pregnancy} /></div>
           }
-          {
+        {
             this.props.hasChildren === 'false'
             ? null
             : <div><LinkBlockDropdown section={data.homepageDropdowns.babyToddler} /></div>
           }
-          <LinkBlockDropdown section={data.homepageDropdowns.supportHelp} /><br />
+        <LinkBlockDropdown section={data.homepageDropdowns.supportHelp} /><br />
         <Contact />
-        <Partners/>
+        <Partners />
         <Footer />
       </div>
     )
