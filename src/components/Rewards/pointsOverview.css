@@ -9,7 +9,6 @@
   width: 90%;
 }
 
-
 .points-overview-row {
   width: 100%;
   align-self: center;
@@ -17,17 +16,12 @@
 
 .points-earned {
 width: auto
-
-}
-
-.points-earned-col {
 }
 
 .points-overview-total {
   color:#FD7171;
   font-size: 64px;
   text-align: center;
-  margin-left: 10px;
   margin-bottom: -5px;
 }
 
@@ -35,13 +29,27 @@ width: auto
   text-align: center;
   color: #a2abbf;
   font-size: 15px;
-  margin-left: 10px;
   margin-top: 0px;
+}
+
+.points-overview-rank {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.points-overview-rank-img {
+  text-align: left;
+  height: 39px;
+  width: 39px;
+  margin-left: 0px;
+  display: inline-block;
 }
 
 .points-overview-rank-title {
   text-align: center;
   margin-left: 10px;
+  color: #6b7897;
+  display: inline-block;
 }
 
 
@@ -58,6 +66,7 @@ width: auto
 .points-saved-header {
   font-size: 15px;
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .points-saved-subheader {
@@ -72,6 +81,7 @@ width: auto
 
 .points-tilnext-header {
   font-size: 15px;
+  margin-bottom: 0px;
 }
 
 .points-tilnext-subheader {
