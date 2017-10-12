@@ -1,3 +1,5 @@
+import sectionIndex from './sectionIndex'
+
 const initialState = {
   userName: null,
   isPregnant: null,
@@ -13,6 +15,7 @@ const initialState = {
   userRewardIds: [1, 2],
   navToggle: false,
   pointsTotal: 200,
+  sectionIndex: sectionIndex,
   rewardsActiveTab: 'shop'
 }
 
