@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Card, CardText, Container } from 'reactstrap'
+import { Link } from 'react-router-dom'
 import heart from '../../img/SectionPages/heart.png'
 
 import './contact.css'
@@ -14,7 +15,13 @@ class Contact extends Component {
             <p className='send-text'>
             Do you have a friend or family member you think would benefit from our app?
           </p>
-            <Card className='send-card'><CardText className='send-card-text'>Send to family & friends</CardText></Card>
+            <Link to='/home/send-to-family'>
+              <Card className='send-card'>
+                <CardText className='send-card-text'>
+                  Send to family & friends
+                </CardText>
+              </Card>
+            </Link>
           </Container>
         </div>
         <div className='contact-div'>

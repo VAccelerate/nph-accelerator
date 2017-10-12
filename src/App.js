@@ -22,6 +22,7 @@ import PepiOraHelp from './components/SectionPage/PepiOraHelp/'
 import RewardsSupport from './components/SectionPage/RewardsSupport/'
 import ContactPage from './components/ContactPage/'
 import AboutPage from './components/AboutPage/'
+import SendToFamily from './components/SendToFamily'
 
 class App extends Component {
   render () {
@@ -49,6 +50,7 @@ class App extends Component {
         <Route exact path='/rewards-support/:articleId' component={ArticlePage} />
         <Route exact path='/contact' component={ContactPage} />
         <Route exact path='/about' component={AboutPage} />
+        <Route exact path='/home/send-to-family' component={SendToFamily} />
       </div>
     )
   }
