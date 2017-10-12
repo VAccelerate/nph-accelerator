@@ -124,7 +124,7 @@ class ChildrenQuestions extends Component {
                           className='child-details-delete'
                           onClick={() => this.deleteChild(key)}
                       >
-                          <img className='X-img' src={hamburgerX} />
+                          <img className='X-img' src={hamburgerX} alt='Hamburger menu icon' />
                         </div>
                       </Card>
                       {
