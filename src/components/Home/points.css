@@ -3,6 +3,7 @@
   height: 79px;
   border-radius: 4px;
   background-color: #fd7171;
+  padding-left: -10px;
 }
 
 .home-points-row{
@@ -21,6 +22,7 @@
   line-height: 1.06;
   color: #ffffff;
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 .home-points-check{
@@ -33,7 +35,7 @@
 .home-points-img{
   display:inline-block;
   text-align: center;
-  margin-left: 15px;
+  margin-top: 3vh;
   height: 40px;
   width: 40px;
 }

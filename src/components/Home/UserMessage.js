@@ -8,6 +8,8 @@ import {
   Container
 } from 'reactstrap'
 
+import './userMessage.css'
+
 const items = [
   {
     key: 'item1',
@@ -80,7 +82,7 @@ class UserMessage extends Component {
 
     return (
       <Container>
-        <h2>Kia Ora {hasName}</h2>
+        <h2 className='carousel-greeting'>Kia Ora {hasName}</h2>
         <Carousel
           activeIndex={activeIndex}
           next={this.next}
