@@ -60,7 +60,7 @@ class PepiOraHelp extends Component {
             })
           }
           <h4 className='sectionPageTitle pepiOraSectionPadding'>More Useful Information</h4>
-          <Link to='/pepi-ora-help'><Card className='linkCard'>
+          <Link to='/about'><Card className='linkCard'>
             <Row>
               <Col xs='10'>
                 <CardTitle className='linkTitle'>
