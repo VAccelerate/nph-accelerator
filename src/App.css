@@ -96,6 +96,6 @@ img.coupon-img {
   font-size: 12px;
 }
 
-a:active, a:visited {
+a:hover, a:active, a:visited {
   text-decoration: none;
 }
