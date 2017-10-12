@@ -8,7 +8,7 @@ import Footer from '../Footer'
 import contactPageImg from '../../img/contactPage.png'
 import heartImg from '../../img/SectionPages/heart.png'
 
-class ArticlePage extends Component {
+class ContactPage extends Component {
   componentDidUpdate () {
     ReactDOM.findDOMNode(this.refs.topOfPage).scrollIntoView()
   }
@@ -71,4 +71,4 @@ class ArticlePage extends Component {
   }
 }
 
-export default ArticlePage
+export default ContactPage
