@@ -15,10 +15,22 @@ class PointsAvailable extends Component {
       <Container>
         <Row className='pointsHeader'>
           <Col className='pointsHeaderText'>
-            <div className='pointsHeaderTextDiv'>Points available</div>
+            <div className='pointsOuter'>
+              <div className='pointsMiddle'>
+                <div className='pointsInner'>
+                  Points available
+                </div>
+              </div>
+            </div>
           </Col>
           <Col>
-            <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
+            <div className='pointsOuter'>
+              <div className='pointsMiddle'>
+                <div className='pointsInner'>
+                  <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
+                </div>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
