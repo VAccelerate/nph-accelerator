@@ -21,6 +21,7 @@ import rewardsSupportArticles from '../RewardsSupport/rewardsSupportArticles'
 import backImg from '../../../img/angle/angle-left.svg'
 import redAngleLeft from '../../../img/angle/red-angle-left.png'
 import redAngleRight from '../../../img/angle/red-angle-right.png'
+import challengeData from '../../Challenges/challengeData'
 
 class ArticlePage extends Component {
   constructor (props) {
@@ -62,7 +63,7 @@ class ArticlePage extends Component {
     const pathname = window.location.pathname
     const section = pathname.split('/')[1]
     const articleId = pathname.split('/')[2]
-    if (this.state.atPageBottom && !this.state.navigated && !this.props.sectionIndex.find(index => {
+    if (this.state.atPageBottom && !this.state.navigated && challengeData[section][articleId].questions.length && !this.props.sectionIndex.find(index => {
       return index.section === section
     }).articles[articleId].challengeCompleted) {
       this.setState({
@@ -70,7 +71,7 @@ class ArticlePage extends Component {
       })
       setTimeout(() => {
         this.props.history.push(`/challenges${window.location.pathname}`)
-      }, 1000)
+      }, 2000)
     }
   }
   render () {

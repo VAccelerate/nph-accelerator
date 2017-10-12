@@ -40,10 +40,11 @@ class Challenges extends Component {
   }
 
   submitAnswer () {
+    window.scrollTo(0, 0)
     const pathname = window.location.pathname
     const section = pathname.split('/')[2]
     const articleId = pathname.split('/')[3]
-    if (this.state.answerSelected === challengeData[section][articleId].questions[0].correct) {
+    if (this.state.answerSelected === challengeData[section][articleId].questions[this.state.questionNumber].correct) {
       this.setState({
         questionsCorrect: this.state.questionsCorrect + 1
       })
@@ -64,7 +65,8 @@ class Challenges extends Component {
     const pathname = window.location.pathname
     const section = pathname.split('/')[2]
     const articleId = pathname.split('/')[3]
-    const question = challengeData[section][articleId].questions[this.state.questionNumber] || {
+    const { questionNumber, questionsCorrect, answerSelected } = this.state
+    const question = challengeData[section][articleId].questions[questionNumber] || {
       question: null,
       answers: [],
       correct: null
@@ -75,7 +77,7 @@ class Challenges extends Component {
         payload: {
           section: section,
           articleId: articleId,
-          questionsCorrect: this.state.questionsCorrect,
+          questionsCorrect: questionsCorrect,
           questionsTotal: challengeData[section][articleId].questions.length
         }
       })
@@ -100,7 +102,7 @@ class Challenges extends Component {
         </div>
         <div className='question-messages'>
           <p className='question-title'>
-            Question {this.state.questionNumber + 1} of {challengeData[section][articleId].questions.length}
+            Question {questionNumber + 1} of {challengeData[section][articleId].questions.length}
           </p>
           <p className='question-description'>
             {question.question}
@@ -116,8 +118,8 @@ class Challenges extends Component {
               >
                 <Label check>
                   <span><Input
-                    type='radio'
-                    name='radio2'
+                    type='checkbox'
+                    checked={i === answerSelected}
                   /></span>
                   <span className='answer-text'>{answer}</span><br />
                 </Label>
@@ -126,8 +128,7 @@ class Challenges extends Component {
           })}
           <Button
             onClick={this.submitAnswer}
-            outline
-            color='danger'
+            color=''
             className='answer-submit-button'
           >Continue</Button>
         </div>

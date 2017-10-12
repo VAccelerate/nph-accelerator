@@ -62,7 +62,7 @@
   color: #35a5b5;
   margin-top: 1vh;
   margin-right: 3vw;
-  margin-bottom: 3vh;
+  margin-bottom: 7vh;
 }
 
 .answers {
@@ -85,6 +85,9 @@
 }
 
 .answer-submit-button {
+  background-color: #f9f8f8;
+  color: #ef005c;
+  border: solid 1px #ef005c;
   width: 283px;
   height: 40px;
   margin-top: 4vh;
