@@ -25,6 +25,17 @@ class Challenges extends Component {
     }
   }
 
+  componentWillMount () {
+    const { history, sectionIndex } = this.props
+    if (
+      sectionIndex.find(index => {
+        return index.section === section
+      }).articles[articleId].challengeCompleted === true
+    ) {
+      history.push('/rewards')
+    }
+  }
+
   submitAnswer () {
     if (this.state.answerSelected === challengeData[section][articleId].questions[0].correct) {
       this.setState({
