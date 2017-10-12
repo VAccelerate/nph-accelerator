@@ -3,6 +3,7 @@
     background-color: #fd7171;
     height: 53px;
     border-radius: 6px;
+    text-align: left;
 }
 
 .pointsHeaderText {
@@ -10,55 +11,135 @@
     font-weight: 500;
     line-height: 1.06;
     color: #ffffff;
-    text-align: left;
+}
+
+.pointsHeaderTextDiv {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .pointsPill {
     background-color: #ffffff;
     color: #fd7171;
+    float: right;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.9px;
     border-radius: 1rem;
+    /* Vertically centre pill */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.pointsHeaderVWrap {
-    height: 100%;
-    white-space: nowrap;
-}
-.pointsHeaderVWrap:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    width: 0;
-    /* adjust for white space between pseudo element and next sibling */
-    margin-right: -.25em;
-    /* stretch line height */
-    height: 100%;
-}
-.pointsHeaderVBox {
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .pointsHeaderTextDiv {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1.5vh;
+    }
+
+    .pointsPill {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1vh;
+    }
 }
 
-.pointsPillVWrap {
-    float: right;
-    height: 100%;
-    white-space: nowrap;
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .pointsHeaderTextDiv {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1.5vh;
+    }
+
+    .pointsPill {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1vh;
+    }
 }
-.pointsPillVWrap:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    width: 0;
-    /* adjust for white space between pseudo element and next sibling */
-    margin-right: -.25em;
-    /* stretch line height */
-    height: 100%;
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .pointsHeaderTextDiv {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1.5vh;
+    }
+
+    .pointsPill {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1vh;
+    }
 }
-.pointsPillVBox {
-    display: inline-block;
-    vertical-align: middle;
-    white-space: normal;
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .pointsHeaderTextDiv {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1.5vh;
+    }
+
+    .pointsPill {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1vh;
+    }
 }
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+    .pointsHeaderTextDiv {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1.5vh;
+    }
+
+    .pointsPill {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin-top: 1vh;
+    }
+}
+
