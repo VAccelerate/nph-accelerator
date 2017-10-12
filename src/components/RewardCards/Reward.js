@@ -92,7 +92,7 @@ class Reward extends Component {
               </Col>
             </Row>
           </CardBody>
-          <Link to={`/terms`} className='link'>Terms & conditions</Link>
+          <p className='link'>Terms & conditions</p>
         </Container>
         <Footer />
       </div>
