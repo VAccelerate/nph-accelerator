@@ -1,8 +1,9 @@
 .link {
     font-size: 10px;
-    text-align: left;
+    text-align: center;
     color: #fd7171;
-    border-bottom: solid 1px #fd7171;
+    text-decoration: underline #fd7171;
+    margin-top: 1vh;
 }
 
 /* Have to overwrite styles from RewardPreview class */
