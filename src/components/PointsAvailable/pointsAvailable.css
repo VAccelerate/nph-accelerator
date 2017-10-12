@@ -13,11 +13,11 @@
     color: #ffffff;
 }
 
-.pointsHeaderTextDiv {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+/*.pointsHeaderTextDiv {*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+/*}*/
 
 .pointsPill {
     background-color: #ffffff;
@@ -28,7 +28,7 @@
     letter-spacing: 0.9px;
     border-radius: 1rem;
     /* Vertically centre pill */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
 }
