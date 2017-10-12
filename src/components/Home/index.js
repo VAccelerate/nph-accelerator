@@ -13,7 +13,6 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <div className='container'>
           <NavBar />
           <UserMessage /><hr />
           <Points />
@@ -28,9 +27,8 @@ class Home extends Component {
             : <div><LinkBlockDropdown section={data.homepageDropdowns.babyToddler} /></div>
           }
           <LinkBlockDropdown section={data.homepageDropdowns.supportHelp} /><br />
-        </div>
         <Contact />
-        <Partners />
+        <Partners/>
         <Footer />
       </div>
     )
