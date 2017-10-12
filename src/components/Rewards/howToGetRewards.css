@@ -1,5 +1,4 @@
-.htgr-title{
-  font-family: HelveticaNeue;
+.htgr-title {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.06;
@@ -7,12 +6,12 @@
   color: #4a4a4a;
 }
 
-.htgr-list{
+.htgr-list {
   text-align: left;
   display: block;
 }
 
-.htgr-item{
+.htgr-item {
   font-size: 16px;
   text-align: left;
   color: #fd7171;
