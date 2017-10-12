@@ -173,13 +173,14 @@
 
 .ageScroll {
   height: 20px;
-  font-family: HelveticaNeue;
+  font-family: HelveticaNeue-Light;
   font-size: 30px;
   font-weight: 100;
   line-height: 0.45;
   text-align: center;
   color: #999999;
   margin-top: 20px;
+  width: 185px;
 }
 
 .stepsImg {

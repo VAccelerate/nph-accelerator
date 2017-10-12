@@ -13,14 +13,14 @@ class Partners extends Component {
   render () {
     return (
       <div>
-        <Row>
+        <Row className='partners-row-margin'>
           <Col>
             <div className='partnerText'>
               Some of our partners
             </div>
           </Col>
         </Row>
-        <Row>
+        <Row className='partners-row-margin'>
           <Col>
             <img src={foursquareLogo} className='partnerLogo' alt='4Square logo' />
           </Col>
@@ -28,7 +28,7 @@ class Partners extends Component {
             <img src={vodafoneLogo} className='partnerLogo' alt='VF logo' />
           </Col>
         </Row>
-        <Row>
+        <Row className='partners-row-margin'>
           <Col>
             <img src={gasLogo} className='partnerLogo' alt='g.a.s. logo' />
           </Col>

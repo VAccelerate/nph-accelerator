@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import { Button, Container } from 'reactstrap'
-import heart from '../../img/heart.svg'
+import { Card, CardText, Container } from 'reactstrap'
+import heart from '../../img/SectionPages/heart.png'
 
 import './contact.css'
 
@@ -14,7 +14,7 @@ class Contact extends Component {
             <p className='send-text'>
             Do you have a friend or family member you think would benefit from our app?
           </p>
-            <Button className='send-button'> Send to family & friends </Button>
+            <Card className='send-card'><CardText className='send-card-text'>Send to family & friends</CardText></Card>
           </Container>
         </div>
         <div className='contact-div'>
