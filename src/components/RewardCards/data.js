@@ -10,7 +10,7 @@ const rewards = [
     icon: foursquareLogo,
     title: '$20 off Four Square',
     points: 100,
-    description: 'Placeholder description',
+    description: 'This can be used for more information about the product.',
     disclaimer: 'Not available for any R18 goods.'
   },
   {
@@ -20,7 +20,7 @@ const rewards = [
     icon: gasLogo,
     title: '$10 off fuel',
     points: 100,
-    description: 'Placeholder description',
+    description: 'This can be used for more information about the product.',
     disclaimer: 'At any Gasoline Alley'
   },
   {
@@ -30,7 +30,7 @@ const rewards = [
     icon: vodafoneLogo,
     title: '$25 worth of data',
     points: 100,
-    description: 'Placeholder description',
+    description: 'This can be used for more information about the product.',
     disclaimer: 'Prepay or account data worth $25. Claim it today and use straight away!'
   },
   {
@@ -40,7 +40,7 @@ const rewards = [
     icon: gasLogo,
     title: '$30 off fuel',
     points: 300,
-    description: 'Placeholder description',
+    description: 'This can be used for more information about the product.',
     disclaimer: 'At any Gasoline Alley'
   }
 ]
