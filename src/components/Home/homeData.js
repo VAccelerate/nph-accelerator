@@ -4,14 +4,15 @@ const data = {
     pregnancy: {
       header: 'Pregnancy',
       subheaders: [
+        {name: 'Seeing the midwife', link: '/your-pregnancy/0'},
         {name: 'Food & Nutrition', link: '/your-pregnancy/1'},
-        {name: 'Exercise & Fitness', link: ''},
-        {name: 'Common Symptoms', link: ''},
+        {name: 'Exercise & Fitness', link: '/your-pregnancy/5'},
+        {name: 'Common Symptoms', link: '/your-pregnancy/8'},
         {name: 'Smoking, Drugs & Alcohol', link: '/your-pregnancy/3'},
-        {name: 'Getting Ready for Baby', link: ''},
+        {name: 'Getting Ready for Baby', link: '/your-pregnancy/9'},
         {name: 'Danger Signs', link: '/your-pregnancy/4'},
-        {name: 'Labour & Birth', link: ''},
-        {name: 'Sex During Pregnancy', link: ''}
+        {name: 'Labour & Birth', link: '/your-pregnancy/7'},
+        {name: 'Sex During Pregnancy', link: '/your-pregnancy/6'}
       ],
       descText: 'Help with your pregnancy'
     },
