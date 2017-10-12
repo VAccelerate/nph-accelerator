@@ -167,7 +167,7 @@ const yourPregnancyArticles = [
       },
       {
         title: 'Exercise & Fitness',
-        link: '/your-pregnancy'
+        link: '/your-pregnancy/5'
       }
     ]
   },
@@ -256,6 +256,238 @@ const yourPregnancyArticles = [
       {
         title: 'Getting a Midwife',
         link: '/your-pregnancy/0'
+      }
+    ]
+  },
+  {
+    id: 5,
+    relatedSection: 'Your Pregnancy',
+    title: 'Exercise & Fitness',
+    description: 'Keeping healthy',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          What do you think when you see or hear the word exercise? If you have
+          always exercised, that doesn’t have to change because you are hapu.
+          You can continue through although you may have to adapt your usual
+          exercise schedule. Exercising 3- 4 times a week is ideal. If you have
+          not exercised regularly before you became hapu, it is a good idea to
+          start a gentle form of exercise such as walking. It can help make you
+          feel good during your pregnancy. There are some types of exercise
+          activities that are more suitable when you are hapu, these are
+          generally low impact or non weight bearing and include exercises such
+          as swimming, walking and cycling.
+        </div>
+        <div className='contentStyle'>
+          As time progresses, there are some forms of exercise that can be
+          detrimental to pepi. Consider the exercise that you are doing and
+          what happens to your body during the exercise. Any exercise that
+          rapidly increases your heart rate above 150 bpm and decreases your
+          level of oxygen will put stress on pepi. For example after the first
+          trimester, it is not good to exercise lying flat on your back as this
+          can reduce the blood flow to pepi and cause stress to pepi.
+        </div>
+        <div className='contentStyle'>
+          As time goes on and pepi grows, you will notice your body change and
+          also a change in your movement. An increase in body size, looser joints
+          and a change in your centre of gravity can result in you being less
+          able to move and sometimes off balance. This could mean you are more
+          prone to injury or accidents and caution is required. Avoid exercises
+          that decrease your level of oxygen such as diving and mountain biking
+          should be avoided, or activities that increase the risk of falls or
+          trauma to your puku such as netball, horse riding or tennis.
+        </div>
+        <div className='contentStyle'>
+          There are more specific exercises that are important for all mama,
+          such as pelvic floor exercises during and after you are hapu. These
+          will help to prevent stress incontinence (mimi when you cough or
+            sneeze). Talk to your midwife, nurse or GP about suitable exercises
+            while you are hapu and after.
+        </div>
+      </div>
+    ),
+    youtubeUrl: '',
+    img: gettingAMidwifeImg,
+    readMore: [
+      {
+        title: 'Food & Nutrition',
+        link: '/your-pregnancy'
+      },
+      {
+        title: 'Smoking, Drugs & Alcohol',
+        link: '/your-pregnancy/3'
+      }
+    ]
+  },
+  {
+    id: 6,
+    relatedSection: 'Your Pregnancy',
+    title: 'Sex During Pregnancy',
+    description: 'Staying safe',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          What do you think when you see or hear the word exercise? If you have
+          always exercised, that doesn’t have to change because you are hapu.
+          You can continue through although you may have to adapt your usual
+          exercise schedule. Exercising 3- 4 times a week is ideal. If you have
+          not exercised regularly before you became hapu, it is a good idea to
+          start a gentle form of exercise such as walking. It can help make you
+          feel good during your pregnancy. There are some types of exercise
+          activities that are more suitable when you are hapu, these are
+          generally low impact or non weight bearing and include exercises such
+          as swimming, walking and cycling.
+        </div>
+        <div className='contentStyle'>
+          As time progresses, there are some forms of exercise that can be
+          detrimental to pepi. Consider the exercise that you are doing and
+          what happens to your body during the exercise. Any exercise that
+          rapidly increases your heart rate above 150 bpm and decreases your
+          level of oxygen will put stress on pepi. For example after the first
+          trimester, it is not good to exercise lying flat on your back as this
+          can reduce the blood flow to pepi and cause stress to pepi.
+        </div>
+      </div>
+    ),
+    youtubeUrl: '',
+    img: gettingAMidwifeImg,
+    readMore: [
+      {
+        title: 'Food & Nutrition',
+        link: '/your-pregnancy'
+      },
+      {
+        title: 'Smoking, Drugs & Alcohol',
+        link: '/your-pregnancy/3'
+      }
+    ]
+  },
+  {
+    id: 7,
+    relatedSection: 'Your Pregnancy',
+    title: 'Labour & Birth',
+    description: 'Explaining the process',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          What do you think when you see or hear the word exercise? If you have
+          always exercised, that doesn’t have to change because you are hapu.
+          You can continue through although you may have to adapt your usual
+          exercise schedule. Exercising 3- 4 times a week is ideal. If you have
+          not exercised regularly before you became hapu, it is a good idea to
+          start a gentle form of exercise such as walking. It can help make you
+          feel good during your pregnancy. There are some types of exercise
+          activities that are more suitable when you are hapu, these are
+          generally low impact or non weight bearing and include exercises such
+          as swimming, walking and cycling.
+        </div>
+        <div className='contentStyle'>
+          As time progresses, there are some forms of exercise that can be
+          detrimental to pepi. Consider the exercise that you are doing and
+          what happens to your body during the exercise. Any exercise that
+          rapidly increases your heart rate above 150 bpm and decreases your
+          level of oxygen will put stress on pepi. For example after the first
+          trimester, it is not good to exercise lying flat on your back as this
+          can reduce the blood flow to pepi and cause stress to pepi.
+        </div>
+      </div>
+    ),
+    youtubeUrl: '',
+    img: gettingAMidwifeImg,
+    readMore: [
+      {
+        title: 'Food & Nutrition',
+        link: '/your-pregnancy'
+      },
+      {
+        title: 'Smoking, Drugs & Alcohol',
+        link: '/your-pregnancy/3'
+      }
+    ]
+  },
+  {
+    id: 8,
+    relatedSection: 'Your Pregnancy',
+    title: 'Common Symptoms',
+    description: 'What to look for',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          What do you think when you see or hear the word exercise? If you have
+          always exercised, that doesn’t have to change because you are hapu.
+          You can continue through although you may have to adapt your usual
+          exercise schedule. Exercising 3- 4 times a week is ideal. If you have
+          not exercised regularly before you became hapu, it is a good idea to
+          start a gentle form of exercise such as walking. It can help make you
+          feel good during your pregnancy. There are some types of exercise
+          activities that are more suitable when you are hapu, these are
+          generally low impact or non weight bearing and include exercises such
+          as swimming, walking and cycling.
+        </div>
+        <div className='contentStyle'>
+          As time progresses, there are some forms of exercise that can be
+          detrimental to pepi. Consider the exercise that you are doing and
+          what happens to your body during the exercise. Any exercise that
+          rapidly increases your heart rate above 150 bpm and decreases your
+          level of oxygen will put stress on pepi. For example after the first
+          trimester, it is not good to exercise lying flat on your back as this
+          can reduce the blood flow to pepi and cause stress to pepi.
+        </div>
+      </div>
+    ),
+    youtubeUrl: '',
+    img: gettingAMidwifeImg,
+    readMore: [
+      {
+        title: 'Food & Nutrition',
+        link: '/your-pregnancy'
+      },
+      {
+        title: 'Smoking, Drugs & Alcohol',
+        link: '/your-pregnancy/3'
+      }
+    ]
+  },
+  {
+    id: 9,
+    relatedSection: 'Your Pregnancy',
+    title: 'Getting Ready for Baby',
+    description: 'What to look forward to',
+    content: (
+      <div>
+        <div className='contentStyle'>
+          What do you think when you see or hear the word exercise? If you have
+          always exercised, that doesn’t have to change because you are hapu.
+          You can continue through although you may have to adapt your usual
+          exercise schedule. Exercising 3- 4 times a week is ideal. If you have
+          not exercised regularly before you became hapu, it is a good idea to
+          start a gentle form of exercise such as walking. It can help make you
+          feel good during your pregnancy. There are some types of exercise
+          activities that are more suitable when you are hapu, these are
+          generally low impact or non weight bearing and include exercises such
+          as swimming, walking and cycling.
+        </div>
+        <div className='contentStyle'>
+          As time progresses, there are some forms of exercise that can be
+          detrimental to pepi. Consider the exercise that you are doing and
+          what happens to your body during the exercise. Any exercise that
+          rapidly increases your heart rate above 150 bpm and decreases your
+          level of oxygen will put stress on pepi. For example after the first
+          trimester, it is not good to exercise lying flat on your back as this
+          can reduce the blood flow to pepi and cause stress to pepi.
+        </div>
+      </div>
+    ),
+    youtubeUrl: '',
+    img: gettingAMidwifeImg,
+    readMore: [
+      {
+        title: 'Food & Nutrition',
+        link: '/your-pregnancy'
+      },
+      {
+        title: 'Smoking, Drugs & Alcohol',
+        link: '/your-pregnancy/3'
       }
     ]
   }
