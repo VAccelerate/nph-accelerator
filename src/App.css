@@ -92,6 +92,10 @@ img.coupon-img {
 }
 
 .terms-link {
-  margin-top: 0px;
+  margin-top: 0;
   font-size: 12px;
+}
+
+a:active, a:visited {
+  text-decoration: none;
 }
