@@ -82,7 +82,7 @@ class UserMessage extends Component {
           src={item.src}
           altText={item.altText}
         >
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       )
     })
