@@ -23,7 +23,8 @@ class Contact extends Component {
             <p> 06 864 6803 </p>
             <br />
             <p>Midwives </p>
-            <p>NPH - Corrina Parata: 021 765053</p>
+            <p>NPH - Corrina Parata: 021 765 053</p>
+            <p>Liz Tamepo: 027 237 8467</p>
           </Container>
         </div>
       </div>

@@ -49,8 +49,8 @@ class AboutPage extends Component {
             <h4 className='boldGreyTitle'>Frances King</h4>
             <ul className='midwifeContact'>
               <li>Ngati Porou Hauora</li>
-              <li><span className='midwifeContactType'>Mobile: </span><span>027 237 8467</span></li>
-              <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>lizzie.andre@xtra.co.nz</span></li>
+              <li><span className='midwifeContactType'>Mobile: </span><span>021 861 426</span></li>
+              <li><span className='midwifeContactType'>Email: </span><a className='pinkUnderline' href='mailto:frances.king@nph.org.nz'>frances.king@nph.org.nz</a></li>
             </ul>
             <h4 className='boldGreyTitle'>Corrina Parata</h4>
             <ul className='midwifeLocations'>
@@ -59,7 +59,7 @@ class AboutPage extends Component {
             <ul className='midwifeContact'>
               <li><span className='midwifeContactType'>Phone: </span>06 864 7788</li>
               <li><span className='midwifeContactType'>Mobile: </span><span>027 237 8467</span></li>
-              <li><span className='midwifeContactType'>Email: </span><span className='pinkUnderline'>lizzie.andre@xtra.co.nz</span></li>
+              <li><span className='midwifeContactType'>Email: </span><a className='pinkUnderline' href='mailto:corrina.parata@nph.org.nz'>corrina.parata@nph.org.nz</a></li>
             </ul>
           </div>
         </Container>
