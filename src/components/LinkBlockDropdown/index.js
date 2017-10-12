@@ -31,7 +31,7 @@ class LinkBlockDropdown extends Component {
 
     function renderSubheader (subheader) {
       return (
-        <NavLink key={subheader.name} href={subheader.link}>{subheader.name}</NavLink>
+        <NavLink key={subheader.name} href={subheader.link} className='dropdown-link'>{subheader.name}</NavLink>
       )
     }
 

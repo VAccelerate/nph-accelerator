@@ -15,7 +15,7 @@ class Points extends Component {
           <Row className='home-points-row'>
             <Col className='home-points-text' xs='10'>
               <CardTitle className='home-points-total'>You have {pointsTotal} points</CardTitle>
-              <CardText className='home-points-check'>Check your rewards</CardText>
+              <CardText className='home-points-check'>Check out your rewards</CardText>
             </Col>
             <Col xs='2'>
               <img src={trophy} alt='' id='trophy-img' className='home-points-img' />
