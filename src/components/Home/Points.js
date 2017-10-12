@@ -13,17 +13,17 @@ class Points extends Component {
     return (
       <Container>
         <Link to='/rewards'>
-        <Card className='home-points'>
-          <Row className='home-points-row'>
-            <Col className='home-points-text' xs='9'>
-              <CardTitle className='home-points-total'>You have {pointsTotal} points</CardTitle>
-              <CardText className='home-points-check'>Check out your rewards</CardText>
-            </Col>
-            <Col xs='3'>
-              <img src={trophy} alt='' id='trophy-img' className='home-points-img' />
-            </Col>
-          </Row>
-        </Card>
+          <Card className='home-points'>
+            <Row className='home-points-row'>
+              <Col className='home-points-text' xs='9'>
+                <CardTitle className='home-points-total'>You have {pointsTotal} points</CardTitle>
+                <CardText className='home-points-check'>Check out your rewards</CardText>
+              </Col>
+              <Col xs='3'>
+                <img src={trophy} alt='' id='trophy-img' className='home-points-img' />
+              </Col>
+            </Row>
+          </Card>
         </Link>
       </Container>
     )
