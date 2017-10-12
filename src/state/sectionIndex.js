@@ -1,6 +1,6 @@
-import babyAndToddlerArticles from '../components/SectionPage/babyAndToddlerArticles'
-import supportAndHelpArticles from '../components/SectionPage/supportAndHelpArticles'
-import yourPregnancyArticles from '../components/SectionPage/yourPregnancyArticles'
+import babyAndToddlerArticles from '../components/SectionPage/BabyAndToddler/babyAndToddlerArticles'
+import supportAndHelpArticles from '../components/SectionPage/SupportAndHelp/supportAndHelpArticles'
+import yourPregnancyArticles from '../components/SectionPage/YourPregnancy/yourPregnancyArticles'
 
 let sectionIndex = []
 
