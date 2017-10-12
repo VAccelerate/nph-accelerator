@@ -15,20 +15,16 @@ class PointsAvailable extends Component {
       <Container>
         <Row className='pointsHeader'>
           <Col className='pointsHeaderText'>
-            <div className='pointsOuter'>
-              <div className='pointsMiddle'>
-                <div className='pointsInner'>
-                  Points available
-                </div>
+            <div className='pointsHeaderVWrap'>
+              <div className='pointsHeaderVBox'>
+                Points available
               </div>
             </div>
           </Col>
           <Col>
-            <div className='pointsOuter'>
-              <div className='pointsMiddle'>
-                <div className='pointsInner'>
-                  <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
-                </div>
+            <div className='pointsPillVWrap'>
+              <div className='pointsPillVBox'>
+                <Badge className='pointsPill' pill>{this.props.pointsTotal}</Badge>
               </div>
             </div>
           </Col>

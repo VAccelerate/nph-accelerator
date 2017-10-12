@@ -3,7 +3,6 @@
     background-color: #fd7171;
     height: 53px;
     border-radius: 6px;
-    text-align: left;
 }
 
 .pointsHeaderText {
@@ -11,32 +10,55 @@
     font-weight: 500;
     line-height: 1.06;
     color: #ffffff;
+    text-align: left;
 }
 
 .pointsPill {
     background-color: #ffffff;
     color: #fd7171;
-    float: right;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.9px;
     border-radius: 1rem;
-    margin-right: 25px;
 }
 
-.pointsOuter {
-    display: table;
-    position: absolute;
+.pointsHeaderVWrap {
     height: 100%;
-    width: 100%;
+    white-space: nowrap;
 }
-
-.pointsMiddle {
-    display: table-cell;
+.pointsHeaderVWrap:before {
+    content: '';
+    display: inline-block;
     vertical-align: middle;
+    width: 0;
+    /* adjust for white space between pseudo element and next sibling */
+    margin-right: -.25em;
+    /* stretch line height */
+    height: 100%;
+}
+.pointsHeaderVBox {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
 }
 
-.pointsInner {
-    margin-left: auto;
-    margin-right: auto;
+.pointsPillVWrap {
+    float: right;
+    height: 100%;
+    white-space: nowrap;
+}
+.pointsPillVWrap:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    /* adjust for white space between pseudo element and next sibling */
+    margin-right: -.25em;
+    /* stretch line height */
+    height: 100%;
+}
+.pointsPillVBox {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
 }
