@@ -37,6 +37,8 @@
 
 img.nav-name {
   margin-left: -15vw;
+  width: 89px;
+  padding-left: 5px;
 }
 
 .nav-link-to {
