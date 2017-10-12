@@ -49,7 +49,7 @@ class MyRewards extends Component {
             {userRewards.map((reward, key) => {
               // Reward is always available as the user has already spent points on it
               return (
-                <RewardPreview reward={reward} isAvailable={true} isClaimed={true} key={key} />
+                <RewardPreview reward={reward} isAvailable isClaimed key={key} />
               )
             })}
           </div>
@@ -59,7 +59,6 @@ class MyRewards extends Component {
     return (
       <div>
         {myRewardsDisplay}
-        {/*The following reward is a placeholder as there's no logic for used rewards*/}
         <div className='my-used-rewards-div'>
           <div className='my-rewards-static-heading'>
             Used&nbsp;
@@ -67,7 +66,6 @@ class MyRewards extends Component {
           <div className='my-rewards-dynamic-heading'>
             - Showing 1 of 1 rewards
           </div>
-          {/*Reward is unavailable as it has already been used*/}
           <RewardPreview reward={rewards[0]} isAvailable={false} key={0} />
         </div>
       </div>
